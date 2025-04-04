@@ -5,15 +5,20 @@
 
 [node name="Control" type="Control"]
 layout_mode = 3
-anchors_preset = 0
+anchor_right = 0.967014
+anchor_bottom = 0.95216
 offset_right = 40.0
 offset_bottom = 40.0
 script = ExtResource("1_i26rj")
+metadata/_edit_use_anchors_ = true
 
 [node name="VBoxContainer" type="VBoxContainer" parent="."]
-layout_mode = 0
-offset_right = 1152.0
-offset_bottom = 646.0
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0052
+anchor_bottom = 0.987823
+grow_horizontal = 2
+grow_vertical = 2
 metadata/_edit_use_anchors_ = true
 
 [node name="level_1" type="Button" parent="VBoxContainer"]
