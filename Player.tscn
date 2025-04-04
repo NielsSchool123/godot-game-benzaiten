@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://phpa3phmm6uu"]
 
-[ext_resource type="Script" uid="uid://dmcpnrysn5ivu" path="res://PlayerScript.gd" id="1_onrkg"]
+[ext_resource type="Script" uid="uid://dmcpnrysn5ivu" path="res://scripts/PlayerScript.gd" id="1_onrkg"]
 [ext_resource type="PackedScene" uid="uid://81bvg13xnw3q" path="res://assets/models/Player.glb" id="2_onrkg"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_onrkg"]

@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://7q6yjl7ixw88"]
 
 [ext_resource type="PackedScene" uid="uid://c1ftouqukk4wn" path="res://assets/models/CarachterPushup.glb" id="1_pwdvl"]
-[ext_resource type="Script" uid="uid://jcbuhjvp15ye" path="res://characterPushupScript.gd" id="2_6a6l5"]
+[ext_resource type="Script" uid="uid://jcbuhjvp15ye" path="res://scripts/characterPushupScript.gd" id="2_6a6l5"]
 
 [node name="CarachterPushup" instance=ExtResource("1_pwdvl")]
 script = ExtResource("2_6a6l5")

@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://cv32626p1bkr8"]
 
-[ext_resource type="Script" uid="uid://bxomej6bcgn3k" path="res://MainMenuScript.gd" id="1_1s6jk"]
+[ext_resource type="Script" uid="uid://bxomej6bcgn3k" path="res://scripts/MainMenuScript.gd" id="1_1s6jk"]
 [ext_resource type="Texture2D" uid="uid://dlxvlp6ve5tab" path="res://assets/images/im431413413age.png" id="2_8h1f3"]
 
 [sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_i26rj"]

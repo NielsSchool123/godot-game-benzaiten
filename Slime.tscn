@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=3 uid="uid://lm1uhplyjr3b"]
 
 [ext_resource type="PackedScene" uid="uid://cj6v2vv0twtvt" path="res://assets/models/slime.glb" id="1_2d52u"]
-[ext_resource type="Script" uid="uid://h6bu4n67q43i" path="res://SlimeScript.gd" id="1_5jc4t"]
+[ext_resource type="Script" uid="uid://h6bu4n67q43i" path="res://scripts/SlimeScript.gd" id="1_5jc4t"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_5jc4t"]
 size = Vector3(2.0918, 2.37427, 1)

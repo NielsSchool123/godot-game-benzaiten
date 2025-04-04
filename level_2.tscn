@@ -7,7 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://brjiarf6ok01m" path="res://PlatfromMoveX.tscn" id="6_0s5r2"]
 [ext_resource type="PackedScene" uid="uid://besrs3ul76nc3" path="res://PlatformMOveZ.tscn" id="7_7dov7"]
 [ext_resource type="PackedScene" uid="uid://bgtir65febws3" path="res://WinPlatform.tscn" id="7_7j8ne"]
-[ext_resource type="Script" uid="uid://bdo7qk8ufymio" path="res://PlatformMoveScriptx2.gd" id="7_ehv2h"]
+[ext_resource type="Script" uid="uid://bdo7qk8ufymio" path="res://scripts/PlatformMoveScriptx2.gd" id="7_ehv2h"]
 
 [sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_7j8ne"]
 panorama = ExtResource("4_0s5r2")

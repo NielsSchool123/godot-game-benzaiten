@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=3 uid="uid://bgtir65febws3"]
 
 [ext_resource type="PackedScene" uid="uid://cvtx8rth06d6a" path="res://assets/models/Block.glb" id="1_30mha"]
-[ext_resource type="Script" uid="uid://cof3bdqwun8uc" path="res://PlatformWInScript.gd" id="1_fwa3j"]
+[ext_resource type="Script" uid="uid://cof3bdqwun8uc" path="res://scripts/PlatformWInScript.gd" id="1_fwa3j"]
 [ext_resource type="PackedScene" uid="uid://bufgukfh7v5qt" path="res://WinScreen.tscn" id="2_fwa3j"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_mi635"]
