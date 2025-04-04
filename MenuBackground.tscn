@@ -1,14 +1,25 @@
-[gd_scene load_steps=5 format=3 uid="uid://dxufgbeyng6pj"]
+[gd_scene load_steps=9 format=3 uid="uid://dxufgbeyng6pj"]
 
 [ext_resource type="PackedScene" uid="uid://db21nmw2v5t8r" path="res://Platrform.tscn" id="1_we2lv"]
-[ext_resource type="PackedScene" uid="uid://81bvg13xnw3q" path="res://assets/models/Player.glb" id="2_7vr3j"]
 [ext_resource type="PackedScene" uid="uid://cpipsmpcc0gs4" path="res://assets/models/boom.glb" id="3_620wr"]
+[ext_resource type="PackedScene" uid="uid://7q6yjl7ixw88" path="res://carachter_pushup.tscn" id="3_we2lv"]
+[ext_resource type="Texture2D" uid="uid://cwbpls1njfmp3" path="res://assets/images/NightSkyHDRI008_2K-HDR.exr" id="4_7vr3j"]
 
 [sub_resource type="CameraAttributesPractical" id="CameraAttributesPractical_x1b6m"]
 dof_blur_far_enabled = true
 dof_blur_far_distance = 0.01
 dof_blur_far_transition = -1.0
 dof_blur_near_distance = 0.01
+
+[sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_620wr"]
+panorama = ExtResource("4_7vr3j")
+
+[sub_resource type="Sky" id="Sky_7jktm"]
+sky_material = SubResource("PanoramaSkyMaterial_620wr")
+
+[sub_resource type="Environment" id="Environment_x1b6m"]
+background_mode = 2
+sky = SubResource("Sky_7jktm")
 
 [node name="Node3D" type="Node3D"]
 
@@ -18,9 +29,6 @@ transform = Transform3D(0.895985, 0, 0, 0, 0.1, 0, 0, 0, 0.971289, 0, -3.0063, 0
 [node name="Camera3D" type="Camera3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 0.785003, 0.619491, 0, -0.619491, 0.785003, 0.291355, 5.90097, 1.65705)
 attributes = SubResource("CameraAttributesPractical_x1b6m")
-
-[node name="Player" parent="." instance=ExtResource("2_7vr3j")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.299862, -2.69968, -3.3377)
 
 [node name="boom" parent="." instance=ExtResource("3_620wr")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.67372, -2.55906, -14.7515)
@@ -43,10 +51,115 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -41.4406, -2.55906, -14.7515)
 [node name="boom7" parent="." instance=ExtResource("3_620wr")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 30.9111, -2.55906, -14.7515)
 
+[node name="boom8" parent="." instance=ExtResource("3_620wr")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 44.6852, -2.55906, -14.7515)
+
+[node name="boom9" parent="." instance=ExtResource("3_620wr")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.2791, -2.55906, -24.1047)
+
+[node name="boom10" parent="." instance=ExtResource("3_620wr")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 23.8632, -2.55906, -24.1047)
+
+[node name="boom11" parent="." instance=ExtResource("3_620wr")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.230021, -2.55906, -24.1047)
+
+[node name="boom12" parent="." instance=ExtResource("3_620wr")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.60961, -2.55906, -24.1047)
+
+[node name="boom13" parent="." instance=ExtResource("3_620wr")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -22.7965, -2.55906, -24.1047)
+
+[node name="boom14" parent="." instance=ExtResource("3_620wr")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -36.8352, -2.55906, -24.1047)
+
+[node name="boom15" parent="." instance=ExtResource("3_620wr")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 35.5165, -2.55906, -24.1047)
+
+[node name="boom16" parent="." instance=ExtResource("3_620wr")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 49.2906, -2.55906, -24.1047)
+
+[node name="boom17" parent="." instance=ExtResource("3_620wr")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.14057, -2.55906, -33.2969)
+
+[node name="boom18" parent="." instance=ExtResource("3_620wr")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16.7246, -2.55906, -33.2969)
+
+[node name="boom19" parent="." instance=ExtResource("3_620wr")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.36856, -2.55906, -33.2969)
+
+[node name="boom20" parent="." instance=ExtResource("3_620wr")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -16.7482, -2.55906, -33.2969)
+
+[node name="boom21" parent="." instance=ExtResource("3_620wr")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -29.9351, -2.55906, -33.2969)
+
+[node name="boom22" parent="." instance=ExtResource("3_620wr")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -43.9738, -2.55906, -33.2969)
+
+[node name="boom23" parent="." instance=ExtResource("3_620wr")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 28.3779, -2.55906, -33.2969)
+
+[node name="boom24" parent="." instance=ExtResource("3_620wr")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 42.1521, -2.55906, -33.2969)
+
+[node name="boom25" parent="." instance=ExtResource("3_620wr")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.1242, -2.55906, -44.3849)
+
+[node name="boom26" parent="." instance=ExtResource("3_620wr")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 24.7083, -2.55906, -44.3849)
+
+[node name="boom27" parent="." instance=ExtResource("3_620wr")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.615047, -2.55906, -44.3849)
+
+[node name="boom28" parent="." instance=ExtResource("3_620wr")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.76454, -2.55906, -44.3849)
+
+[node name="boom29" parent="." instance=ExtResource("3_620wr")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -21.9514, -2.55906, -44.3849)
+
+[node name="boom30" parent="." instance=ExtResource("3_620wr")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -35.9901, -2.55906, -44.3849)
+
+[node name="boom31" parent="." instance=ExtResource("3_620wr")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 36.3616, -2.55906, -44.3849)
+
+[node name="boom32" parent="." instance=ExtResource("3_620wr")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 50.1357, -2.55906, -44.3849)
+
+[node name="boom33" parent="." instance=ExtResource("3_620wr")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.0718, -2.55906, -53.6992)
+
+[node name="boom34" parent="." instance=ExtResource("3_620wr")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 21.6559, -2.55906, -53.6992)
+
+[node name="boom35" parent="." instance=ExtResource("3_620wr")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.43733, -2.55906, -53.6992)
+
+[node name="boom36" parent="." instance=ExtResource("3_620wr")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11.8169, -2.55906, -53.6992)
+
+[node name="boom37" parent="." instance=ExtResource("3_620wr")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -25.0038, -2.55906, -53.6992)
+
+[node name="boom38" parent="." instance=ExtResource("3_620wr")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -39.0425, -2.55906, -53.6992)
+
+[node name="boom39" parent="." instance=ExtResource("3_620wr")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 33.3092, -2.55906, -53.6992)
+
+[node name="boom40" parent="." instance=ExtResource("3_620wr")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 47.0833, -2.55906, -53.6992)
+
 [node name="OmniLight3D" type="OmniLight3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -3.1379)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.294707, -1.63295, -3.1379)
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, -0.882324, 0.470642, 0, -0.470642, -0.882324, 0, 0, 0)
 shadow_enabled = true
 shadow_blur = 10.0
+
+[node name="CarachterPushup" parent="." instance=ExtResource("3_we2lv")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.251617, -2.327, -5.54457)
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_x1b6m")

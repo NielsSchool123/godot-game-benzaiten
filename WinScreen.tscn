@@ -44,6 +44,7 @@ offset_top = 405.0
 offset_right = 984.0
 offset_bottom = 513.0
 text = "Return to Main Menu"
+metadata/_edit_use_anchors_ = true
 
 [node name="GPUParticles2D" type="GPUParticles2D" parent="."]
 position = Vector2(575, 627)

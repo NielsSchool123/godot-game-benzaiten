@@ -14,6 +14,7 @@ script = ExtResource("1_i26rj")
 layout_mode = 0
 offset_right = 1152.0
 offset_bottom = 646.0
+metadata/_edit_use_anchors_ = true
 
 [node name="level_1" type="Button" parent="VBoxContainer"]
 layout_mode = 2
