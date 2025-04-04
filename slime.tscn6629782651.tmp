@@ -1,0 +1,31 @@
+[gd_scene load_steps=5 format=3 uid="uid://lm1uhplyjr3b"]
+
+[ext_resource type="PackedScene" uid="uid://cj6v2vv0twtvt" path="res://slime.glb" id="1_2d52u"]
+[ext_resource type="Script" uid="uid://h6bu4n67q43i" path="res://slime.gd" id="1_5jc4t"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_5jc4t"]
+size = Vector3(2.0918, 2.37427, 1)
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_5jc4t"]
+radius = 5.26002
+
+[node name="slime" type="CharacterBody3D"]
+script = ExtResource("1_5jc4t")
+
+[node name="Hitbox2" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1.96411, -0.360165, 0.687134, 0)
+shape = SubResource("BoxShape3D_5jc4t")
+
+[node name="slime" parent="." instance=ExtResource("1_2d52u")]
+
+[node name="DetectionZone" type="Area3D" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="DetectionZone"]
+transform = Transform3D(1.3, 0, 0, 0, 1.3, 0, 0, 0, 1.3, 0, 0, 0)
+shape = SubResource("SphereShape3D_5jc4t")
+
+[node name="Hitbox" type="Area3D" parent="."]
+
+[node name="Hitbox" type="CollisionShape3D" parent="Hitbox"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1.96411, -0.360165, 0.687134, 0)
+shape = SubResource("BoxShape3D_5jc4t")

@@ -1,0 +1,26 @@
+[gd_scene load_steps=3 format=3 uid="uid://db21nmw2v5t8r"]
+
+[ext_resource type="PackedScene" uid="uid://cvtx8rth06d6a" path="res://assets/models/Block.glb" id="1_mi635"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_mi635"]
+
+[node name="platform" type="StaticBody3D"]
+transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, 0, 0, 0)
+
+[node name="untitled" parent="." instance=ExtResource("1_mi635")]
+transform = Transform3D(0.30628, 0, 0, 0, 0.929131, 0, 0, 0, 0.582929, 0, 0, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(120, 0, 0, 0, 10, 0, 0, 0, 115.109, 0, 2.88055, 0)
+shape = SubResource("BoxShape3D_mi635")
+
+[node name="SpotLight3D" type="SpotLight3D" parent="."]
+transform = Transform3D(13.2489, 0, 0, 0, -0.207505, 9.99785, 0, -9.99785, -0.207505, 5.21818, 60.3958, 10.2442)
+light_color = Color(0.104694, 0.0886255, 0.319315, 1)
+light_energy = 16.0
+light_indirect_energy = 16.0
+light_volumetric_fog_energy = 16.0
+light_size = 1.295
+light_specular = 16.0
+spot_range = 10.9624
+spot_angle = 89.99

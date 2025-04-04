@@ -1,0 +1,52 @@
+[gd_scene load_steps=5 format=3 uid="uid://dxufgbeyng6pj"]
+
+[ext_resource type="PackedScene" uid="uid://db21nmw2v5t8r" path="res://Platrform.tscn" id="1_we2lv"]
+[ext_resource type="PackedScene" uid="uid://81bvg13xnw3q" path="res://assets/models/Player.glb" id="2_7vr3j"]
+[ext_resource type="PackedScene" uid="uid://cpipsmpcc0gs4" path="res://assets/models/boom.glb" id="3_620wr"]
+
+[sub_resource type="CameraAttributesPractical" id="CameraAttributesPractical_x1b6m"]
+dof_blur_far_enabled = true
+dof_blur_far_distance = 0.01
+dof_blur_far_transition = -1.0
+dof_blur_near_distance = 0.01
+
+[node name="Node3D" type="Node3D"]
+
+[node name="platform" parent="." instance=ExtResource("1_we2lv")]
+transform = Transform3D(0.895985, 0, 0, 0, 0.1, 0, 0, 0, 0.971289, 0, -3.0063, 0)
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.785003, 0.619491, 0, -0.619491, 0.785003, 0.291355, 5.90097, 1.65705)
+attributes = SubResource("CameraAttributesPractical_x1b6m")
+
+[node name="Player" parent="." instance=ExtResource("2_7vr3j")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.299862, -2.69968, -3.3377)
+
+[node name="boom" parent="." instance=ExtResource("3_620wr")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.67372, -2.55906, -14.7515)
+
+[node name="boom2" parent="." instance=ExtResource("3_620wr")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 19.2578, -2.55906, -14.7515)
+
+[node name="boom3" parent="." instance=ExtResource("3_620wr")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.83541, -2.55906, -14.7515)
+
+[node name="boom4" parent="." instance=ExtResource("3_620wr")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -14.215, -2.55906, -14.7515)
+
+[node name="boom5" parent="." instance=ExtResource("3_620wr")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -27.4019, -2.55906, -14.7515)
+
+[node name="boom6" parent="." instance=ExtResource("3_620wr")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -41.4406, -2.55906, -14.7515)
+
+[node name="boom7" parent="." instance=ExtResource("3_620wr")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 30.9111, -2.55906, -14.7515)
+
+[node name="OmniLight3D" type="OmniLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -3.1379)
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, -0.882324, 0.470642, 0, -0.470642, -0.882324, 0, 0, 0)
+shadow_enabled = true
+shadow_blur = 10.0

@@ -1,0 +1,64 @@
+[gd_scene load_steps=4 format=3 uid="uid://bufgukfh7v5qt"]
+
+[ext_resource type="Script" uid="uid://bbdj6sfwtvtuj" path="res://WinScreenScript.gd" id="1_a03an"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_ok131"]
+font_size = 70
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_a03an"]
+particle_flag_disable_z = true
+spread = 90.0
+initial_velocity_max = 413.79
+linear_accel_min = -100.0
+linear_accel_max = 100.0
+radial_accel_min = -100.0
+radial_accel_max = 100.0
+tangential_accel_min = -100.0
+tangential_accel_max = 100.0
+scale_max = 29.74
+color = Color(1, 1, 0, 1)
+hue_variation_min = 1.0
+hue_variation_max = 1.0
+
+[node name="WinScreen" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 1149.0
+offset_bottom = 648.0
+script = ExtResource("1_a03an")
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_left = 6.0
+offset_top = 4.0
+offset_right = 1151.0
+offset_bottom = 649.0
+text = "YOU WIN"
+label_settings = SubResource("LabelSettings_ok131")
+horizontal_alignment = 1
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 0
+offset_left = 163.0
+offset_top = 405.0
+offset_right = 984.0
+offset_bottom = 513.0
+text = "Return to Main Menu"
+
+[node name="GPUParticles2D" type="GPUParticles2D" parent="."]
+position = Vector2(575, 627)
+rotation = -1.62038
+amount = 50
+process_material = SubResource("ParticleProcessMaterial_a03an")
+
+[node name="GPUParticles2D2" type="GPUParticles2D" parent="."]
+position = Vector2(1095, 638)
+rotation = -1.62038
+amount = 50
+process_material = SubResource("ParticleProcessMaterial_a03an")
+
+[node name="GPUParticles2D3" type="GPUParticles2D" parent="."]
+position = Vector2(57, 626)
+rotation = -1.62038
+amount = 50
+process_material = SubResource("ParticleProcessMaterial_a03an")

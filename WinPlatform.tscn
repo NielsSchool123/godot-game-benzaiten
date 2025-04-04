@@ -1,0 +1,30 @@
+[gd_scene load_steps=5 format=3 uid="uid://bgtir65febws3"]
+
+[ext_resource type="PackedScene" uid="uid://cvtx8rth06d6a" path="res://assets/models/Block.glb" id="1_30mha"]
+[ext_resource type="Script" uid="uid://cof3bdqwun8uc" path="res://PlatformWInScript.gd" id="1_fwa3j"]
+[ext_resource type="PackedScene" uid="uid://bufgukfh7v5qt" path="res://WinScreen.tscn" id="2_fwa3j"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_mi635"]
+
+[node name="WinPlatform" type="StaticBody3D"]
+transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, 0, 0, 0)
+script = ExtResource("1_fwa3j")
+win_screen_scene = ExtResource("2_fwa3j")
+
+[node name="Block" parent="." instance=ExtResource("1_30mha")]
+transform = Transform3D(0.30628, 0, 0, 0, 0.929131, 0, 0, 0, 0.582929, 0, 0, 0)
+
+[node name="Area3D" type="Area3D" parent="."]
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="Area3D"]
+transform = Transform3D(120, 0, 0, 0, 11.0815, 0, 0, 0, 115.109, 0, 2.88055, 0)
+shape = SubResource("BoxShape3D_mi635")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(120, 0, 0, 0, 10, 0, 0, 0, 115.109, 0, 2.88055, 0)
+shape = SubResource("BoxShape3D_mi635")
+
+[node name="OmniLight3D" type="OmniLight3D" parent="."]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 10, 0, 11.2136, 0)
+light_color = Color(1, 1, 0, 1)
+light_energy = 28.385

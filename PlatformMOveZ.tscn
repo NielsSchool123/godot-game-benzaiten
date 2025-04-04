@@ -1,0 +1,37 @@
+[gd_scene load_steps=5 format=3 uid="uid://besrs3ul76nc3"]
+
+[ext_resource type="Script" uid="uid://csi2bhr7o0cr0" path="res://platformmovez.gd" id="1_rugll"]
+[ext_resource type="PackedScene" uid="uid://cvtx8rth06d6a" path="res://assets/models/Block.glb" id="2_r2u5a"]
+[ext_resource type="PackedScene" uid="uid://b45ktddj22rp2" path="res://assets/models/red arrow.glb" id="3_ynwc3"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_mi635"]
+
+[node name="platformmovez" type="StaticBody3D"]
+transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, 0, 0, 0)
+script = ExtResource("1_rugll")
+
+[node name="Block" parent="." instance=ExtResource("2_r2u5a")]
+transform = Transform3D(0.30628, 0, 0, 0, 0.929131, 0, 0, 0, 0.582929, 0, 0, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(120, 0, 0, 0, 10, 0, 0, 0, 115.109, 0, 2.88055, 0)
+shape = SubResource("BoxShape3D_mi635")
+
+[node name="SpotLight3D" type="SpotLight3D" parent="."]
+transform = Transform3D(13.2489, 0, 0, 0, -0.207505, 9.99785, 0, -9.99785, -0.207505, 5.21818, 60.3958, 10.2442)
+light_color = Color(0.104694, 0.0886255, 0.319315, 1)
+light_energy = 16.0
+light_indirect_energy = 16.0
+light_volumetric_fog_energy = 16.0
+light_size = 1.295
+light_specular = 16.0
+spot_range = 10.9624
+spot_angle = 89.99
+
+[node name="Area3D" type="Area3D" parent="."]
+
+[node name="red arrow" parent="." instance=ExtResource("3_ynwc3")]
+transform = Transform3D(-0.144082, 0, 7.57902, 0, 1, 0, -5.71574, 0, -0.191051, 1.01601, 9.75952, 25.9384)
+
+[node name="red arrow2" parent="red arrow" instance=ExtResource("3_ynwc3")]
+transform = Transform3D(-0.999376, 0, 0.0353356, 0, 1, 0, -0.0353356, 0, -0.999376, 8.3138, -0.000120163, 0.152211)
