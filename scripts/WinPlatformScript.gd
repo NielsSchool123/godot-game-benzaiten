@@ -1,6 +1,6 @@
 extends Area3D
 
-@export var win_screen_scene: PackedScene
+@export var win_screen_scene: PackedScene # je selecteerd dit in godot inspector (note: zoek uit hoe dit precies werkt)
 
 func _ready():
 	body_entered.connect(_on_body_entered)
