@@ -30,6 +30,10 @@ text = "level 1"
 layout_mode = 2
 text = "level 2"
 
+[node name="credits" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+text = "credits"
+
 [node name="Quit" type="Button" parent="VBoxContainer"]
 layout_mode = 2
 text = "Quit"
