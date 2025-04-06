@@ -1,0 +1,5 @@
+[gd_scene load_steps=2 format=3 uid="uid://cqkdj7rm7ds05"]
+
+[ext_resource type="PackedScene" uid="uid://bja5lqhupg7bo" path="res://assets/models/in place girl anima.glb" id="1_6j8a6"]
+
+[node name="Animation" instance=ExtResource("1_6j8a6")]

@@ -6,6 +6,9 @@ extends CharacterBody3D
 @export var mouse_sensitivity: float = 0.002
 
 @onready var camera: Camera3D = $Camera3D
+@onready var anim_player: AnimationPlayer = $Animation/AnimationPlayer
+
+
 var mouse_captured: bool = false
 
 # muis input om om je heen te kijken
@@ -46,3 +49,11 @@ func _physics_process(delta: float) -> void:
 	
 	# beweeg het chacter
 	move_and_slide()
+	
+	# speel animatie als je beweegt
+	var horizontal_speed = Vector2(velocity.x, velocity.z).length()
+	if horizontal_speed > 0.1:
+		if !anim_player.is_playing():
+			anim_player.play("Armature|mixamo_com|Layer0") 
+	else:
+		anim_player.stop()
