@@ -1,11 +1,13 @@
-[gd_scene load_steps=10 format=3 uid="uid://pp11buvlytyl"]
+[gd_scene load_steps=12 format=3 uid="uid://pp11buvlytyl"]
 
+[ext_resource type="Script" uid="uid://q6pcjrbfxr" path="res://scripts/bakcgroundmusic.gd" id="1_bjebc"]
 [ext_resource type="PackedScene" uid="uid://d2otn14bnvjn6" path="res://DeathZone.tscn" id="1_rka8t"]
 [ext_resource type="PackedScene" uid="uid://phpa3phmm6uu" path="res://Player.tscn" id="2_5hph3"]
 [ext_resource type="PackedScene" uid="uid://db21nmw2v5t8r" path="res://Platrform.tscn" id="3_j7kpp"]
 [ext_resource type="Texture2D" uid="uid://cwbpls1njfmp3" path="res://assets/images/NightSkyHDRI008_2K-HDR.exr" id="4_bjebc"]
 [ext_resource type="PackedScene" uid="uid://lm1uhplyjr3b" path="res://Slime.tscn" id="5_5rr72"]
 [ext_resource type="PackedScene" uid="uid://bgtir65febws3" path="res://WinPlatform.tscn" id="6_5hph3"]
+[ext_resource type="AudioStream" uid="uid://68ore0n8fakj" path="res://assets/sounds/backgroundmusic.wav" id="8_5rr72"]
 
 [sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_fc0e3"]
 panorama = ExtResource("4_bjebc")
@@ -18,6 +20,7 @@ background_mode = 2
 sky = SubResource("Sky_5hph3")
 
 [node name="Node3D" type="Node3D"]
+script = ExtResource("1_bjebc")
 
 [node name="DeathZone" parent="." instance=ExtResource("1_rka8t")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.1211, -15.3843, 52.9995)
@@ -41,3 +44,7 @@ transform = Transform3D(-0.0818515, 0, 0.996645, 0, 1, 0, -0.996645, 0, -0.08185
 
 [node name="platformmove" parent="." instance=ExtResource("6_5hph3")]
 transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, 1.9608, 0, 89.6868)
+
+[node name="Backgroundmusic" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("8_5rr72")
+autoplay = true

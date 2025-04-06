@@ -21,4 +21,4 @@ shape = SubResource("BoxShape3D_onrkg")
 
 [node name="Jump" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("3_kne1u")
-volume_db = -10.0
+volume_db = -20.0

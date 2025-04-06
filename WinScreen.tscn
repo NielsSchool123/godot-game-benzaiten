@@ -45,6 +45,8 @@ metadata/_edit_use_anchors_ = true
 
 [node name="Levelwin" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("2_0eiwq")
+volume_db = -20.0
 
 [node name="Buttonselect" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("3_cx6km")
+volume_db = -20.0
