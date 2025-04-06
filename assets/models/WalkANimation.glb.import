@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://bja5lqhupg7bo"
-path="res://.godot/imported/in place girl anima.glb-a8e796596177a96acc5e09328a7569b7.scn"
+path="res://.godot/imported/WalkANimation.glb-f7fc516eccb6675a2d1f37d5bbfc1c9d.scn"
 
 [deps]
 
-source_file="res://assets/models/in place girl anima.glb"
-dest_files=["res://.godot/imported/in place girl anima.glb-a8e796596177a96acc5e09328a7569b7.scn"]
+source_file="res://assets/models/WalkANimation.glb"
+dest_files=["res://.godot/imported/WalkANimation.glb-f7fc516eccb6675a2d1f37d5bbfc1c9d.scn"]
 
 [params]
 
@@ -36,7 +36,7 @@ _subresources={
 "animations": {
 "Armature|mixamo_com|Layer0": {
 "save_to_file/enabled": false,
-"save_to_file/keep_custom_tracks": "",
+"save_to_file/keep_custom_tracks": true,
 "save_to_file/path": "",
 "settings/loop_mode": 1,
 "slice_1/end_frame": 0,

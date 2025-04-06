@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=3 uid="uid://v0aliswj1uu"]
+[gd_scene load_steps=4 format=3 uid="uid://v0aliswj1uu"]
 
 [ext_resource type="Script" uid="uid://bxomej6bcgn3k" path="res://scripts/MainMenuScript.gd" id="1_i26rj"]
 [ext_resource type="PackedScene" uid="uid://dxufgbeyng6pj" path="res://MenuBackground.tscn" id="2_eiy7p"]
+[ext_resource type="AudioStream" uid="uid://cdxbjdg0ltl4w" path="res://assets/sounds/buttonselect.wav" id="3_h7a2f"]
 
 [node name="Control" type="Control"]
 layout_mode = 3
@@ -23,14 +24,17 @@ grow_horizontal = 2
 
 [node name="level_1" type="Button" parent="VBoxContainer"]
 layout_mode = 2
-text = "level_1"
+text = "level 1"
 
 [node name="level_2" type="Button" parent="VBoxContainer"]
 layout_mode = 2
-text = "level_2"
+text = "level 2"
 
 [node name="Quit" type="Button" parent="VBoxContainer"]
 layout_mode = 2
 text = "Quit"
 
 [node name="Node3D" parent="." instance=ExtResource("2_eiy7p")]
+
+[node name="Buttonselect" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_h7a2f")

@@ -1,9 +1,13 @@
 extends Control
 
 @export var main_menu_scene: String = "res://MainMenu.tscn"
+@onready var win_sound: AudioStreamPlayer = $Levelwin
+@onready var button_select: AudioStreamPlayer = $Buttonselect
 
 func _ready():
+	win_sound.play()
 	$Button.pressed.connect(_on_button_pressed)
 
 func _on_button_pressed():
+	button_select
 	get_tree().change_scene_to_file(main_menu_scene)

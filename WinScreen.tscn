@@ -1,6 +1,8 @@
-[gd_scene load_steps=3 format=3 uid="uid://bufgukfh7v5qt"]
+[gd_scene load_steps=5 format=3 uid="uid://bufgukfh7v5qt"]
 
 [ext_resource type="Script" uid="uid://bbdj6sfwtvtuj" path="res://scripts/WinScreenScript.gd" id="1_a03an"]
+[ext_resource type="AudioStream" uid="uid://bugmarblwtj2w" path="res://assets/sounds/levelwin.wav" id="2_0eiwq"]
+[ext_resource type="AudioStream" uid="uid://cdxbjdg0ltl4w" path="res://assets/sounds/buttonselect.wav" id="3_cx6km"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_ok131"]
 font_size = 70
@@ -24,7 +26,7 @@ anchor_left = 0.00303819
 anchor_right = 0.996962
 anchor_bottom = 0.99537
 grow_horizontal = 2
-text = "YOU WIN"
+text = "LEVEL BEATEN"
 label_settings = SubResource("LabelSettings_ok131")
 horizontal_alignment = 1
 
@@ -40,3 +42,9 @@ grow_horizontal = 2
 grow_vertical = 2
 text = "Return to Main Menu"
 metadata/_edit_use_anchors_ = true
+
+[node name="Levelwin" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("2_0eiwq")
+
+[node name="Buttonselect" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_cx6km")
