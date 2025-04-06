@@ -10,7 +10,7 @@ config_version=5
 
 [application]
 
-config/name="test 2"
+config/name="Benzaiten"
 run/main_scene="uid://v0aliswj1uu"
 config/features=PackedStringArray("4.4", "Forward Plus")
 config/icon="res://assets/images/icon.svg"
