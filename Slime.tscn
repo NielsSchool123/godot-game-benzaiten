@@ -4,7 +4,7 @@
 [ext_resource type="Script" uid="uid://h6bu4n67q43i" path="res://scripts/SlimeScript.gd" id="1_5jc4t"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_cwriv"]
-size = Vector3(1.32977, 0.951172, 1.39142)
+size = Vector3(1.32977, 1.10168, 1.39142)
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_5jc4t"]
 radius = 5.26002
@@ -14,7 +14,7 @@ transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 0, 0, 
 script = ExtResource("1_5jc4t")
 
 [node name="CollisionShape3D2" type="CollisionShape3D" parent="."]
-transform = Transform3D(1.9, 0, -7.71464e-14, 0, 1.9, 0, 7.71464e-14, 0, 1.9, -0.21516, 0.771593, -0.100452)
+transform = Transform3D(1.89999, 0, -7.81597e-14, 0, 1.9, 0, 7.81597e-14, 0, 1.89999, -0.21516, 0.91458, -0.100452)
 shape = SubResource("BoxShape3D_cwriv")
 
 [node name="slime" parent="." instance=ExtResource("1_2d52u")]
