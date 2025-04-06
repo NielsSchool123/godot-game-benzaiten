@@ -1,6 +1,6 @@
 [gd_scene load_steps=5 format=3 uid="uid://besrs3ul76nc3"]
 
-[ext_resource type="Script" uid="uid://csi2bhr7o0cr0" path="res://platformmovez.gd" id="1_rugll"]
+[ext_resource type="Script" uid="uid://csi2bhr7o0cr0" path="res://scripts/platformmovez.gd" id="1_rugll"]
 [ext_resource type="PackedScene" uid="uid://cvtx8rth06d6a" path="res://assets/models/Block.glb" id="2_r2u5a"]
 [ext_resource type="PackedScene" uid="uid://b45ktddj22rp2" path="res://assets/models/red arrow.glb" id="3_ynwc3"]
 
