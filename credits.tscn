@@ -1,6 +1,6 @@
 [gd_scene load_steps=5 format=3 uid="uid://b0dphdjryugrh"]
 
-[ext_resource type="Script" uid="uid://b83q53uec4arj" path="res://scripts/button.gd" id="1_g4wvt"]
+[ext_resource type="Script" uid="uid://dt5jmw6o1sgk4" path="res://credits.gd" id="1_g4wvt"]
 [ext_resource type="PackedScene" uid="uid://dxufgbeyng6pj" path="res://MenuBackground.tscn" id="1_nm7lk"]
 [ext_resource type="AudioStream" uid="uid://cdxbjdg0ltl4w" path="res://assets/sounds/buttonselect.wav" id="3_g4wvt"]
 
@@ -14,28 +14,37 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_g4wvt")
 metadata/_edit_use_anchors_ = true
 
-[node name="button" type="Button" parent="." node_paths=PackedStringArray("audio_player")]
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
 layout_mode = 1
 anchors_preset = -1
-anchor_left = 0.804688
-anchor_top = 0.895062
-anchor_right = 0.997761
-anchor_bottom = 0.998297
+anchor_left = 0.849826
+anchor_top = 0.95216
+anchor_right = 1.0
+anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-text = "Return to Main Menu"
-script = ExtResource("1_g4wvt")
-press_sound = ExtResource("3_g4wvt")
-audio_player = NodePath("../Buttonselect")
 metadata/_edit_use_anchors_ = true
 
+[node name="MainMenu" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+text = "Return to Main Menu"
+metadata/_edit_use_anchors_ = true
+
+[node name="Buttonselect" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_g4wvt")
+volume_db = -20.0
+
+[node name="Node3D" parent="." instance=ExtResource("1_nm7lk")]
+
 [node name="Label" type="Label" parent="."]
-layout_mode = 1
-anchors_preset = -1
-anchor_right = 1.0026
-anchor_bottom = 1.00154
+layout_mode = 2
+anchor_top = 0.00154321
+anchor_right = 0.998264
+anchor_bottom = 0.99537
 text = "Credits
 
 Game Title
@@ -44,7 +53,7 @@ Test 2
 Programming & Game Design:
 Niels
 
-3D Models:
+3D Models & Animations:
 Bodhi
 
 Music & Sound Effects:
@@ -54,11 +63,4 @@ Special Thanks:
 frikandelbroodjes"
 label_settings = SubResource("LabelSettings_t5rx0")
 horizontal_alignment = 1
-vertical_alignment = 1
 metadata/_edit_use_anchors_ = true
-
-[node name="Node3D" parent="." instance=ExtResource("1_nm7lk")]
-
-[node name="Buttonselect" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("3_g4wvt")
-volume_db = -20.0
