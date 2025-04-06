@@ -1,7 +1,8 @@
-[gd_scene load_steps=5 format=3 uid="uid://lm1uhplyjr3b"]
+[gd_scene load_steps=6 format=3 uid="uid://lm1uhplyjr3b"]
 
 [ext_resource type="PackedScene" uid="uid://cj6v2vv0twtvt" path="res://assets/models/slime.glb" id="1_2d52u"]
 [ext_resource type="Script" uid="uid://h6bu4n67q43i" path="res://scripts/SlimeScript.gd" id="1_5jc4t"]
+[ext_resource type="AudioStream" uid="uid://wronojwepiv5" path="res://assets/sounds/death.wav" id="3_oh23g"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_cwriv"]
 size = Vector3(1.32977, 1.10168, 1.39142)
@@ -30,3 +31,6 @@ shape = SubResource("SphereShape3D_5jc4t")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Hitbox"]
 transform = Transform3D(2.09995, 0, -8.52651e-14, 0, 2.1, 0, 8.52651e-14, 0, 2.09995, -0.21516, 0.771593, -0.100452)
 shape = SubResource("BoxShape3D_cwriv")
+
+[node name="Death" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_oh23g")

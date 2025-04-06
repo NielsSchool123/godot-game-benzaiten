@@ -5,6 +5,7 @@ extends CharacterBody3D
 @onready var player: CharacterBody3D = get_tree().get_first_node_in_group("player")
 @onready var detection_zone: Area3D = $DetectionZone  # De aggro zone
 @onready var hitbox: Area3D = $Hitbox  # De hitbox om te resetten
+@onready var death: AudioStreamPlayer = $Death
 
 var active: bool = false  # Vijand start inactief (wat doet bool)
 
@@ -26,6 +27,7 @@ func _on_hitbox_entered(body):
 		reset_game()  # Reset de game wanneer de speler de hitbox aanraakt
 
 func reset_game():
+	death.play()
 	get_tree().reload_current_scene()
 
 func _physics_process(delta: float) -> void:

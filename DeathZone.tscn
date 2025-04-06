@@ -1,6 +1,7 @@
-[gd_scene load_steps=3 format=3 uid="uid://d2otn14bnvjn6"]
+[gd_scene load_steps=4 format=3 uid="uid://d2otn14bnvjn6"]
 
 [ext_resource type="Script" uid="uid://b55u1y8stj2pf" path="res://scripts/DeathZoneScript.gd" id="1_cpr33"]
+[ext_resource type="AudioStream" uid="uid://wronojwepiv5" path="res://assets/sounds/death.wav" id="2_j53p1"]
 
 [sub_resource type="WorldBoundaryShape3D" id="WorldBoundaryShape3D_aleya"]
 
@@ -9,3 +10,6 @@ script = ExtResource("1_cpr33")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 shape = SubResource("WorldBoundaryShape3D_aleya")
+
+[node name="Death" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("2_j53p1")
