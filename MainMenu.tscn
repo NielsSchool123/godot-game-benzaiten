@@ -17,10 +17,12 @@ metadata/_edit_use_anchors_ = true
 
 [node name="VBoxContainer" type="VBoxContainer" parent="."]
 layout_mode = 1
-anchors_preset = 10
+anchors_preset = -1
 anchor_right = 1.0
-offset_bottom = 101.0
+anchor_bottom = 0.263889
+offset_bottom = -70.0
 grow_horizontal = 2
+metadata/_edit_use_anchors_ = true
 
 [node name="level_1" type="Button" parent="VBoxContainer"]
 layout_mode = 2
@@ -29,6 +31,10 @@ text = "level 1"
 [node name="level_2" type="Button" parent="VBoxContainer"]
 layout_mode = 2
 text = "level 2"
+
+[node name="level_3" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+text = "level 3"
 
 [node name="credits" type="Button" parent="VBoxContainer"]
 layout_mode = 2

@@ -19,6 +19,8 @@ func _ready():
 
 # muis input om om je heen te kijken
 func _input(event):
+	if is_dead:
+		return
 	if event is InputEventMouseMotion and mouse_captured:
 		rotate_y(-event.relative.x * mouse_sensitivity)  # horizontaal
 		camera.rotate_x(event.relative.y * mouse_sensitivity)  # verticaal

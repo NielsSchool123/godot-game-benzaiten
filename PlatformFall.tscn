@@ -1,14 +1,17 @@
-[gd_scene load_steps=5 format=4 uid="uid://db21nmw2v5t8r"]
+[gd_scene load_steps=7 format=4 uid="uid://basjwxxsevbey"]
+
+[ext_resource type="Script" uid="uid://kyct1mkg4sv6" path="res://platform_fall.gd" id="1_5h7le"]
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_5h7le"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_mi635"]
+size = Vector3(1, 1.10107, 1)
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_v7x5n"]
-resource_name = "Material.001"
-cull_mode = 2
-albedo_color = Color(0.19758, 0.567924, 0.121967, 1)
-roughness = 0.5
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_wnf2a"]
+albedo_color = Color(1, 0, 0, 1)
+metallic = 1.0
 
-[sub_resource type="ArrayMesh" id="ArrayMesh_ixsv5"]
+[sub_resource type="ArrayMesh" id="ArrayMesh_wnf2a"]
 _surfaces = [{
 "aabb": AABB(-200.049, -3.87262, -100.73, 400.099, 7.74524, 201.459),
 "format": 34896613377,
@@ -22,7 +25,7 @@ _surfaces = [{
 }]
 blend_shape_mode = 0
 
-[sub_resource type="ArrayMesh" id="ArrayMesh_f7oas"]
+[sub_resource type="ArrayMesh" id="ArrayMesh_5h7le"]
 resource_name = "Block_Cube_001"
 _surfaces = [{
 "aabb": AABB(-200.049, -3.87262, -100.73, 400.099, 7.74524, 201.459),
@@ -30,7 +33,7 @@ _surfaces = [{
 "format": 34896613399,
 "index_count": 36,
 "index_data": PackedByteArray("AAABAAIAAAADAAEABAAFAAYABAAHAAUACAAJAAoACAALAAkADAANAA4ADAAPAA0AEAARABIAEAATABEAFAAVABYAFAAXABUA"),
-"material": SubResource("StandardMaterial3D_v7x5n"),
+"material": SubResource("StandardMaterial3D_wnf2a"),
 "name": "Material.001",
 "primitive": 3,
 "uv_scale": Vector4(0, 0, 0, 0),
@@ -38,14 +41,21 @@ _surfaces = [{
 "vertex_data": PackedByteArray("AAAAAP//VNUAAP//AABU1QAA/////1TVAAAAAAAAVNUAAAAAAAD///////8AAP//AAD//wAA/////wAAAAD/////AAAAAFTV////////VNX/////AABU1f//AAD//1TV//8AAP///78AAP//////v/////////+/AAAAAP///78AAAAAAAD/v///AAD///+///8AAAAA/78AAAAA////v/////8AAP//AAD///////8AAP//AAD/////////////VNVU1VTVVNVU1VTVVNVU1f+//7//v/+//7//v/+//7+qKqoqqiqqKqoqqiqqKqoq/////////////////////wAA/38AAP9/AAD/fwAA/3//f/+//3//v/9//7//f/+/")
 }]
 blend_shape_mode = 0
-shadow_mesh = SubResource("ArrayMesh_ixsv5")
+shadow_mesh = SubResource("ArrayMesh_wnf2a")
 
-[node name="platform" type="StaticBody3D"]
+[node name="platformchange" type="StaticBody3D"]
 transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, 0, 0, 0)
+physics_material_override = SubResource("PhysicsMaterial_5h7le")
+script = ExtResource("1_5h7le")
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="."]
 transform = Transform3D(120, 0, 0, 0, 10, 0, 0, 0, 115.109, 0, 2.88055, 0)
 shape = SubResource("BoxShape3D_mi635")
+
+[node name="Cube" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.306, 0, 0, 0, 0.929, 0, 0, 0, 0.583, -0.219177, 3.87262, 0.473404)
+mesh = SubResource("ArrayMesh_5h7le")
+skeleton = NodePath("")
 
 [node name="SpotLight3D" type="SpotLight3D" parent="."]
 transform = Transform3D(13.2489, 0, 0, 0, -0.207505, 9.99785, 0, -9.99785, -0.207505, 5.21818, 60.3958, 10.2442)
@@ -58,7 +68,11 @@ light_specular = 16.0
 spot_range = 10.9624
 spot_angle = 89.99
 
-[node name="Cube" type="MeshInstance3D" parent="."]
-transform = Transform3D(0.306, 0, 0, 0, 0.929, 0, 0, 0, 0.583, -0.219177, 3.87262, 0.473404)
-mesh = SubResource("ArrayMesh_f7oas")
-skeleton = NodePath("")
+[node name="DetectorArea" type="Area3D" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="DetectorArea"]
+transform = Transform3D(120, 0, 0, 0, 10, 0, 0, 0, 115.109, 0, 10.7473, 0)
+shape = SubResource("BoxShape3D_mi635")
+
+[connection signal="body_entered" from="DetectorArea" to="." method="_on_detector_area_body_entered"]
+[connection signal="body_exited" from="DetectorArea" to="." method="_on_detector_area_body_exited"]

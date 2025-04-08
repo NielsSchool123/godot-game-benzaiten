@@ -42,7 +42,7 @@ transform = Transform3D(0.31996, 0, 0, 0, 0.1, 0, 0, 0, 0.331587, 0.0420074, -0.
 [node name="slime" parent="." instance=ExtResource("5_5rr72")]
 transform = Transform3D(-0.0818515, 0, 0.996645, 0, 1, 0, -0.996645, 0, -0.0818515, 0, 0, 57.4675)
 
-[node name="platformmove" parent="." instance=ExtResource("6_5hph3")]
+[node name="winplatform" parent="." instance=ExtResource("6_5hph3")]
 transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, 1.9608, 0, 89.6868)
 
 [node name="Backgroundmusic" type="AudioStreamPlayer" parent="."]
