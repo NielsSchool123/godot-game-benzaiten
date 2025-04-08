@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://bds6faxm42coo"]
+[gd_scene load_steps=15 format=3 uid="uid://bds6faxm42coo"]
 
 [ext_resource type="Script" uid="uid://q6pcjrbfxr" path="res://scripts/bakcgroundmusic.gd" id="1_7ds5r"]
 [ext_resource type="PackedScene" uid="uid://d2otn14bnvjn6" path="res://DeathZone.tscn" id="2_liaj6"]
@@ -10,6 +10,7 @@
 [ext_resource type="PackedScene" uid="uid://besrs3ul76nc3" path="res://PlatformMOveZ.tscn" id="9_b60u5"]
 [ext_resource type="PackedScene" uid="uid://basjwxxsevbey" path="res://PlatformFall.tscn" id="9_liaj6"]
 [ext_resource type="PackedScene" uid="uid://8t2mksv7v141" path="res://PlatformFallFAST.tscn" id="10_b60u5"]
+[ext_resource type="Script" uid="uid://bbovss4m0fxbi" path="res://platform_m_ove_z.gd" id="10_kmy7e"]
 
 [sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_fc0e3"]
 panorama = ExtResource("5_833wy")
@@ -36,7 +37,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.526007, 0)
 environment = SubResource("Environment_ryrav")
 
 [node name="platformwin" parent="." instance=ExtResource("7_jvy75")]
-transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, 0.0600089, 0, 100.907)
+transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, 0.0600089, 0, 147.242)
 
 [node name="Backgroundmusic" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("8_g0tlw")
@@ -49,10 +50,16 @@ transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, 0, 0, 19.122)
 transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, 0, 0, 19.122)
 
 [node name="platformmovez" parent="." instance=ExtResource("9_b60u5")]
-transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, 0, 0, 42.6083)
+transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, -0.0766983, 0.0354919, 42.7848)
+script = ExtResource("10_kmy7e")
+move_distance = 7.5
+move_speed = 10.0
 
 [node name="platformchangeGFASTR" parent="." instance=ExtResource("10_b60u5")]
-transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, 0, 0, 63.0575)
+transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, 0, 0, 72.5752)
+
+[node name="platformchangeGFASTR3" parent="." instance=ExtResource("10_b60u5")]
+transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, 0, 0, 125.159)
 
 [node name="platformchangeGFASTR2" parent="." instance=ExtResource("10_b60u5")]
-transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, 0, 0, 84.3732)
+transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, 0.0531788, 3.8147e-06, 99.9978)
