@@ -10,7 +10,7 @@
 [ext_resource type="PackedScene" uid="uid://besrs3ul76nc3" path="res://PlatformMOveZ.tscn" id="9_b60u5"]
 [ext_resource type="PackedScene" uid="uid://basjwxxsevbey" path="res://PlatformFall.tscn" id="9_liaj6"]
 [ext_resource type="PackedScene" uid="uid://8t2mksv7v141" path="res://PlatformFallFAST.tscn" id="10_b60u5"]
-[ext_resource type="Script" uid="uid://bbovss4m0fxbi" path="res://platform_m_ove_z.gd" id="10_kmy7e"]
+[ext_resource type="Script" uid="uid://bbovss4m0fxbi" path="res://scripts/PlatformMoveLVL3.gd" id="10_kmy7e"]
 
 [sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_fc0e3"]
 panorama = ExtResource("5_833wy")

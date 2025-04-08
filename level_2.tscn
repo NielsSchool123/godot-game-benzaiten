@@ -42,6 +42,8 @@ transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, -0.0590725, 0.096283, 8
 [node name="platformmovex1" parent="." instance=ExtResource("6_0s5r2")]
 transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, 0, 0, 18.9552)
 script = ExtResource("7_ehv2h")
+move_distance = 10.0
+move_speed = 15.0
 
 [node name="platformmovex2" parent="." instance=ExtResource("6_0s5r2")]
 transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, 0, 0, 36.2697)

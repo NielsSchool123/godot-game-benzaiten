@@ -1,6 +1,6 @@
 [gd_scene load_steps=7 format=4 uid="uid://basjwxxsevbey"]
 
-[ext_resource type="Script" uid="uid://kyct1mkg4sv6" path="res://scripts/platform_fall.gd" id="1_5h7le"]
+[ext_resource type="Script" uid="uid://kyct1mkg4sv6" path="res://scripts/PlatformFall.gd" id="1_5h7le"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_5h7le"]
 

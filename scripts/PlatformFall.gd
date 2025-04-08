@@ -1,14 +1,10 @@
 extends Node3D
 
-# het meeste hiervan is door AI geschreven (note to self: rewrite/write comments + code)
-
 class_name DisappearingPlatform
 
 # Export variables to customize platform behavior in the editor
 @export var disappear_time: float = 0.5
 @export var respawn_time: float = 3.0
-@export var warning_color: Color = Color(1.0, 0.5, 0.0)  # Orange warning color
-@export var normal_color: Color = Color(0.2, 0.8, 0.2)   # Default green color
 @export var fade_animation_time: float = 0.5
 
 # Internal variables to track state
@@ -38,8 +34,6 @@ func _ready():
 	# Store and modify all materials in the platform mesh
 	collect_materials(platform_mesh)
 	
-	# Set initial color
-	set_platform_color(normal_color)
 
 # Recursively collect all materials from the model
 func collect_materials(node: Node) -> void:
@@ -66,23 +60,7 @@ func collect_materials(node: Node) -> void:
 	for child in node.get_children():
 		collect_materials(child)
 
-# Set color for all platform materials
-func set_platform_color(color: Color) -> void:
-	for material in materials:
-		if material is StandardMaterial3D:
-			material.albedo_color = color
-		elif material is BaseMaterial3D:
-			material.albedo_color = color
 
-# Set alpha for all platform materials
-func set_platform_alpha(alpha: float) -> void:
-	for material in materials:
-		if material is StandardMaterial3D:
-			material.transparency = BaseMaterial3D.TRANSPARENCY_ALPHA
-			material.albedo_color.a = alpha
-		elif material is BaseMaterial3D:
-			material.transparency = BaseMaterial3D.TRANSPARENCY_ALPHA
-			material.albedo_color.a = alpha
 
 func _physics_process(delta):
 	if is_player_on_platform and is_active:
@@ -90,8 +68,6 @@ func _physics_process(delta):
 		timer += delta
 		
 		# Visual warning when platform is about to disappear
-		if timer > disappear_time * 0.5:
-			set_platform_color(warning_color)
 		
 		# When timer reaches disappear_time, start disappearing
 		if timer >= disappear_time:
@@ -111,7 +87,6 @@ func start_disappearing():
 	# Create a tween for smooth disappearing animation
 	var tween = create_tween()
 	tween.tween_property(self, "scale", Vector3.ZERO, fade_animation_time)
-	tween.parallel().tween_method(set_platform_alpha, 1.0, 0.0, fade_animation_time)
 	
 	# Disable collision when platform is gone
 	tween.tween_callback(func(): 
@@ -129,19 +104,12 @@ func respawn_platform():
 	collision_shape.disabled = false
 	visible = true
 	
-	# Reset appearance
-	set_platform_color(normal_color)
-	set_platform_alpha(1.0)
 	
 	# Create a tween for smooth respawning animation
 	var tween = create_tween()
 	tween.tween_property(self, "scale", original_scale, fade_animation_time)
 	
 # Signal handlers for player detection
-
-
-
-
 
 func _on_detector_area_body_entered(body: Node3D):
 	if body.is_in_group("player"):
@@ -153,4 +121,3 @@ func _on_detector_area_body_exited(body: Node3D):
 		is_player_on_platform = false
 	if is_active:
 		timer = 0.0
-		set_platform_color(normal_color)
