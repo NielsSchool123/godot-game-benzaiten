@@ -17,17 +17,6 @@ size = Vector3(1, 1.07471, 0.92334)
 transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, 0, 0, 0)
 script = ExtResource("1_3lrba")
 
-[node name="SpotLight3D" type="SpotLight3D" parent="."]
-transform = Transform3D(13.2489, 0, 0, 0, -0.207505, 9.99785, 0, -9.99785, -0.207505, 5.21818, 60.3958, 10.2442)
-light_color = Color(0.104694, 0.0886255, 0.319315, 1)
-light_energy = 16.0
-light_indirect_energy = 16.0
-light_volumetric_fog_energy = 16.0
-light_size = 1.295
-light_specular = 16.0
-spot_range = 10.9624
-spot_angle = 89.99
-
 [node name="platforisland" parent="." instance=ExtResource("3_0flqw")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
 

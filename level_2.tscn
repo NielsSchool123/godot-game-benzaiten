@@ -90,3 +90,8 @@ transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, 0, 0, -1.15819)
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
 transform = Transform3D(2000, 0, 0, 0, 100, 0, 0, 0, 2000, 12.0219, -50.5651, -0.229027)
 mesh = SubResource("BoxMesh_0hcvi")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(0.842687, 0.182316, -0.506595, 0.138096, 0.836254, 0.530668, 0.520392, -0.517146, 0.679524, 0, 7.40441, 0)
+shadow_enabled = true
+shadow_blur = 3.0

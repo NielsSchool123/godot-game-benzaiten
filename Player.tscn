@@ -25,3 +25,4 @@ stream = ExtResource("3_kne1u")
 volume_db = -20.0
 
 [node name="CharachterDeath" parent="." instance=ExtResource("4_e80uo")]
+visible = false

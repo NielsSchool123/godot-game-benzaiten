@@ -20,6 +20,7 @@ sky_material = SubResource("PanoramaSkyMaterial_fc0e3")
 [sub_resource type="Environment" id="Environment_ryrav"]
 background_mode = 2
 sky = SubResource("Sky_5hph3")
+volumetric_fog_enabled = true
 
 [sub_resource type="FastNoiseLite" id="FastNoiseLite_eoq84"]
 noise_type = 0
@@ -63,10 +64,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.526007, 0)
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_ryrav")
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="WorldEnvironment"]
-transform = Transform3D(2000, 0, 0, 0, 100, 0, 0, 0, 2000, 12.0219, -50.5651, -0.229027)
-mesh = SubResource("BoxMesh_es7r5")
-
 [node name="winplatform" parent="." instance=ExtResource("7_xxbfp")]
 transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, -0.333206, -3.8147e-06, 223.557)
 
@@ -94,3 +91,13 @@ transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 2.0769
 
 [node name="platforisland2" parent="." instance=ExtResource("10_cicwn")]
 transform = Transform3D(0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, 0, 0, 38.5378)
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(0.842687, 0.182316, -0.506595, 0.138096, 0.836254, 0.530668, 0.520392, -0.517146, 0.679524, 0, 7.40441, 0)
+shadow_enabled = true
+shadow_blur = 3.0
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(2000, 0, 0, 0, 100, 0, 0, 0, 2000, 12.0219, -50.5651, -0.229027)
+mesh = SubResource("BoxMesh_es7r5")
+skeleton = NodePath("../WorldEnvironment")

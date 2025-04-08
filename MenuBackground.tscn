@@ -1,9 +1,10 @@
-[gd_scene load_steps=9 format=3 uid="uid://dxufgbeyng6pj"]
+[gd_scene load_steps=10 format=3 uid="uid://dxufgbeyng6pj"]
 
 [ext_resource type="PackedScene" uid="uid://db21nmw2v5t8r" path="res://Platrform.tscn" id="1_we2lv"]
 [ext_resource type="PackedScene" uid="uid://cpipsmpcc0gs4" path="res://assets/models/boom.glb" id="3_620wr"]
 [ext_resource type="PackedScene" uid="uid://7q6yjl7ixw88" path="res://carachter_pushup.tscn" id="3_we2lv"]
 [ext_resource type="Texture2D" uid="uid://cwbpls1njfmp3" path="res://assets/images/NightSkyHDRI008_2K-HDR.exr" id="4_7vr3j"]
+[ext_resource type="PackedScene" uid="uid://cqdmd237vujjo" path="res://assets/models/rups gast.glb" id="5_620wr"]
 
 [sub_resource type="CameraAttributesPractical" id="CameraAttributesPractical_x1b6m"]
 dof_blur_far_enabled = true
@@ -163,3 +164,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.251617, -2.327, -5.54457)
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_x1b6m")
+
+[node name="rups gast" parent="." instance=ExtResource("5_620wr")]
+transform = Transform3D(0.841596, 0, -0.540108, 0, 1, 0, 0.540108, 0, 0.841596, 8.35078, -3.34385, -25.919)

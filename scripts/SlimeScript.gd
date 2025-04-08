@@ -27,7 +27,7 @@ func _on_hitbox_entered(body):
 		if body.has_method("die"):
 			body.die()
 			death.play()
-			await get_tree().create_timer(3.0).timeout  # wacht 2 seconden zodat animatie afspeelt
+			await get_tree().create_timer(3.0).timeout  # wacht 3 seconden zodat animatie afspeelt
 		reset_game()
 
 
