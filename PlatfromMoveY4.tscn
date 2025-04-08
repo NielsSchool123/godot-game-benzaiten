@@ -1,50 +1,8 @@
-[gd_scene load_steps=10 format=4 uid="uid://c0xetmip442kc"]
+[gd_scene load_steps=7 format=3 uid="uid://c0xetmip442kc"]
 
 [ext_resource type="Script" uid="uid://bksaafsnfj1c0" path="res://scripts/PlatformMoveScriptz.gd" id="1_3lrba"]
 [ext_resource type="PackedScene" uid="uid://b45ktddj22rp2" path="res://assets/models/red arrow.glb" id="2_0flqw"]
-
-[sub_resource type="BoxShape3D" id="BoxShape3D_mi635"]
-size = Vector3(1, 1.07471, 0.92334)
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_v7x5n"]
-resource_name = "Material.001"
-cull_mode = 2
-albedo_color = Color(0.19758, 0.567924, 0.121967, 1)
-roughness = 0.5
-
-[sub_resource type="ArrayMesh" id="ArrayMesh_6n2mc"]
-_surfaces = [{
-"aabb": AABB(-200.049, -3.87262, -100.73, 400.099, 7.74524, 201.459),
-"format": 34896613377,
-"index_count": 36,
-"index_data": PackedByteArray("AAABAAIAAAADAAEABAACAAEAAwAEAAEABQAAAAIAAwAAAAUABAAGAAIABQACAAYAAwAHAAQAAwAFAAcABwAGAAQABwAFAAYA"),
-"name": "Material.001",
-"primitive": 3,
-"uv_scale": Vector4(0, 0, 0, 0),
-"vertex_count": 8,
-"vertex_data": PackedByteArray("AAAAAP//AAAAAP//AAAAAAAA/////wAAAAAAAAAAAAD/////AAAAAP//AAD//wAA////////AAD//wAAAAAAAA==")
-}]
-blend_shape_mode = 0
-
-[sub_resource type="ArrayMesh" id="ArrayMesh_6yw0j"]
-resource_name = "Block_Cube_001"
-_surfaces = [{
-"aabb": AABB(-200.049, -3.87262, -100.73, 400.099, 7.74524, 201.459),
-"attribute_data": PackedByteArray("/1////+f/7//n////1//v/9f/7//n/9//5//v/9f/3//X/9//5//P/+f/3//X/8//1//P/+fAAD/n/8//18AAP8f/3//X/8//1//f/8f/z//n/9//9//P//f/3//n/8/"),
-"format": 34896613399,
-"index_count": 36,
-"index_data": PackedByteArray("AAABAAIAAAADAAEABAAFAAYABAAHAAUACAAJAAoACAALAAkADAANAA4ADAAPAA0AEAARABIAEAATABEAFAAVABYAFAAXABUA"),
-"material": SubResource("StandardMaterial3D_v7x5n"),
-"name": "Material.001",
-"primitive": 3,
-"uv_scale": Vector4(0, 0, 0, 0),
-"vertex_count": 24,
-"vertex_data": PackedByteArray("AAAAAP//VNUAAP//AABU1QAA/////1TVAAAAAAAAVNUAAAAAAAD///////8AAP//AAD//wAA/////wAAAAD/////AAAAAFTV////////VNX/////AABU1f//AAD//1TV//8AAP///78AAP//////v/////////+/AAAAAP///78AAAAAAAD/v///AAD///+///8AAAAA/78AAAAA////v/////8AAP//AAD///////8AAP//AAD/////////////VNVU1VTVVNVU1VTVVNVU1f+//7//v/+//7//v/+//7+qKqoqqiqqKqoqqiqqKqoq/////////////////////wAA/38AAP9/AAD/fwAA/3//f/+//3//v/9//7//f/+/")
-}]
-blend_shape_mode = 0
-shadow_mesh = SubResource("ArrayMesh_6n2mc")
-
-[sub_resource type="Skin" id="Skin_6n2mc"]
+[ext_resource type="PackedScene" uid="uid://bb4guv2ig54t4" path="res://Island.tscn" id="3_0flqw"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_3lrba"]
 albedo_color = Color(0.270588, 0.145098, 0, 1)
@@ -52,17 +10,12 @@ albedo_color = Color(0.270588, 0.145098, 0, 1)
 [sub_resource type="BoxMesh" id="BoxMesh_0flqw"]
 material = SubResource("StandardMaterial3D_3lrba")
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_mi635"]
+size = Vector3(1, 1.07471, 0.92334)
+
 [node name="platformmovez4" type="StaticBody3D"]
 transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, 0, 0, 0)
 script = ExtResource("1_3lrba")
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
-transform = Transform3D(120, 0, 0, 0, 10, 0, 0, 0, 115.109, 0, 2.88055, 0)
-shape = SubResource("BoxShape3D_mi635")
-
-[node name="CollisionShape3D2" type="CollisionShape3D" parent="."]
-transform = Transform3D(6.15416, 0, 0, 0, 49.4756, 0, 0, 0, 22.0678, -23.7595, 22.8829, -0.0187563)
-shape = SubResource("BoxShape3D_mi635")
 
 [node name="SpotLight3D" type="SpotLight3D" parent="."]
 transform = Transform3D(13.2489, 0, 0, 0, -0.207505, 9.99785, 0, -9.99785, -0.207505, 5.21818, 60.3958, 10.2442)
@@ -75,17 +28,19 @@ light_specular = 16.0
 spot_range = 10.9624
 spot_angle = 89.99
 
-[node name="Area3D" type="Area3D" parent="."]
+[node name="platforisland" parent="." instance=ExtResource("3_0flqw")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
 
-[node name="Cube" type="MeshInstance3D" parent="."]
-transform = Transform3D(0.306, 0, 0, 0, 0.929, 0, 0, 0, 0.583, -0.219177, 3.87262, 0.473404)
-mesh = SubResource("ArrayMesh_6yw0j")
-skin = SubResource("Skin_6n2mc")
-skeleton = NodePath("")
+[node name="StaticBody3D" type="StaticBody3D" parent="."]
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
-transform = Transform3D(-5.19593, 0, 0, 0, 50.9506, 0, 0, 0, 22.3764, -23.6334, 24.3639, 0.086174)
+[node name="MeshInstance3D" type="MeshInstance3D" parent="StaticBody3D"]
+transform = Transform3D(-5.19593, 0, 0, 0, 50.9506, 0, 0, 0, 22.3764, -40.86, 24.3639, 19.4173)
 mesh = SubResource("BoxMesh_0flqw")
+skeleton = NodePath("../..")
 
-[node name="red arrow" parent="MeshInstance3D" instance=ExtResource("2_0flqw")]
+[node name="red arrow" parent="StaticBody3D/MeshInstance3D" instance=ExtResource("2_0flqw")]
 transform = Transform3D(0.00108819, -0.440762, 0, -0.105975, -4.7067e-05, 0, 0, 0, 0.338814, 0.544404, 0.199451, 0)
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="StaticBody3D"]
+transform = Transform3D(6.15416, 0, 0, 0, 49.4756, 0, 0, 0, 22.0678, -40.9861, 22.8829, 19.3124)
+shape = SubResource("BoxShape3D_mi635")

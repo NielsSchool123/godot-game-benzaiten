@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://bb4guv2ig54t4"]
+
+[ext_resource type="PackedScene" uid="uid://bkgaiqfclk5" path="res://assets/models/base eiland.glb" id="1_weaig"]
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_weaig"]
+
+[node name="platforisland" type="StaticBody3D"]
+transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, 0, 0, 0)
+
+[node name="base eiland" parent="." instance=ExtResource("1_weaig")]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(200, 0, 0, 0, 10, 0, 0, 0, 200, 2.27453, -10.3266, 18.2986)
+shape = SubResource("CylinderShape3D_weaig")

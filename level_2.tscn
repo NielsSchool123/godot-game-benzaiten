@@ -1,19 +1,19 @@
-[gd_scene load_steps=15 format=3 uid="uid://d245pelxgsbqf"]
+[gd_scene load_steps=20 format=3 uid="uid://d3mlotrslplbs"]
 
 [ext_resource type="Script" uid="uid://q6pcjrbfxr" path="res://scripts/bakcgroundmusic.gd" id="1_ehv2h"]
 [ext_resource type="PackedScene" uid="uid://d2otn14bnvjn6" path="res://DeathZone.tscn" id="1_n7ypv"]
 [ext_resource type="PackedScene" uid="uid://phpa3phmm6uu" path="res://Player.tscn" id="2_0s5r2"]
-[ext_resource type="PackedScene" uid="uid://db21nmw2v5t8r" path="res://Platrform.tscn" id="3_7j8ne"]
-[ext_resource type="Texture2D" uid="uid://dft0ttx1wn8qk" path="res://assets/images/NightSkyHDRI007_2K-HDR.exr" id="4_0s5r2"]
+[ext_resource type="Texture2D" uid="uid://b5so7di8cwa53" path="res://assets/images/kloppenheim_07_puresky_2k.exr" id="4_eoq84"]
 [ext_resource type="PackedScene" uid="uid://brjiarf6ok01m" path="res://PlatfromMoveX.tscn" id="6_0s5r2"]
 [ext_resource type="PackedScene" uid="uid://besrs3ul76nc3" path="res://PlatformMOveZ.tscn" id="7_7dov7"]
 [ext_resource type="PackedScene" uid="uid://bgtir65febws3" path="res://WinPlatform.tscn" id="7_7j8ne"]
 [ext_resource type="Script" uid="uid://bdo7qk8ufymio" path="res://scripts/PlatformMoveScriptx2.gd" id="7_ehv2h"]
 [ext_resource type="Script" uid="uid://bxxqjh27dwfix" path="res://PlatformMoveScriptx.gd" id="9_eoq84"]
 [ext_resource type="AudioStream" uid="uid://68ore0n8fakj" path="res://assets/sounds/backgroundmusic.wav" id="10_15wb7"]
+[ext_resource type="PackedScene" uid="uid://bb4guv2ig54t4" path="res://Island.tscn" id="11_yl73a"]
 
 [sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_7j8ne"]
-panorama = ExtResource("4_0s5r2")
+panorama = ExtResource("4_eoq84")
 energy_multiplier = 0.5
 
 [sub_resource type="Sky" id="Sky_7dov7"]
@@ -23,38 +23,70 @@ sky_material = SubResource("PanoramaSkyMaterial_7j8ne")
 background_mode = 2
 sky = SubResource("Sky_7dov7")
 
+[sub_resource type="FastNoiseLite" id="FastNoiseLite_eoq84"]
+noise_type = 0
+
+[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_pi0sr"]
+seamless = true
+as_normal_map = true
+noise = SubResource("FastNoiseLite_eoq84")
+
+[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_e8vru"]
+seamless = true
+as_normal_map = true
+noise = SubResource("FastNoiseLite_eoq84")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_yl73a"]
+transparency = 1
+depth_draw_mode = 1
+albedo_color = Color(0, 1, 1, 0.6)
+roughness = 0.0
+normal_enabled = true
+normal_texture = SubResource("NoiseTexture2D_pi0sr")
+refraction_enabled = true
+refraction_texture = SubResource("NoiseTexture2D_e8vru")
+uv1_world_triplanar = true
+
+[sub_resource type="BoxMesh" id="BoxMesh_0hcvi"]
+material = SubResource("StandardMaterial3D_yl73a")
+
 [node name="Node3D" type="Node3D"]
 script = ExtResource("1_ehv2h")
 
 [node name="DeathZone" parent="." instance=ExtResource("1_n7ypv")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.1211, -15.3843, 52.9995)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -10, 0)
 
 [node name="player" parent="." instance=ExtResource("2_0s5r2")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.526007, 0)
-
-[node name="platform" parent="." instance=ExtResource("3_7j8ne")]
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_ryrav")
 
 [node name="WinPlatform" parent="." instance=ExtResource("7_7j8ne")]
-transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, -0.0590725, 0.096283, 85.7152)
+transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, -0.0590725, 0.096283, 99.7399)
 
 [node name="platformmovex1" parent="." instance=ExtResource("6_0s5r2")]
-transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, 0, 0, 18.9552)
+transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, -0.0286694, 1.90735e-06, 23.0967)
 script = ExtResource("7_ehv2h")
 move_distance = 10.0
 move_speed = 15.0
 
 [node name="platformmovex2" parent="." instance=ExtResource("6_0s5r2")]
-transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, 0, 0, 36.2697)
+transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, 0, 0, 48.2192)
 script = ExtResource("9_eoq84")
 move_distance = 10.0
 move_speed = 15.0
 
 [node name="platformmovez" parent="." instance=ExtResource("7_7dov7")]
-transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, 0, 0, 62.1589)
+transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, 0, 0, 74.8404)
 
 [node name="Backgroundmusic" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("10_15wb7")
 autoplay = true
+
+[node name="platforisland" parent="." instance=ExtResource("11_yl73a")]
+transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, 0, 0, -1.15819)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(2000, 0, 0, 0, 100, 0, 0, 0, 2000, 12.0219, -50.5651, -0.229027)
+mesh = SubResource("BoxMesh_0hcvi")

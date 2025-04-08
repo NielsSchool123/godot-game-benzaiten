@@ -1,19 +1,19 @@
-[gd_scene load_steps=15 format=3 uid="uid://bds6faxm42coo"]
+[gd_scene load_steps=20 format=3 uid="uid://dd5a1dr3c5vav"]
 
 [ext_resource type="Script" uid="uid://q6pcjrbfxr" path="res://scripts/bakcgroundmusic.gd" id="1_7ds5r"]
 [ext_resource type="PackedScene" uid="uid://d2otn14bnvjn6" path="res://DeathZone.tscn" id="2_liaj6"]
 [ext_resource type="PackedScene" uid="uid://phpa3phmm6uu" path="res://Player.tscn" id="3_b60u5"]
-[ext_resource type="PackedScene" uid="uid://db21nmw2v5t8r" path="res://Platrform.tscn" id="4_kmy7e"]
-[ext_resource type="Texture2D" uid="uid://cwbpls1njfmp3" path="res://assets/images/NightSkyHDRI008_2K-HDR.exr" id="5_833wy"]
+[ext_resource type="Texture2D" uid="uid://b5so7di8cwa53" path="res://assets/images/kloppenheim_07_puresky_2k.exr" id="4_kmy7e"]
 [ext_resource type="PackedScene" uid="uid://bgtir65febws3" path="res://WinPlatform.tscn" id="7_jvy75"]
 [ext_resource type="AudioStream" uid="uid://68ore0n8fakj" path="res://assets/sounds/backgroundmusic.wav" id="8_g0tlw"]
 [ext_resource type="PackedScene" uid="uid://besrs3ul76nc3" path="res://PlatformMOveZ.tscn" id="9_b60u5"]
 [ext_resource type="PackedScene" uid="uid://basjwxxsevbey" path="res://PlatformFall.tscn" id="9_liaj6"]
 [ext_resource type="PackedScene" uid="uid://8t2mksv7v141" path="res://PlatformFallFAST.tscn" id="10_b60u5"]
 [ext_resource type="Script" uid="uid://bbovss4m0fxbi" path="res://scripts/PlatformMoveLVL3.gd" id="10_kmy7e"]
+[ext_resource type="PackedScene" uid="uid://bb4guv2ig54t4" path="res://Island.tscn" id="11_833wy"]
 
 [sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_fc0e3"]
-panorama = ExtResource("5_833wy")
+panorama = ExtResource("4_kmy7e")
 
 [sub_resource type="Sky" id="Sky_5hph3"]
 sky_material = SubResource("PanoramaSkyMaterial_fc0e3")
@@ -22,16 +22,41 @@ sky_material = SubResource("PanoramaSkyMaterial_fc0e3")
 background_mode = 2
 sky = SubResource("Sky_5hph3")
 
+[sub_resource type="FastNoiseLite" id="FastNoiseLite_5rr72"]
+noise_type = 0
+
+[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_bvuwa"]
+seamless = true
+as_normal_map = true
+noise = SubResource("FastNoiseLite_5rr72")
+
+[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_ohnwj"]
+seamless = true
+as_normal_map = true
+noise = SubResource("FastNoiseLite_5rr72")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_27bay"]
+transparency = 1
+depth_draw_mode = 1
+albedo_color = Color(0, 1, 1, 0.6)
+roughness = 0.0
+normal_enabled = true
+normal_texture = SubResource("NoiseTexture2D_bvuwa")
+refraction_enabled = true
+refraction_texture = SubResource("NoiseTexture2D_ohnwj")
+uv1_world_triplanar = true
+
+[sub_resource type="BoxMesh" id="BoxMesh_gitia"]
+material = SubResource("StandardMaterial3D_27bay")
+
 [node name="Node3D" type="Node3D"]
 script = ExtResource("1_7ds5r")
 
 [node name="DeathZone" parent="." instance=ExtResource("2_liaj6")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.1211, -15.3843, 52.9995)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -10, 0)
 
 [node name="player" parent="." instance=ExtResource("3_b60u5")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.526007, 0)
-
-[node name="platform" parent="." instance=ExtResource("4_kmy7e")]
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_ryrav")
@@ -44,22 +69,25 @@ stream = ExtResource("8_g0tlw")
 autoplay = true
 
 [node name="platformchange" parent="." instance=ExtResource("9_liaj6")]
-transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, 0, 0, 19.122)
-
-[node name="platformchange2" parent="." instance=ExtResource("9_liaj6")]
-transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, 0, 0, 19.122)
+transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, 0, -0.645343, 23.4281)
 
 [node name="platformmovez" parent="." instance=ExtResource("9_b60u5")]
-transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, -0.0766983, 0.0354919, 42.7848)
+transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, 0.364637, 0.0354919, 44.2635)
 script = ExtResource("10_kmy7e")
 move_distance = 7.5
 move_speed = 10.0
 
 [node name="platformchangeGFASTR" parent="." instance=ExtResource("10_b60u5")]
-transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, 0, 0, 72.5752)
+transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, 0, -0.363754, 72.5752)
 
 [node name="platformchangeGFASTR3" parent="." instance=ExtResource("10_b60u5")]
-transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, 0, 0, 125.159)
+transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, 0, -0.363754, 125.159)
 
 [node name="platformchangeGFASTR2" parent="." instance=ExtResource("10_b60u5")]
-transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, 0.0531788, 3.8147e-06, 99.9978)
+transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, 0.0531788, -0.36375, 99.9978)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(2000, 0, 0, 0, 100, 0, 0, 0, 2000, 12.0219, -50.5651, -0.229027)
+mesh = SubResource("BoxMesh_gitia")
+
+[node name="platforisland" parent="." instance=ExtResource("11_833wy")]

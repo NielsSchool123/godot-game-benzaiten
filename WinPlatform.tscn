@@ -1,70 +1,26 @@
-[gd_scene load_steps=7 format=4 uid="uid://bgtir65febws3"]
+[gd_scene load_steps=5 format=3 uid="uid://bgtir65febws3"]
 
 [ext_resource type="Script" uid="uid://cof3bdqwun8uc" path="res://scripts/PlatformWinScript.gd" id="1_fwa3j"]
 [ext_resource type="PackedScene" uid="uid://bufgukfh7v5qt" path="res://WinScreen.tscn" id="2_fwa3j"]
+[ext_resource type="PackedScene" uid="uid://bb4guv2ig54t4" path="res://Island.tscn" id="3_fwa3j"]
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_v7x5n"]
-resource_name = "Material.001"
-cull_mode = 2
-albedo_color = Color(0.19758, 0.567924, 0.121967, 1)
-roughness = 0.5
-
-[sub_resource type="ArrayMesh" id="ArrayMesh_oftse"]
-_surfaces = [{
-"aabb": AABB(-200.049, -3.87262, -100.73, 400.099, 7.74524, 201.459),
-"format": 34896613377,
-"index_count": 36,
-"index_data": PackedByteArray("AAABAAIAAAADAAEABAACAAEAAwAEAAEABQAAAAIAAwAAAAUABAAGAAIABQACAAYAAwAHAAQAAwAFAAcABwAGAAQABwAFAAYA"),
-"name": "Material.001",
-"primitive": 3,
-"uv_scale": Vector4(0, 0, 0, 0),
-"vertex_count": 8,
-"vertex_data": PackedByteArray("AAAAAP//AAAAAP//AAAAAAAA/////wAAAAAAAAAAAAD/////AAAAAP//AAD//wAA////////AAD//wAAAAAAAA==")
-}]
-blend_shape_mode = 0
-
-[sub_resource type="ArrayMesh" id="ArrayMesh_fwa3j"]
-resource_name = "Block_Cube_001"
-_surfaces = [{
-"aabb": AABB(-200.049, -3.87262, -100.73, 400.099, 7.74524, 201.459),
-"attribute_data": PackedByteArray("/1////+f/7//n////1//v/9f/7//n/9//5//v/9f/3//X/9//5//P/+f/3//X/8//1//P/+fAAD/n/8//18AAP8f/3//X/8//1//f/8f/z//n/9//9//P//f/3//n/8/"),
-"format": 34896613399,
-"index_count": 36,
-"index_data": PackedByteArray("AAABAAIAAAADAAEABAAFAAYABAAHAAUACAAJAAoACAALAAkADAANAA4ADAAPAA0AEAARABIAEAATABEAFAAVABYAFAAXABUA"),
-"material": SubResource("StandardMaterial3D_v7x5n"),
-"name": "Material.001",
-"primitive": 3,
-"uv_scale": Vector4(0, 0, 0, 0),
-"vertex_count": 24,
-"vertex_data": PackedByteArray("AAAAAP//VNUAAP//AABU1QAA/////1TVAAAAAAAAVNUAAAAAAAD///////8AAP//AAD//wAA/////wAAAAD/////AAAAAFTV////////VNX/////AABU1f//AAD//1TV//8AAP///78AAP//////v/////////+/AAAAAP///78AAAAAAAD/v///AAD///+///8AAAAA/78AAAAA////v/////8AAP//AAD///////8AAP//AAD/////////////VNVU1VTVVNVU1VTVVNVU1f+//7//v/+//7//v/+//7+qKqoqqiqqKqoqqiqqKqoq/////////////////////wAA/38AAP9/AAD/fwAA/3//f/+//3//v/9//7//f/+/")
-}]
-blend_shape_mode = 0
-shadow_mesh = SubResource("ArrayMesh_oftse")
-
-[sub_resource type="BoxShape3D" id="BoxShape3D_mi635"]
-size = Vector3(1, 1.1438, 1)
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_kt5f1"]
 
 [node name="WinPlatform" type="StaticBody3D"]
 transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, 0, 0, 0)
 script = ExtResource("1_fwa3j")
 win_screen_scene = ExtResource("2_fwa3j")
 
-[node name="Cube" type="MeshInstance3D" parent="."]
-transform = Transform3D(0.306, 0, 0, 0, 0.929, 0, 0, 0, 0.583, -0.219177, 3.87262, 0.473404)
-mesh = SubResource("ArrayMesh_fwa3j")
-skeleton = NodePath("")
-
-[node name="CollisionShape3D3" type="CollisionShape3D" parent="."]
-transform = Transform3D(120, 0, 0, 0, 11.0815, 0, 0, 0, 115.109, 0, 2.88055, 0)
-shape = SubResource("BoxShape3D_mi635")
-
 [node name="Area3D" type="Area3D" parent="."]
 
-[node name="CollisionShape3D2" type="CollisionShape3D" parent="Area3D"]
-transform = Transform3D(120, 0, 0, 0, 11.0815, 0, 0, 0, 115.109, 0, 3.6773, 0)
-shape = SubResource("BoxShape3D_mi635")
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D"]
+transform = Transform3D(200, 0, 0, 0, 12.1323, 0, 0, 0, 200, 2.27453, -10.3266, 18.2986)
+shape = SubResource("CylinderShape3D_kt5f1")
 
 [node name="OmniLight3D" type="OmniLight3D" parent="."]
 transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 10, 0, 11.2136, 0)
 light_color = Color(1, 1, 0, 1)
 light_energy = 28.385
+
+[node name="platforisland" parent="." instance=ExtResource("3_fwa3j")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
