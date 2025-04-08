@@ -1,6 +1,6 @@
-[gd_scene load_steps=7 format=4 uid="uid://basjwxxsevbey"]
+[gd_scene load_steps=7 format=4 uid="uid://8t2mksv7v141"]
 
-[ext_resource type="Script" uid="uid://kyct1mkg4sv6" path="res://scripts/platform_fall.gd" id="1_5h7le"]
+[ext_resource type="Script" uid="uid://sv33l5rvc5mw" path="res://scripts/platform_fall_fast.gd" id="1_5lh7e"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_5h7le"]
 
@@ -8,7 +8,7 @@
 size = Vector3(1, 1.10107, 1)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_wnf2a"]
-albedo_color = Color(1, 0, 0, 1)
+albedo_color = Color(1, 1, 0, 1)
 metallic = 1.0
 
 [sub_resource type="ArrayMesh" id="ArrayMesh_wnf2a"]
@@ -43,10 +43,10 @@ _surfaces = [{
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_wnf2a")
 
-[node name="platformchange" type="StaticBody3D"]
+[node name="platformchangeGFASTR" type="StaticBody3D"]
 transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, 0, 0, 0)
 physics_material_override = SubResource("PhysicsMaterial_5h7le")
-script = ExtResource("1_5h7le")
+script = ExtResource("1_5lh7e")
 
 [node name="CollisionShape3D2" type="CollisionShape3D" parent="."]
 transform = Transform3D(120, 0, 0, 0, 10, 0, 0, 0, 115.109, 0, 2.88055, 0)

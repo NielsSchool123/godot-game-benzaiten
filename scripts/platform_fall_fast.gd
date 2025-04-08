@@ -2,14 +2,14 @@ extends Node3D
 
 # het meeste hiervan is door AI geschreven (note to self: rewrite/write comments + code)
 
-class_name DisappearingPlatform
+class_name DisappearingPlatformfast
 
 # Export variables to customize platform behavior in the editor
-@export var disappear_time: float = 1.0
+@export var disappear_time: float = 0.25
 @export var respawn_time: float = 3.0
 @export var warning_color: Color = Color(1.0, 0.5, 0.0)  # Orange warning color
 @export var normal_color: Color = Color(0.2, 0.8, 0.2)   # Default green color
-@export var fade_animation_time: float = 1
+@export var fade_animation_time: float = 0.25
 
 # Internal variables to track state
 var timer: float = 0.0
@@ -28,7 +28,6 @@ var original_materials: Array[Material] = []
 
 func _ready():
 	# Get references to components
-	platform_body = $StaticBody3D
 	collision_shape = $DetectorArea/CollisionShape3D
 	platform_mesh = $Cube  # Adjust this path to your model's node
 	
