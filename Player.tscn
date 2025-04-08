@@ -1,8 +1,9 @@
-[gd_scene load_steps=5 format=3 uid="uid://phpa3phmm6uu"]
+[gd_scene load_steps=6 format=3 uid="uid://phpa3phmm6uu"]
 
 [ext_resource type="Script" uid="uid://dmcpnrysn5ivu" path="res://scripts/PlayerScript.gd" id="1_onrkg"]
 [ext_resource type="PackedScene" uid="uid://cqkdj7rm7ds05" path="res://PlayerWalkAnimation.tscn" id="2_kne1u"]
 [ext_resource type="AudioStream" uid="uid://llca46munslo" path="res://assets/sounds/jump.wav" id="3_kne1u"]
+[ext_resource type="PackedScene" uid="uid://dincgrtfnsx2r" path="res://charachter_death.tscn" id="4_e80uo"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_onrkg"]
 size = Vector3(1.40004, 0.945007, 0.001)
@@ -22,3 +23,5 @@ shape = SubResource("BoxShape3D_onrkg")
 [node name="Jump" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("3_kne1u")
 volume_db = -20.0
+
+[node name="CharachterDeath" parent="." instance=ExtResource("4_e80uo")]

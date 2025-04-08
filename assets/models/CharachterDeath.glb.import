@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://bja5lqhupg7bo"
-path="res://.godot/imported/WalkANimation.glb-f7fc516eccb6675a2d1f37d5bbfc1c9d.scn"
+uid="uid://b56kl4enaqnru"
+path="res://.godot/imported/CharachterDeath.glb-524f58d5be7484ff66c015742b6fbd5d.scn"
 
 [deps]
 
-source_file="res://assets/models/WalkANimation.glb"
-dest_files=["res://.godot/imported/WalkANimation.glb-f7fc516eccb6675a2d1f37d5bbfc1c9d.scn"]
+source_file="res://assets/models/CharachterDeath.glb"
+dest_files=["res://.godot/imported/CharachterDeath.glb-524f58d5be7484ff66c015742b6fbd5d.scn"]
 
 [params]
 
@@ -35,10 +35,10 @@ import_script/path=""
 _subresources={
 "animations": {
 "Armature|mixamo_com|Layer0": {
-"save_to_file/enabled": false,
+"save_to_file/enabled": true,
 "save_to_file/keep_custom_tracks": true,
 "save_to_file/path": "",
-"settings/loop_mode": 1,
+"settings/loop_mode": 0,
 "slice_1/end_frame": 0,
 "slice_1/loop_mode": 0,
 "slice_1/name": "",

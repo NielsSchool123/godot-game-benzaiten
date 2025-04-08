@@ -24,10 +24,15 @@ func _on_body_exited(body):
 
 func _on_hitbox_entered(body):
 	if body.is_in_group("player"):
-		reset_game()  # Reset de game wanneer de speler de hitbox aanraakt
+		if body.has_method("die"):
+			body.die()
+			death.play()
+			await get_tree().create_timer(3.0).timeout  # wacht 2 seconden zodat animatie afspeelt
+		reset_game()
+
+
 
 func reset_game():
-	death.play()
 	get_tree().reload_current_scene()
 
 func _physics_process(delta: float) -> void:
