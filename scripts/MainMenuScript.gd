@@ -11,6 +11,6 @@ func _ready(): # logica voor de quit button, als de button text quit is dan runt
 
 func _on_level_selected(level_name: String): # logica voor levels laden, het kijkt hij de button heet  en laad dat level
 	button_select.play()
-	await get_tree().create_timer(0.25).timeout
+	await get_tree().create_timer(0.14).timeout
 	var scene_path = "res://" + level_name + ".tscn" 
 	get_tree().change_scene_to_file(scene_path)
