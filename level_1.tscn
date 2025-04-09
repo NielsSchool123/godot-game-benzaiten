@@ -60,10 +60,10 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.526007, 0)
 environment = SubResource("Environment_ryrav")
 
 [node name="slime" parent="." instance=ExtResource("5_5rr72")]
-transform = Transform3D(-0.0818515, 0, 0.996645, 0, 1, 0, -0.996645, 0, -0.0818515, 1.13792, 0, 57.6445)
+transform = Transform3D(-0.0818515, 0, 0.996645, 0, 1, 0, -0.996645, 0, -0.0818515, 0, 0, 76.0793)
 
 [node name="winplatform" parent="." instance=ExtResource("6_5hph3")]
-transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, 1.9608, 0, 89.6868)
+transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, 1.9608, 0, 111.797)
 
 [node name="Backgroundmusic" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("8_5rr72")
@@ -77,10 +77,10 @@ mesh = SubResource("BoxMesh_sof0w")
 transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, 0, 0, -1.68437)
 
 [node name="platforisland2" parent="." instance=ExtResource("8_bjebc")]
-transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, 0, 0, 22.7608)
+transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, 0, 0, 29.9209)
 
 [node name="platforisland3" parent="." instance=ExtResource("8_bjebc")]
-transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, 0, 0, 55.2335)
+transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, 0, 0, 70.947)
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
 transform = Transform3D(0.842687, 0.182316, -0.506595, 0.138096, 0.836254, 0.530668, 0.520392, -0.517146, 0.679524, 0, 7.40441, 0)

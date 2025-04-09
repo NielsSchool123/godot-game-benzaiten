@@ -8,8 +8,8 @@
 [ext_resource type="AudioStream" uid="uid://68ore0n8fakj" path="res://assets/sounds/backgroundmusic.wav" id="8_0yqnl"]
 [ext_resource type="PackedScene" uid="uid://bpjnse0ji0y3b" path="res://PlatformFallFAST4.tscn" id="8_s24i2"]
 [ext_resource type="PackedScene" uid="uid://b2y3cjbmbjofx" path="res://Slime4.tscn" id="9_66w8i"]
+[ext_resource type="PackedScene" uid="uid://cpgxfatch6tik" path="res://PlatFormMoveY.tscn" id="10_80qnk"]
 [ext_resource type="PackedScene" uid="uid://bb4guv2ig54t4" path="res://Island.tscn" id="10_cicwn"]
-[ext_resource type="PackedScene" uid="uid://c0xetmip442kc" path="res://PlatfromMoveY4.tscn" id="11_cicwn"]
 
 [sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_fc0e3"]
 panorama = ExtResource("5_80qnk")
@@ -78,12 +78,6 @@ transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, 0, -0.751924, 194.273)
 [node name="platformchangeGFASTR2" parent="." instance=ExtResource("8_s24i2")]
 transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, 0, -0.751924, 145.508)
 
-[node name="platformmovez4" parent="." instance=ExtResource("11_cicwn")]
-transform = Transform3D(6.55116e-05, 4.90393e-05, -0.1, 5.95662e-05, 0.1, 4.90802e-05, 0.0999999, -5.95998e-05, 6.5481e-05, -0.354115, -0.101994, 90.1271)
-
-[node name="platformmovez5" parent="." instance=ExtResource("11_cicwn")]
-transform = Transform3D(6.55116e-05, 4.90393e-05, -0.0999999, 5.95662e-05, 0.1, 4.90801e-05, 0.0999999, -5.95998e-05, 6.5481e-05, -0.67736, -3.61797e-09, 119.6)
-
 [node name="slime4" parent="." instance=ExtResource("9_66w8i")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 2.07693, -2.98023e-08, 48.4958)
 
@@ -101,3 +95,9 @@ shadow_blur = 3.0
 transform = Transform3D(2000, 0, 0, 0, 100, 0, 0, 0, 2000, 12.0219, -50.5651, -0.229027)
 mesh = SubResource("BoxMesh_es7r5")
 skeleton = NodePath("../WorldEnvironment")
+
+[node name="AnimatableBody3D" parent="." instance=ExtResource("10_80qnk")]
+transform = Transform3D(-4.37114e-09, 0, -0.1, 0, 0.1, 0, 0.1, 0, -4.37114e-09, 0, 0, 89.8654)
+
+[node name="AnimatableBody3D2" parent="." instance=ExtResource("10_80qnk")]
+transform = Transform3D(-4.37114e-09, 0, -0.1, 0, 0.1, 0, 0.1, 0, -4.37114e-09, 0, 0, 119.857)

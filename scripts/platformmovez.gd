@@ -1,6 +1,6 @@
 extends StaticBody3D
 
-@export var move_distance: float = 5.0  # Distance forward/backward
+@export var move_distance: float = 7.5  # Distance forward/backward
 @export var move_speed: float = 15.0  # Speed of movement
 
 var direction: int = 1  # 1 = forward, -1 = backward

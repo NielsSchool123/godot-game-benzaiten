@@ -1,4 +1,4 @@
-[gd_scene load_steps=20 format=3 uid="uid://d3mlotrslplbs"]
+[gd_scene load_steps=21 format=3 uid="uid://d3mlotrslplbs"]
 
 [ext_resource type="Script" uid="uid://q6pcjrbfxr" path="res://scripts/bakcgroundmusic.gd" id="1_ehv2h"]
 [ext_resource type="PackedScene" uid="uid://d2otn14bnvjn6" path="res://DeathZone.tscn" id="1_n7ypv"]
@@ -11,6 +11,7 @@
 [ext_resource type="Script" uid="uid://bxxqjh27dwfix" path="res://PlatformMoveScriptx.gd" id="9_eoq84"]
 [ext_resource type="AudioStream" uid="uid://68ore0n8fakj" path="res://assets/sounds/backgroundmusic.wav" id="10_15wb7"]
 [ext_resource type="PackedScene" uid="uid://bb4guv2ig54t4" path="res://Island.tscn" id="11_yl73a"]
+[ext_resource type="PackedScene" uid="uid://cpgxfatch6tik" path="res://PlatFormMoveY.tscn" id="12_yl73a"]
 
 [sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_7j8ne"]
 panorama = ExtResource("4_eoq84")
@@ -63,22 +64,28 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.526007, 0)
 environment = SubResource("Environment_ryrav")
 
 [node name="WinPlatform" parent="." instance=ExtResource("7_7j8ne")]
-transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, -0.0590725, 0.096283, 99.7399)
+transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, -0.0590725, 0.096283, 123.751)
 
 [node name="platformmovex1" parent="." instance=ExtResource("6_0s5r2")]
-transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, -0.0286694, 1.90735e-06, 23.0967)
+transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, -0.0286694, 1.90735e-06, 27.2675)
+script = ExtResource("7_ehv2h")
+move_distance = 10.0
+move_speed = 15.0
+
+[node name="platformmovex3" parent="." instance=ExtResource("6_0s5r2")]
+transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, -0.0286694, 1.90735e-06, 27.2675)
 script = ExtResource("7_ehv2h")
 move_distance = 10.0
 move_speed = 15.0
 
 [node name="platformmovex2" parent="." instance=ExtResource("6_0s5r2")]
-transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, 0, 0, 48.2192)
+transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, 0, 0, 56.7301)
 script = ExtResource("9_eoq84")
 move_distance = 10.0
 move_speed = 15.0
 
 [node name="platformmovez" parent="." instance=ExtResource("7_7dov7")]
-transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, 0, 0, 74.8404)
+transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, 0, 0, 89.5213)
 
 [node name="Backgroundmusic" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("10_15wb7")
@@ -95,3 +102,6 @@ mesh = SubResource("BoxMesh_0hcvi")
 transform = Transform3D(0.842687, 0.182316, -0.506595, 0.138096, 0.836254, 0.530668, 0.520392, -0.517146, 0.679524, 0, 7.40441, 0)
 shadow_enabled = true
 shadow_blur = 3.0
+
+[node name="AnimatableBody3D" parent="." instance=ExtResource("12_yl73a")]
+transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, -23.5591, 0, 0)

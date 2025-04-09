@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://besrs3ul76nc3"]
 
-[ext_resource type="Script" uid="uid://csi2bhr7o0cr0" path="res://scripts/PlatformMoveZ.gd" id="1_rugll"]
+[ext_resource type="Script" uid="uid://csi2bhr7o0cr0" path="res://scripts/platformmovez.gd" id="1_rugll"]
 [ext_resource type="PackedScene" uid="uid://bb4guv2ig54t4" path="res://Island.tscn" id="3_1dmi6"]
 [ext_resource type="PackedScene" uid="uid://b45ktddj22rp2" path="res://assets/models/red arrow.glb" id="3_ynwc3"]
 

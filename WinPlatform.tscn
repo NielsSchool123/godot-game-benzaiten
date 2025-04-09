@@ -1,8 +1,9 @@
-[gd_scene load_steps=5 format=3 uid="uid://bgtir65febws3"]
+[gd_scene load_steps=6 format=3 uid="uid://bgtir65febws3"]
 
-[ext_resource type="Script" uid="uid://cof3bdqwun8uc" path="res://scripts/PlatformWinScript.gd" id="1_fwa3j"]
+[ext_resource type="Script" uid="uid://cof3bdqwun8uc" path="res://scripts/PlatformWInScript.gd" id="1_fwa3j"]
 [ext_resource type="PackedScene" uid="uid://bufgukfh7v5qt" path="res://WinScreen.tscn" id="2_fwa3j"]
 [ext_resource type="PackedScene" uid="uid://bb4guv2ig54t4" path="res://Island.tscn" id="3_fwa3j"]
+[ext_resource type="PackedScene" uid="uid://dttckuk2adbts" path="res://assets/models/kroon.glb" id="4_kt5f1"]
 
 [sub_resource type="CylinderShape3D" id="CylinderShape3D_kt5f1"]
 
@@ -18,9 +19,12 @@ transform = Transform3D(200, 0, 0, 0, 12.1323, 0, 0, 0, 200, 2.27453, -10.3266, 
 shape = SubResource("CylinderShape3D_kt5f1")
 
 [node name="OmniLight3D" type="OmniLight3D" parent="."]
-transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 10, 0, 11.2136, 0)
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 10, -1.98508, 18.0523, 10.8111)
 light_color = Color(1, 1, 0, 1)
 light_energy = 28.385
 
 [node name="platforisland" parent="." instance=ExtResource("3_fwa3j")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
+
+[node name="kroon" parent="." instance=ExtResource("4_kt5f1")]
+transform = Transform3D(12.5, 0, -21.6506, 0, 25, 0, 21.6506, 0, 12.5, 15.1381, -52.2725, 6.26768)
