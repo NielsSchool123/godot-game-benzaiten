@@ -1,4 +1,4 @@
-[gd_scene load_steps=21 format=3 uid="uid://d3mlotrslplbs"]
+[gd_scene load_steps=20 format=3 uid="uid://d3mlotrslplbs"]
 
 [ext_resource type="Script" uid="uid://q6pcjrbfxr" path="res://scripts/bakcgroundmusic.gd" id="1_ehv2h"]
 [ext_resource type="PackedScene" uid="uid://d2otn14bnvjn6" path="res://DeathZone.tscn" id="1_n7ypv"]
@@ -11,7 +11,6 @@
 [ext_resource type="Script" uid="uid://bxxqjh27dwfix" path="res://PlatformMoveScriptx.gd" id="9_eoq84"]
 [ext_resource type="AudioStream" uid="uid://68ore0n8fakj" path="res://assets/sounds/backgroundmusic.wav" id="10_15wb7"]
 [ext_resource type="PackedScene" uid="uid://bb4guv2ig54t4" path="res://Island.tscn" id="11_yl73a"]
-[ext_resource type="PackedScene" uid="uid://cpgxfatch6tik" path="res://PlatFormMoveY.tscn" id="12_yl73a"]
 
 [sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_7j8ne"]
 panorama = ExtResource("4_eoq84")
@@ -102,6 +101,3 @@ mesh = SubResource("BoxMesh_0hcvi")
 transform = Transform3D(0.842687, 0.182316, -0.506595, 0.138096, 0.836254, 0.530668, 0.520392, -0.517146, 0.679524, 0, 7.40441, 0)
 shadow_enabled = true
 shadow_blur = 3.0
-
-[node name="AnimatableBody3D" parent="." instance=ExtResource("12_yl73a")]
-transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, -23.5591, 0, 0)
