@@ -1,7 +1,7 @@
 extends AnimatableBody3D
 
 @export var move_distance: float = 15  # hoe ver
-@export var move_speed: float = 10  # hoe snel
+@export var move_speed: float = 15  # hoe snel
 
 var direction: int = 1
 var start_position: Vector3

@@ -74,7 +74,6 @@ transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, 0, -0.645343, 23.4281)
 [node name="platformmovez" parent="." instance=ExtResource("9_b60u5")]
 transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, 0.364637, 0.0354919, 44.2635)
 script = ExtResource("10_kmy7e")
-move_distance = 7.5
 move_speed = 10.0
 
 [node name="platformchangeGFASTR" parent="." instance=ExtResource("10_b60u5")]
