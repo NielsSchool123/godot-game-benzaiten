@@ -1,6 +1,6 @@
 [gd_scene load_steps=20 format=3 uid="uid://dd5a1dr3c5vav"]
 
-[ext_resource type="Script" uid="uid://q6pcjrbfxr" path="res://scripts/bakcgroundmusic.gd" id="1_7ds5r"]
+[ext_resource type="Script" uid="uid://q6pcjrbfxr" path="res://scripts/BackGroundMusic.gd" id="1_7ds5r"]
 [ext_resource type="PackedScene" uid="uid://d2otn14bnvjn6" path="res://DeathZone.tscn" id="2_liaj6"]
 [ext_resource type="PackedScene" uid="uid://phpa3phmm6uu" path="res://Player.tscn" id="3_b60u5"]
 [ext_resource type="Texture2D" uid="uid://b5so7di8cwa53" path="res://assets/images/kloppenheim_07_puresky_2k.exr" id="4_kmy7e"]
@@ -9,7 +9,7 @@
 [ext_resource type="PackedScene" uid="uid://besrs3ul76nc3" path="res://PlatformMOveZ.tscn" id="9_b60u5"]
 [ext_resource type="PackedScene" uid="uid://basjwxxsevbey" path="res://PlatformFall.tscn" id="9_liaj6"]
 [ext_resource type="PackedScene" uid="uid://8t2mksv7v141" path="res://PlatformFallFAST.tscn" id="10_b60u5"]
-[ext_resource type="Script" uid="uid://bbovss4m0fxbi" path="res://scripts/PlatformMoveLVL3.gd" id="10_kmy7e"]
+[ext_resource type="Script" uid="uid://bbovss4m0fxbi" path="res://scripts/PlatformMoveZ3.gd" id="10_kmy7e"]
 [ext_resource type="PackedScene" uid="uid://bb4guv2ig54t4" path="res://Island.tscn" id="11_833wy"]
 
 [sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_fc0e3"]
@@ -74,7 +74,6 @@ transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, 0, -0.645343, 23.4281)
 [node name="platformmovez" parent="." instance=ExtResource("9_b60u5")]
 transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, 0.364637, 0.0354919, 44.2635)
 script = ExtResource("10_kmy7e")
-move_distance = 7.5
 move_speed = 10.0
 
 [node name="platformchangeGFASTR" parent="." instance=ExtResource("10_b60u5")]
