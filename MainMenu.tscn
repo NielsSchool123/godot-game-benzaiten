@@ -56,13 +56,10 @@ theme_override_colors/font_pressed_color = Color(1, 0, 0, 1)
 theme_override_constants/outline_size = 3
 text = "level 4"
 
-[node name="credits" type="Button" parent="VBoxContainer"]
+[node name="IntroScreen" type="Button" parent="VBoxContainer"]
 layout_mode = 2
-text = "credits"
-
-[node name="Quit" type="Button" parent="VBoxContainer"]
-layout_mode = 2
-text = "Quit"
+text = "Back to intro screen
+"
 
 [node name="Node3D" parent="." instance=ExtResource("2_eiy7p")]
 

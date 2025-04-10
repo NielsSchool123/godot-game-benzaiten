@@ -1,0 +1,46 @@
+[gd_scene load_steps=4 format=3 uid="uid://dktctapc0cslb"]
+
+[ext_resource type="Script" uid="uid://bp6rp8qag1hpe" path="res://scripts/intro_screen.gd" id="1_66135"]
+[ext_resource type="PackedScene" uid="uid://baq7oqjbffu1k" path="res://IntroScreenBackGround.tscn" id="3_66135"]
+[ext_resource type="AudioStream" uid="uid://cdxbjdg0ltl4w" path="res://assets/sounds/buttonselect.wav" id="3_yd5l1"]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+script = ExtResource("1_66135")
+metadata/_edit_use_anchors_ = true
+
+[node name="Buttonselect" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_yd5l1")
+volume_db = -20.0
+
+[node name="Node3D" parent="." instance=ExtResource("3_66135")]
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 0
+offset_top = 307.0
+offset_right = 500.0
+offset_bottom = 957.0
+
+[node name="MainMenu" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+text = "Play Game"
+
+[node name="Settings" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+text = "Settings
+"
+
+[node name="credits" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+text = "credits"
+
+[node name="Quit" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+text = "Quit
+"

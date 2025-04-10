@@ -1,0 +1,54 @@
+[gd_scene load_steps=4 format=3 uid="uid://bm0er5v0cblc5"]
+
+[ext_resource type="Script" uid="uid://652luabav2r1" path="res://scripts/settings.gd" id="1_mx4kw"]
+[ext_resource type="PackedScene" uid="uid://dne0falxcvvqj" path="res://settingsbackground.tscn" id="3_mx4kw"]
+[ext_resource type="AudioStream" uid="uid://cdxbjdg0ltl4w" path="res://assets/sounds/buttonselect.wav" id="3_sfvul"]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+script = ExtResource("1_mx4kw")
+metadata/_edit_use_anchors_ = true
+
+[node name="Buttonselect" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_sfvul")
+volume_db = -20.0
+
+[node name="Fullscreen" type="CheckBox" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.00260417
+anchor_top = 0.00462963
+anchor_right = 0.0954861
+anchor_bottom = 0.0524691
+scale = Vector2(2, 2)
+text = "Fullscreen"
+metadata/_edit_use_anchors_ = true
+
+[node name="FPS limit" type="OptionButton" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.000868056
+anchor_top = 0.143519
+anchor_right = 0.0286459
+anchor_bottom = 0.174383
+scale = Vector2(2, 2)
+metadata/_edit_use_anchors_ = true
+
+[node name="IntroScreen" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.920139
+anchor_top = 0.901235
+anchor_right = 0.959201
+anchor_bottom = 0.949074
+scale = Vector2(2, 2)
+text = "Back"
+metadata/_edit_use_anchors_ = true
+
+[node name="Node3D" parent="." instance=ExtResource("3_mx4kw")]
