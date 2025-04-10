@@ -15,6 +15,10 @@ run/main_scene="uid://dktctapc0cslb"
 config/features=PackedStringArray("4.4", "Forward Plus")
 config/icon="res://assets/images/icon.svg"
 
+[autoload]
+
+Escapefullscreen="*res://scripts/escapefullscreen.gd"
+
 [input]
 
 move_right={
