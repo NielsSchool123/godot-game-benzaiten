@@ -1,6 +1,6 @@
 [gd_scene load_steps=11 format=3 uid="uid://c0as3cvhybnve"]
 
-[ext_resource type="Script" uid="uid://c024q2fxmtwul" path="res://node_3d.gd" id="1_i5fsn"]
+[ext_resource type="Script" uid="uid://c024q2fxmtwul" path="res://scripts/CreditsANimation.gd" id="1_i5fsn"]
 [ext_resource type="PackedScene" uid="uid://db21nmw2v5t8r" path="res://Platrform.tscn" id="2_upik2"]
 [ext_resource type="PackedScene" uid="uid://cpipsmpcc0gs4" path="res://assets/models/boom.glb" id="3_g2vv3"]
 [ext_resource type="Texture2D" uid="uid://cwbpls1njfmp3" path="res://assets/images/NightSkyHDRI008_2K-HDR.exr" id="4_rqg3i"]

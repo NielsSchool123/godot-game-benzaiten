@@ -1,6 +1,6 @@
 [gd_scene load_steps=5 format=3 uid="uid://ddv0uw6vn73em"]
 
-[ext_resource type="Script" uid="uid://cqhsv6lbta2g" path="res://static_body_3d.gd" id="1_25lmi"]
+[ext_resource type="Script" uid="uid://cqhsv6lbta2g" path="res://scripts/SpikeDeath.gd" id="1_25lmi"]
 [ext_resource type="PackedScene" uid="uid://djrsk0yctohsq" path="res://assets/SPike.glb" id="2_l1dkd"]
 [ext_resource type="AudioStream" uid="uid://wronojwepiv5" path="res://assets/sounds/death.wav" id="3_l1dkd"]
 
