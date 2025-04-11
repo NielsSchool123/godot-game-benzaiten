@@ -19,6 +19,10 @@ config/icon="res://assets/images/icon.svg"
 
 Escapefullscreen="*res://scripts/escapefullscreen.gd"
 
+[debug]
+
+settings/fps_display=true
+
 [input]
 
 move_right={

@@ -1,5 +1,6 @@
-[gd_scene load_steps=17 format=3 uid="uid://58uq12ehc5mv"]
+[gd_scene load_steps=19 format=3 uid="uid://58uq12ehc5mv"]
 
+[ext_resource type="Script" uid="uid://q6pcjrbfxr" path="res://scripts/BackGroundMusic.gd" id="1_2etst"]
 [ext_resource type="PackedScene" uid="uid://ddv0uw6vn73em" path="res://spike dood.tscn" id="1_kcwpe"]
 [ext_resource type="PackedScene" uid="uid://phpa3phmm6uu" path="res://Player.tscn" id="2_j6qfn"]
 [ext_resource type="PackedScene" uid="uid://cn1ovhleelier" path="res://wolk.tscn" id="3_2etst"]
@@ -8,6 +9,7 @@
 [ext_resource type="PackedScene" uid="uid://dj2wl7y84yg7h" path="res://win_platform wolk.tscn" id="6_uws32"]
 [ext_resource type="PackedScene" uid="uid://clpkehuwcsoao" path="res://wolk no coll.tscn" id="7_vcgqq"]
 [ext_resource type="PackedScene" uid="uid://cj87gh2ow7xcf" path="res://assets/skull.glb" id="8_o1mlc"]
+[ext_resource type="AudioStream" uid="uid://68ore0n8fakj" path="res://assets/sounds/backgroundmusic.wav" id="10_vw43l"]
 
 [sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_t6fl3"]
 panorama = ExtResource("5_jiqp1")
@@ -53,6 +55,7 @@ uv1_world_triplanar = true
 material = SubResource("StandardMaterial3D_5rr72")
 
 [node name="Node3D" type="Node3D"]
+script = ExtResource("1_2etst")
 
 [node name="Area3D" parent="." instance=ExtResource("1_kcwpe")]
 transform = Transform3D(0.514998, 0, 0, 0, 0.300085, 0, 0, 0, 0.499358, -17.0452, 8.5623, -2.1707)
@@ -213,3 +216,6 @@ transform = Transform3D(0.999999, 0, -7.45058e-09, 0, 1, 0, 7.45058e-09, 0, 0.99
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
 transform = Transform3D(10000, 0, 0, 0, 115.211, 0, 0, 0, 10000, 12.0219, -884.925, -0.229027)
 mesh = SubResource("BoxMesh_2etst")
+
+[node name="Backgroundmusic" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("10_vw43l")
