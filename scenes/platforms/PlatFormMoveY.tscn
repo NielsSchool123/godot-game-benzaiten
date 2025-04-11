@@ -1,7 +1,7 @@
 [gd_scene load_steps=7 format=3 uid="uid://cpgxfatch6tik"]
 
-[ext_resource type="Script" path="res://scripts/PlatformMoveY.gd" id="1_o1qet"]
-[ext_resource type="PackedScene" uid="uid://bb4guv2ig54t4" path="res://Island.tscn" id="2_5vuuu"]
+[ext_resource type="Script" uid="uid://uou4fy5jjw7d" path="res://scripts/PlatformMoveY.gd" id="1_o1qet"]
+[ext_resource type="PackedScene" uid="uid://bb4guv2ig54t4" path="res://scenes/platforms/Island.tscn" id="2_5vuuu"]
 [ext_resource type="PackedScene" uid="uid://b45ktddj22rp2" path="res://assets/models/red arrow.glb" id="3_cfros"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_3lrba"]

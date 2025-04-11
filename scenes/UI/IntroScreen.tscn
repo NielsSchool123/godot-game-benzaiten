@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://dktctapc0cslb"]
 
 [ext_resource type="Script" uid="uid://bp6rp8qag1hpe" path="res://scripts/intro_screen.gd" id="1_66135"]
-[ext_resource type="PackedScene" uid="uid://baq7oqjbffu1k" path="res://IntroScreenBackGround.tscn" id="3_66135"]
+[ext_resource type="PackedScene" uid="uid://baq7oqjbffu1k" path="res://scenes/IntroScreenBackGround.tscn" id="3_66135"]
 [ext_resource type="AudioStream" uid="uid://cdxbjdg0ltl4w" path="res://assets/sounds/buttonselect.wav" id="3_yd5l1"]
 
 [node name="Control" type="Control"]

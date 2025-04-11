@@ -1,16 +1,16 @@
 [gd_scene load_steps=17 format=3 uid="uid://pp11buvlytyl"]
 
-[ext_resource type="Script" uid="uid://q6pcjrbfxr" path="res://scripts/BackGroundMusic.gd" id="1_bjebc"]
-[ext_resource type="PackedScene" uid="uid://d2otn14bnvjn6" path="res://DeathZone.tscn" id="1_rka8t"]
-[ext_resource type="PackedScene" uid="uid://phpa3phmm6uu" path="res://Player.tscn" id="2_5hph3"]
-[ext_resource type="PackedScene" uid="uid://lm1uhplyjr3b" path="res://Slime.tscn" id="5_5rr72"]
-[ext_resource type="Texture2D" uid="uid://b5so7di8cwa53" path="res://assets/images/kloppenheim_07_puresky_2k.exr" id="5_bjebc"]
-[ext_resource type="PackedScene" uid="uid://bgtir65febws3" path="res://WinPlatform.tscn" id="6_5hph3"]
-[ext_resource type="AudioStream" uid="uid://68ore0n8fakj" path="res://assets/sounds/backgroundmusic.wav" id="8_5rr72"]
-[ext_resource type="PackedScene" uid="uid://bb4guv2ig54t4" path="res://Island.tscn" id="8_bjebc"]
+[ext_resource type="Script" uid="uid://q6pcjrbfxr" path="res://scripts/BackGroundMusic.gd" id="1_s8va5"]
+[ext_resource type="PackedScene" uid="uid://d2otn14bnvjn6" path="res://scenes/DeathZone.tscn" id="2_dga24"]
+[ext_resource type="PackedScene" uid="uid://phpa3phmm6uu" path="res://scenes/Player.tscn" id="3_qxy0u"]
+[ext_resource type="Texture2D" uid="uid://b5so7di8cwa53" path="res://assets/images/kloppenheim_07_puresky_2k.exr" id="4_excbq"]
+[ext_resource type="PackedScene" uid="uid://lm1uhplyjr3b" path="res://scenes/Slime.tscn" id="5_iav0o"]
+[ext_resource type="PackedScene" uid="uid://bgtir65febws3" path="res://scenes/platforms/WinPlatform.tscn" id="6_dnkej"]
+[ext_resource type="AudioStream" uid="uid://68ore0n8fakj" path="res://assets/sounds/backgroundmusic.wav" id="7_mm8aj"]
+[ext_resource type="PackedScene" uid="uid://bb4guv2ig54t4" path="res://scenes/platforms/Island.tscn" id="8_wtwp4"]
 
 [sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_fc0e3"]
-panorama = ExtResource("5_bjebc")
+panorama = ExtResource("4_excbq")
 
 [sub_resource type="Sky" id="Sky_bjebc"]
 sky_material = SubResource("PanoramaSkyMaterial_fc0e3")
@@ -48,38 +48,38 @@ uv1_world_triplanar = true
 material = SubResource("StandardMaterial3D_5rr72")
 
 [node name="Node3D" type="Node3D"]
-script = ExtResource("1_bjebc")
+script = ExtResource("1_s8va5")
 
-[node name="DeathZone" parent="." instance=ExtResource("1_rka8t")]
+[node name="DeathZone" parent="." instance=ExtResource("2_dga24")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -10, 0)
 
-[node name="player" parent="." instance=ExtResource("2_5hph3")]
+[node name="player" parent="." instance=ExtResource("3_qxy0u")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.526007, 0)
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_ryrav")
 
-[node name="slime" parent="." instance=ExtResource("5_5rr72")]
+[node name="slime" parent="." instance=ExtResource("5_iav0o")]
 transform = Transform3D(-0.0818515, 0, 0.996645, 0, 1, 0, -0.996645, 0, -0.0818515, 0, 0, 76.0793)
 
-[node name="winplatform" parent="." instance=ExtResource("6_5hph3")]
+[node name="winplatform" parent="." instance=ExtResource("6_dnkej")]
 transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, 1.9608, 0, 111.797)
 
 [node name="Backgroundmusic" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("8_5rr72")
+stream = ExtResource("7_mm8aj")
 autoplay = true
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
 transform = Transform3D(2000, 0, 0, 0, 100, 0, 0, 0, 2000, 12.0219, -50.5651, -0.229027)
 mesh = SubResource("BoxMesh_sof0w")
 
-[node name="platforisland" parent="." instance=ExtResource("8_bjebc")]
+[node name="platforisland" parent="." instance=ExtResource("8_wtwp4")]
 transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, 0, 0, -1.68437)
 
-[node name="platforisland2" parent="." instance=ExtResource("8_bjebc")]
+[node name="platforisland2" parent="." instance=ExtResource("8_wtwp4")]
 transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, 0, 0, 29.9209)
 
-[node name="platforisland3" parent="." instance=ExtResource("8_bjebc")]
+[node name="platforisland3" parent="." instance=ExtResource("8_wtwp4")]
 transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, 0, 0, 70.947)
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
