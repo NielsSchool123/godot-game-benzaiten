@@ -1,9 +1,9 @@
 [gd_scene load_steps=6 format=3 uid="uid://dj2wl7y84yg7h"]
 
 [ext_resource type="Script" uid="uid://cof3bdqwun8uc" path="res://scripts/PlatformWInScript.gd" id="1_165fm"]
-[ext_resource type="PackedScene" uid="uid://bufgukfh7v5qt" path="res://scenes/UI/WinScreen.tscn" id="2_jpbhs"]
+[ext_resource type="PackedScene" uid="uid://bufgukfh7v5qt" path="res://WinScreen.tscn" id="2_jpbhs"]
 [ext_resource type="PackedScene" uid="uid://dttckuk2adbts" path="res://assets/models/kroon.glb" id="3_h5gyl"]
-[ext_resource type="PackedScene" uid="uid://cn1ovhleelier" path="res://scenes/platforms/wolk.tscn" id="4_5xe1i"]
+[ext_resource type="PackedScene" uid="uid://cn1ovhleelier" path="res://wolk.tscn" id="4_5xe1i"]
 
 [sub_resource type="CylinderShape3D" id="CylinderShape3D_kt5f1"]
 

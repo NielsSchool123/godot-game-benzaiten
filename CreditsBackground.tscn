@@ -1,11 +1,11 @@
-[gd_scene load_steps=11 format=3 uid="uid://dne0falxcvvqj"]
+[gd_scene load_steps=11 format=3 uid="uid://c0as3cvhybnve"]
 
-[ext_resource type="PackedScene" uid="uid://db21nmw2v5t8r" path="res://scenes/platforms/Platrform.tscn" id="1_cpdla"]
-[ext_resource type="Script" uid="uid://5bj5tkk1bh4i" path="res://scripts/settingsbackground.gd" id="1_ed2hk"]
-[ext_resource type="PackedScene" uid="uid://cpipsmpcc0gs4" path="res://assets/models/boom.glb" id="2_ed2hk"]
-[ext_resource type="Texture2D" uid="uid://cwbpls1njfmp3" path="res://assets/images/NightSkyHDRI008_2K-HDR.exr" id="4_tsw4r"]
-[ext_resource type="PackedScene" uid="uid://cqdmd237vujjo" path="res://assets/models/rups gast.glb" id="5_6s8yn"]
-[ext_resource type="PackedScene" uid="uid://bj7xidfymgkgs" path="res://assets/models/CharachterThink.glb" id="5_cpdla"]
+[ext_resource type="Script" uid="uid://c024q2fxmtwul" path="res://scripts/CreditsANimation.gd" id="1_i5fsn"]
+[ext_resource type="PackedScene" uid="uid://db21nmw2v5t8r" path="res://Platrform.tscn" id="2_upik2"]
+[ext_resource type="PackedScene" uid="uid://cpipsmpcc0gs4" path="res://assets/models/boom.glb" id="3_g2vv3"]
+[ext_resource type="Texture2D" uid="uid://cwbpls1njfmp3" path="res://assets/images/NightSkyHDRI008_2K-HDR.exr" id="4_rqg3i"]
+[ext_resource type="PackedScene" uid="uid://cqdmd237vujjo" path="res://assets/models/rups gast.glb" id="5_3nitr"]
+[ext_resource type="PackedScene" uid="uid://dcru0p2j1yv74" path="res://assets/models/CharachterDance.glb" id="6_5t03s"]
 
 [sub_resource type="CameraAttributesPractical" id="CameraAttributesPractical_x1b6m"]
 dof_blur_far_enabled = true
@@ -14,7 +14,7 @@ dof_blur_far_transition = -1.0
 dof_blur_near_distance = 0.01
 
 [sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_620wr"]
-panorama = ExtResource("4_tsw4r")
+panorama = ExtResource("4_rqg3i")
 
 [sub_resource type="Sky" id="Sky_7jktm"]
 sky_material = SubResource("PanoramaSkyMaterial_620wr")
@@ -24,133 +24,133 @@ background_mode = 2
 sky = SubResource("Sky_7jktm")
 
 [node name="Node3D" type="Node3D"]
-script = ExtResource("1_ed2hk")
+script = ExtResource("1_i5fsn")
 
-[node name="platform" parent="." instance=ExtResource("1_cpdla")]
+[node name="platform" parent="." instance=ExtResource("2_upik2")]
 transform = Transform3D(0.895985, 0, 0, 0, 0.1, 0, 0, 0, 0.971289, 0, -3.0063, 0)
 
 [node name="Camera3D" type="Camera3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 0.766044, 0.642788, 0, -0.642788, 0.766044, 0.291355, 7.1778, 3.70387)
+transform = Transform3D(1, 0, 0, 0, 0.785003, 0.619491, 0, -0.619491, 0.785003, 0, 5.901, 1.657)
 attributes = SubResource("CameraAttributesPractical_x1b6m")
 
-[node name="boom" parent="." instance=ExtResource("2_ed2hk")]
+[node name="boom" parent="." instance=ExtResource("3_g2vv3")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.67372, -2.55906, -14.7515)
 
-[node name="boom2" parent="." instance=ExtResource("2_ed2hk")]
+[node name="boom2" parent="." instance=ExtResource("3_g2vv3")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 19.2578, -2.55906, -14.7515)
 
-[node name="boom3" parent="." instance=ExtResource("2_ed2hk")]
+[node name="boom3" parent="." instance=ExtResource("3_g2vv3")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.83541, -2.55906, -14.7515)
 
-[node name="boom4" parent="." instance=ExtResource("2_ed2hk")]
+[node name="boom4" parent="." instance=ExtResource("3_g2vv3")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -14.215, -2.55906, -14.7515)
 
-[node name="boom5" parent="." instance=ExtResource("2_ed2hk")]
+[node name="boom5" parent="." instance=ExtResource("3_g2vv3")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -27.4019, -2.55906, -14.7515)
 
-[node name="boom6" parent="." instance=ExtResource("2_ed2hk")]
+[node name="boom6" parent="." instance=ExtResource("3_g2vv3")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -41.4406, -2.55906, -14.7515)
 
-[node name="boom7" parent="." instance=ExtResource("2_ed2hk")]
+[node name="boom7" parent="." instance=ExtResource("3_g2vv3")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 30.9111, -2.55906, -14.7515)
 
-[node name="boom8" parent="." instance=ExtResource("2_ed2hk")]
+[node name="boom8" parent="." instance=ExtResource("3_g2vv3")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 44.6852, -2.55906, -14.7515)
 
-[node name="boom9" parent="." instance=ExtResource("2_ed2hk")]
+[node name="boom9" parent="." instance=ExtResource("3_g2vv3")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.2791, -2.55906, -24.1047)
 
-[node name="boom10" parent="." instance=ExtResource("2_ed2hk")]
+[node name="boom10" parent="." instance=ExtResource("3_g2vv3")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 23.8632, -2.55906, -24.1047)
 
-[node name="boom11" parent="." instance=ExtResource("2_ed2hk")]
+[node name="boom11" parent="." instance=ExtResource("3_g2vv3")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.230021, -2.55906, -24.1047)
 
-[node name="boom12" parent="." instance=ExtResource("2_ed2hk")]
+[node name="boom12" parent="." instance=ExtResource("3_g2vv3")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.60961, -2.55906, -24.1047)
 
-[node name="boom13" parent="." instance=ExtResource("2_ed2hk")]
+[node name="boom13" parent="." instance=ExtResource("3_g2vv3")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -22.7965, -2.55906, -24.1047)
 
-[node name="boom14" parent="." instance=ExtResource("2_ed2hk")]
+[node name="boom14" parent="." instance=ExtResource("3_g2vv3")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -36.8352, -2.55906, -24.1047)
 
-[node name="boom15" parent="." instance=ExtResource("2_ed2hk")]
+[node name="boom15" parent="." instance=ExtResource("3_g2vv3")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 35.5165, -2.55906, -24.1047)
 
-[node name="boom16" parent="." instance=ExtResource("2_ed2hk")]
+[node name="boom16" parent="." instance=ExtResource("3_g2vv3")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 49.2906, -2.55906, -24.1047)
 
-[node name="boom17" parent="." instance=ExtResource("2_ed2hk")]
+[node name="boom17" parent="." instance=ExtResource("3_g2vv3")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.14057, -2.55906, -33.2969)
 
-[node name="boom18" parent="." instance=ExtResource("2_ed2hk")]
+[node name="boom18" parent="." instance=ExtResource("3_g2vv3")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16.7246, -2.55906, -33.2969)
 
-[node name="boom19" parent="." instance=ExtResource("2_ed2hk")]
+[node name="boom19" parent="." instance=ExtResource("3_g2vv3")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.36856, -2.55906, -33.2969)
 
-[node name="boom20" parent="." instance=ExtResource("2_ed2hk")]
+[node name="boom20" parent="." instance=ExtResource("3_g2vv3")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -16.7482, -2.55906, -33.2969)
 
-[node name="boom21" parent="." instance=ExtResource("2_ed2hk")]
+[node name="boom21" parent="." instance=ExtResource("3_g2vv3")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -29.9351, -2.55906, -33.2969)
 
-[node name="boom22" parent="." instance=ExtResource("2_ed2hk")]
+[node name="boom22" parent="." instance=ExtResource("3_g2vv3")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -43.9738, -2.55906, -33.2969)
 
-[node name="boom23" parent="." instance=ExtResource("2_ed2hk")]
+[node name="boom23" parent="." instance=ExtResource("3_g2vv3")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 28.3779, -2.55906, -33.2969)
 
-[node name="boom24" parent="." instance=ExtResource("2_ed2hk")]
+[node name="boom24" parent="." instance=ExtResource("3_g2vv3")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 42.1521, -2.55906, -33.2969)
 
-[node name="boom25" parent="." instance=ExtResource("2_ed2hk")]
+[node name="boom25" parent="." instance=ExtResource("3_g2vv3")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.1242, -2.55906, -44.3849)
 
-[node name="boom26" parent="." instance=ExtResource("2_ed2hk")]
+[node name="boom26" parent="." instance=ExtResource("3_g2vv3")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 24.7083, -2.55906, -44.3849)
 
-[node name="boom27" parent="." instance=ExtResource("2_ed2hk")]
+[node name="boom27" parent="." instance=ExtResource("3_g2vv3")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.615047, -2.55906, -44.3849)
 
-[node name="boom28" parent="." instance=ExtResource("2_ed2hk")]
+[node name="boom28" parent="." instance=ExtResource("3_g2vv3")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.76454, -2.55906, -44.3849)
 
-[node name="boom29" parent="." instance=ExtResource("2_ed2hk")]
+[node name="boom29" parent="." instance=ExtResource("3_g2vv3")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -21.9514, -2.55906, -44.3849)
 
-[node name="boom30" parent="." instance=ExtResource("2_ed2hk")]
+[node name="boom30" parent="." instance=ExtResource("3_g2vv3")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -35.9901, -2.55906, -44.3849)
 
-[node name="boom31" parent="." instance=ExtResource("2_ed2hk")]
+[node name="boom31" parent="." instance=ExtResource("3_g2vv3")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 36.3616, -2.55906, -44.3849)
 
-[node name="boom32" parent="." instance=ExtResource("2_ed2hk")]
+[node name="boom32" parent="." instance=ExtResource("3_g2vv3")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 50.1357, -2.55906, -44.3849)
 
-[node name="boom33" parent="." instance=ExtResource("2_ed2hk")]
+[node name="boom33" parent="." instance=ExtResource("3_g2vv3")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.0718, -2.55906, -53.6992)
 
-[node name="boom34" parent="." instance=ExtResource("2_ed2hk")]
+[node name="boom34" parent="." instance=ExtResource("3_g2vv3")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 21.6559, -2.55906, -53.6992)
 
-[node name="boom35" parent="." instance=ExtResource("2_ed2hk")]
+[node name="boom35" parent="." instance=ExtResource("3_g2vv3")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.43733, -2.55906, -53.6992)
 
-[node name="boom36" parent="." instance=ExtResource("2_ed2hk")]
+[node name="boom36" parent="." instance=ExtResource("3_g2vv3")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11.8169, -2.55906, -53.6992)
 
-[node name="boom37" parent="." instance=ExtResource("2_ed2hk")]
+[node name="boom37" parent="." instance=ExtResource("3_g2vv3")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -25.0038, -2.55906, -53.6992)
 
-[node name="boom38" parent="." instance=ExtResource("2_ed2hk")]
+[node name="boom38" parent="." instance=ExtResource("3_g2vv3")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -39.0425, -2.55906, -53.6992)
 
-[node name="boom39" parent="." instance=ExtResource("2_ed2hk")]
+[node name="boom39" parent="." instance=ExtResource("3_g2vv3")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 33.3092, -2.55906, -53.6992)
 
-[node name="boom40" parent="." instance=ExtResource("2_ed2hk")]
+[node name="boom40" parent="." instance=ExtResource("3_g2vv3")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 47.0833, -2.55906, -53.6992)
 
 [node name="OmniLight3D" type="OmniLight3D" parent="."]
@@ -164,7 +164,7 @@ shadow_blur = 10.0
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_x1b6m")
 
-[node name="rups gast" parent="." instance=ExtResource("5_6s8yn")]
+[node name="rups gast" parent="." instance=ExtResource("5_3nitr")]
 transform = Transform3D(0.841596, 0, -0.540108, 0, 1, 0, 0.540108, 0, 0.841596, 8.35078, -3.34385, -25.919)
 
-[node name="CharachterThink" parent="." instance=ExtResource("5_cpdla")]
+[node name="CharachterDance" parent="." instance=ExtResource("6_5t03s")]

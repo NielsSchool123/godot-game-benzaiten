@@ -1,16 +1,16 @@
 [gd_scene load_steps=20 format=3 uid="uid://d3mlotrslplbs"]
 
 [ext_resource type="Script" uid="uid://q6pcjrbfxr" path="res://scripts/BackGroundMusic.gd" id="1_ehv2h"]
-[ext_resource type="PackedScene" uid="uid://d2otn14bnvjn6" path="res://scenes/DeathZone.tscn" id="1_n7ypv"]
-[ext_resource type="PackedScene" uid="uid://phpa3phmm6uu" path="res://scenes/Player.tscn" id="2_0s5r2"]
+[ext_resource type="PackedScene" uid="uid://d2otn14bnvjn6" path="res://DeathZone.tscn" id="1_n7ypv"]
+[ext_resource type="PackedScene" uid="uid://phpa3phmm6uu" path="res://Player.tscn" id="2_0s5r2"]
 [ext_resource type="Texture2D" uid="uid://b5so7di8cwa53" path="res://assets/images/kloppenheim_07_puresky_2k.exr" id="4_eoq84"]
-[ext_resource type="PackedScene" uid="uid://brjiarf6ok01m" path="res://scenes/platforms/PlatfromMoveX.tscn" id="6_0s5r2"]
-[ext_resource type="PackedScene" uid="uid://besrs3ul76nc3" path="res://scenes/platforms/PlatformMOveZ.tscn" id="7_7dov7"]
-[ext_resource type="PackedScene" uid="uid://bgtir65febws3" path="res://scenes/platforms/WinPlatform.tscn" id="7_7j8ne"]
-[ext_resource type="Script" uid="uid://bdo7qk8ufymio" path="res://scripts/PlatformMoveScriptx2.gd" id="7_ehv2h"]
+[ext_resource type="PackedScene" uid="uid://brjiarf6ok01m" path="res://PlatfromMoveX.tscn" id="6_0s5r2"]
+[ext_resource type="PackedScene" uid="uid://besrs3ul76nc3" path="res://PlatformMOveZ.tscn" id="7_7dov7"]
+[ext_resource type="PackedScene" uid="uid://bgtir65febws3" path="res://WinPlatform.tscn" id="7_7j8ne"]
+[ext_resource type="Script" uid="uid://bdo7qk8ufymio" path="res://scripts/PlatformMoveScriptX2.gd" id="7_ehv2h"]
 [ext_resource type="Script" uid="uid://bxxqjh27dwfix" path="res://scripts/PlatformMoveScriptX.gd" id="9_eoq84"]
 [ext_resource type="AudioStream" uid="uid://68ore0n8fakj" path="res://assets/sounds/backgroundmusic.wav" id="10_15wb7"]
-[ext_resource type="PackedScene" uid="uid://bb4guv2ig54t4" path="res://scenes/platforms/Island.tscn" id="11_yl73a"]
+[ext_resource type="PackedScene" uid="uid://bb4guv2ig54t4" path="res://Island.tscn" id="11_yl73a"]
 
 [sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_7j8ne"]
 panorama = ExtResource("4_eoq84")

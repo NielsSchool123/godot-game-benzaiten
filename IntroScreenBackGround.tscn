@@ -1,6 +1,6 @@
 [gd_scene load_steps=12 format=3 uid="uid://baq7oqjbffu1k"]
 
-[ext_resource type="PackedScene" uid="uid://db21nmw2v5t8r" path="res://scenes/platforms/Platrform.tscn" id="1_2dljv"]
+[ext_resource type="PackedScene" uid="uid://db21nmw2v5t8r" path="res://Platrform.tscn" id="1_2dljv"]
 [ext_resource type="PackedScene" uid="uid://cpipsmpcc0gs4" path="res://assets/models/boom.glb" id="2_61ybs"]
 [ext_resource type="Texture2D" uid="uid://cwbpls1njfmp3" path="res://assets/images/NightSkyHDRI008_2K-HDR.exr" id="3_eeduj"]
 [ext_resource type="PackedScene" uid="uid://dllab4orjnwdd" path="res://assets/models/CharachterSit.glb" id="4_61ybs"]

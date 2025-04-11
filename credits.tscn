@@ -1,6 +1,6 @@
 [gd_scene load_steps=5 format=3 uid="uid://b0dphdjryugrh"]
 
-[ext_resource type="PackedScene" uid="uid://c0as3cvhybnve" path="res://scenes/CreditsBackground.tscn" id="2_c1t8d"]
+[ext_resource type="PackedScene" uid="uid://c0as3cvhybnve" path="res://CreditsBackground.tscn" id="2_c1t8d"]
 [ext_resource type="AudioStream" uid="uid://cdxbjdg0ltl4w" path="res://assets/sounds/buttonselect.wav" id="3_g4wvt"]
 
 [sub_resource type="GDScript" id="GDScript_c1t8d"]

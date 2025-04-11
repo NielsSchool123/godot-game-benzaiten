@@ -1,15 +1,15 @@
 [gd_scene load_steps=19 format=3 uid="uid://ba3glaa7qnuda"]
 
 [ext_resource type="Script" uid="uid://q6pcjrbfxr" path="res://scripts/BackGroundMusic.gd" id="1_s24i2"]
-[ext_resource type="PackedScene" uid="uid://d2otn14bnvjn6" path="res://scenes/DeathZone.tscn" id="2_66w8i"]
-[ext_resource type="PackedScene" uid="uid://phpa3phmm6uu" path="res://scenes/Player.tscn" id="3_80qnk"]
+[ext_resource type="PackedScene" uid="uid://d2otn14bnvjn6" path="res://DeathZone.tscn" id="2_66w8i"]
+[ext_resource type="PackedScene" uid="uid://phpa3phmm6uu" path="res://Player.tscn" id="3_80qnk"]
 [ext_resource type="Texture2D" uid="uid://b5so7di8cwa53" path="res://assets/images/kloppenheim_07_puresky_2k.exr" id="5_80qnk"]
-[ext_resource type="PackedScene" uid="uid://bgtir65febws3" path="res://scenes/platforms/WinPlatform.tscn" id="7_xxbfp"]
+[ext_resource type="PackedScene" uid="uid://bgtir65febws3" path="res://WinPlatform.tscn" id="7_xxbfp"]
 [ext_resource type="AudioStream" uid="uid://68ore0n8fakj" path="res://assets/sounds/backgroundmusic.wav" id="8_0yqnl"]
-[ext_resource type="PackedScene" uid="uid://bpjnse0ji0y3b" path="res://scenes/platforms/PlatformFallFAST4.tscn" id="8_s24i2"]
-[ext_resource type="PackedScene" uid="uid://b2y3cjbmbjofx" path="res://scenes/Slime4.tscn" id="9_66w8i"]
-[ext_resource type="PackedScene" uid="uid://cpgxfatch6tik" path="res://scenes/platforms/PlatFormMoveY.tscn" id="10_80qnk"]
-[ext_resource type="PackedScene" uid="uid://bb4guv2ig54t4" path="res://scenes/platforms/Island.tscn" id="10_cicwn"]
+[ext_resource type="PackedScene" uid="uid://bpjnse0ji0y3b" path="res://PlatformFallFAST4.tscn" id="8_s24i2"]
+[ext_resource type="PackedScene" uid="uid://b2y3cjbmbjofx" path="res://Slime4.tscn" id="9_66w8i"]
+[ext_resource type="PackedScene" uid="uid://cpgxfatch6tik" path="res://PlatFormMoveY.tscn" id="10_80qnk"]
+[ext_resource type="PackedScene" uid="uid://bb4guv2ig54t4" path="res://Island.tscn" id="10_cicwn"]
 
 [sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_fc0e3"]
 panorama = ExtResource("5_80qnk")
