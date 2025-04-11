@@ -1,8 +1,11 @@
-[gd_scene load_steps=4 format=3 uid="uid://dktctapc0cslb"]
+[gd_scene load_steps=5 format=3 uid="uid://dktctapc0cslb"]
 
 [ext_resource type="Script" uid="uid://bp6rp8qag1hpe" path="res://scripts/intro_screen.gd" id="1_66135"]
 [ext_resource type="PackedScene" uid="uid://baq7oqjbffu1k" path="res://IntroScreenBackGround.tscn" id="3_66135"]
 [ext_resource type="AudioStream" uid="uid://cdxbjdg0ltl4w" path="res://assets/sounds/buttonselect.wav" id="3_yd5l1"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_66135"]
+font_color = Color(1, 0, 0, 1)
 
 [node name="Control" type="Control"]
 layout_mode = 3
@@ -44,3 +47,14 @@ text = "Credits"
 layout_mode = 2
 text = "Quit
 "
+
+[node name="TURN TO VISIBLE FOR WEB VERSION" type="Label" parent="."]
+visible = false
+layout_mode = 0
+offset_left = 2.0
+offset_top = 259.0
+offset_right = 521.0
+offset_bottom = 419.0
+text = "WARNING: THIS IS THE WEBSITE VERSION, EXPECT TO RUN IN BUGS!
+(No audio, bugged lighting and more)"
+label_settings = SubResource("LabelSettings_66135")
