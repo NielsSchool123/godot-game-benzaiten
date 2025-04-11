@@ -1,10 +1,12 @@
-[gd_scene load_steps=14 format=3 uid="uid://baq7oqjbffu1k"]
+[gd_scene load_steps=12 format=3 uid="uid://baq7oqjbffu1k"]
 
 [ext_resource type="PackedScene" uid="uid://db21nmw2v5t8r" path="res://Platrform.tscn" id="1_2dljv"]
 [ext_resource type="PackedScene" uid="uid://cpipsmpcc0gs4" path="res://assets/models/boom.glb" id="2_61ybs"]
 [ext_resource type="Texture2D" uid="uid://cwbpls1njfmp3" path="res://assets/images/NightSkyHDRI008_2K-HDR.exr" id="3_eeduj"]
+[ext_resource type="PackedScene" uid="uid://dllab4orjnwdd" path="res://assets/models/CharachterSit.glb" id="4_61ybs"]
 [ext_resource type="PackedScene" uid="uid://cqdmd237vujjo" path="res://assets/models/rups gast.glb" id="4_sy1ou"]
-[ext_resource type="PackedScene" uid="uid://bja5lqhupg7bo" path="res://assets/models/Player.glb" id="5_wv6r2"]
+[ext_resource type="Script" uid="uid://bsinun72pdnif" path="res://scripts/charachter_sit.gd" id="5_eeduj"]
+[ext_resource type="PackedScene" uid="uid://b5tmc1e22d5c3" path="res://assets/models/CampFire.glb" id="6_61ybs"]
 
 [sub_resource type="CameraAttributesPractical" id="CameraAttributesPractical_x1b6m"]
 dof_blur_far_enabled = true
@@ -22,19 +24,8 @@ sky_material = SubResource("PanoramaSkyMaterial_620wr")
 background_mode = 2
 sky = SubResource("Sky_7jktm")
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_mpjvj"]
-albedo_color = Color(1, 0.521569, 0, 1)
-
-[sub_resource type="BoxMesh" id="BoxMesh_f3wl4"]
-material = SubResource("StandardMaterial3D_mpjvj")
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_dw43o"]
-albedo_color = Color(1, 0, 0, 1)
-
-[sub_resource type="PrismMesh" id="PrismMesh_cqhca"]
-material = SubResource("StandardMaterial3D_dw43o")
-
 [node name="Node3D" type="Node3D"]
+script = ExtResource("5_eeduj")
 
 [node name="platform" parent="." instance=ExtResource("1_2dljv")]
 transform = Transform3D(0.895985, 0, 0, 0, 0.1, 0, 0, 0, 0.971289, 0, -3.0063, 0)
@@ -42,6 +33,7 @@ transform = Transform3D(0.895985, 0, 0, 0, 0.1, 0, 0, 0, 0.971289, 0, -3.0063, 0
 [node name="Camera3D" type="Camera3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 0.848787, 0.528735, 0, -0.528735, 0.848787, -2.72519, 5.90097, 8.34687)
 attributes = SubResource("CameraAttributesPractical_x1b6m")
+current = true
 
 [node name="boom" parent="." instance=ExtResource("2_61ybs")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.67372, -2.55906, -14.7515)
@@ -171,20 +163,20 @@ shadow_blur = 10.0
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_x1b6m")
 
+[node name="CharachterSit" parent="." instance=ExtResource("4_61ybs")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.95622, 0, -1.15315)
+
 [node name="rups gast" parent="." instance=ExtResource("4_sy1ou")]
 transform = Transform3D(0.841596, 0, -0.540108, 0, 1, 0, 0.540108, 0, 0.841596, 2.02145, -3.34385, -25.919)
-
-[node name="Player" parent="." instance=ExtResource("5_wv6r2")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0566947, 0, 0.965853)
-
-[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
-transform = Transform3D(4.098, 0, 0, 0, 1, 0, 0, 0, 4.58549, 0, 0.50198, 4.76432)
-mesh = SubResource("BoxMesh_f3wl4")
-
-[node name="MeshInstance3D2" type="MeshInstance3D" parent="."]
-transform = Transform3D(4.098, 0, 0, 0, 1, 0, 0, 0, 4.58549, 0, 1.33012, 4.76432)
-mesh = SubResource("PrismMesh_cqhca")
 
 [node name="OmniLight3D" type="OmniLight3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.0943, 4.77965)
 light_color = Color(1, 0.690196, 0, 1)
+
+[node name="CampFire" parent="." instance=ExtResource("6_61ybs")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0739801, -1.56675, 4.63025)
+
+[node name="OmniLight3D2" type="OmniLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.323054, 2.96308, 4.43135)
+light_color = Color(1, 0, 0, 1)
+light_energy = 16.0

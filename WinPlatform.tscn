@@ -1,6 +1,6 @@
 [gd_scene load_steps=6 format=3 uid="uid://bgtir65febws3"]
 
-[ext_resource type="Script" uid="uid://cof3bdqwun8uc" path="res://scripts/PlatformWInScript.gd" id="1_fwa3j"]
+[ext_resource type="Script" uid="uid://cof3bdqwun8uc" path="res://scripts/PlatformWinScript.gd" id="1_fwa3j"]
 [ext_resource type="PackedScene" uid="uid://bufgukfh7v5qt" path="res://WinScreen.tscn" id="2_fwa3j"]
 [ext_resource type="PackedScene" uid="uid://bb4guv2ig54t4" path="res://Island.tscn" id="3_fwa3j"]
 [ext_resource type="PackedScene" uid="uid://dttckuk2adbts" path="res://assets/models/kroon.glb" id="4_kt5f1"]
