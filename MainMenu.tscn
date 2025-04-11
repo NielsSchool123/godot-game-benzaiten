@@ -24,41 +24,13 @@ offset_bottom = -70.0
 grow_horizontal = 2
 metadata/_edit_use_anchors_ = true
 
-[node name="level_1" type="Button" parent="VBoxContainer"]
+[node name="World1" type="Button" parent="VBoxContainer"]
 layout_mode = 2
-text = "level 1"
+text = "World 1"
 
-[node name="level_2" type="Button" parent="VBoxContainer"]
+[node name="World2" type="Button" parent="VBoxContainer"]
 layout_mode = 2
-text = "level 2"
-
-[node name="level_3" type="Button" parent="VBoxContainer"]
-layout_mode = 2
-text = "level 3"
-
-[node name="level_4" type="Button" parent="VBoxContainer"]
-modulate = Color(1, 0, 0, 1)
-self_modulate = Color(1, 0, 0, 1)
-layout_mode = 2
-theme_override_colors/font_disabled_color = Color(1, 0, 0, 1)
-theme_override_colors/font_hover_pressed_color = Color(1, 0, 0, 1)
-theme_override_colors/font_hover_color = Color(1, 0, 0, 1)
-theme_override_colors/icon_disabled_color = Color(1, 0, 0, 1)
-theme_override_colors/icon_hover_pressed_color = Color(1, 0, 0, 1)
-theme_override_colors/icon_hover_color = Color(1, 0, 0, 1)
-theme_override_colors/icon_pressed_color = Color(1, 0, 0, 1)
-theme_override_colors/icon_focus_color = Color(1, 0, 0, 1)
-theme_override_colors/icon_normal_color = Color(1, 0, 0, 1)
-theme_override_colors/font_outline_color = Color(1, 0, 0, 1)
-theme_override_colors/font_color = Color(1, 0, 0, 1)
-theme_override_colors/font_focus_color = Color(1, 0, 0, 1)
-theme_override_colors/font_pressed_color = Color(1, 0, 0, 1)
-theme_override_constants/outline_size = 3
-text = "level 4"
-
-[node name="level_5" type="Button" parent="VBoxContainer"]
-layout_mode = 2
-text = "level 5"
+text = "World 2"
 
 [node name="IntroScreen" type="Button" parent="VBoxContainer"]
 layout_mode = 2
