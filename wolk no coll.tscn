@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://clpkehuwcsoao"]
+
+[ext_resource type="PackedScene" uid="uid://dugq0g2qdbxfv" path="res://assets/Wolk3.glb" id="1_l1ivj"]
+
+[node name="StaticBody3D" type="StaticBody3D"]
+
+[node name="Wolk3" parent="." instance=ExtResource("1_l1ivj")]

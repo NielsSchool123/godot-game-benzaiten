@@ -1,0 +1,23 @@
+[gd_scene load_steps=4 format=3 uid="uid://ddv0uw6vn73em"]
+
+[ext_resource type="Script" uid="uid://cqhsv6lbta2g" path="res://static_body_3d.gd" id="1_25lmi"]
+[ext_resource type="PackedScene" uid="uid://djrsk0yctohsq" path="res://assets/midel wood spike (1).glb" id="2_l1dkd"]
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_fvj18"]
+height = 7.89917
+radius = 1.49805
+
+[node name="Area3D" type="Area3D"]
+script = ExtResource("1_25lmi")
+
+[node name="midel wood spike (1)" parent="." instance=ExtResource("2_l1dkd")]
+
+[node name="Area3D" type="Area3D" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0160065, 2.94958, -0.0998342)
+shape = SubResource("CylinderShape3D_fvj18")
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0160065, 2.4231, -0.0998342)
+shape = SubResource("CylinderShape3D_fvj18")
