@@ -1,0 +1,21 @@
+[gd_scene load_steps=4 format=3 uid="uid://cn1ovhleelier"]
+
+[ext_resource type="PackedScene" uid="uid://dugq0g2qdbxfv" path="res://assets/Wolk3.glb" id="1_um5r2"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_um5r2"]
+size = Vector3(24.3744, 1, 25.4409)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_x484s"]
+size = Vector3(6.64294, 1, 7.63373)
+
+[node name="StaticBody3D" type="StaticBody3D"]
+
+[node name="Wolk3" parent="." instance=ExtResource("1_um5r2")]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.14923, 0.132493, 0.411789)
+shape = SubResource("BoxShape3D_um5r2")
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.5274, -0.26236, -0.615814)
+shape = SubResource("BoxShape3D_x484s")
