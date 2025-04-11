@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://58uq12ehc5mv"]
+[gd_scene load_steps=17 format=3 uid="uid://58uq12ehc5mv"]
 
 [ext_resource type="PackedScene" uid="uid://ddv0uw6vn73em" path="res://spike dood.tscn" id="1_kcwpe"]
 [ext_resource type="PackedScene" uid="uid://phpa3phmm6uu" path="res://Player.tscn" id="2_j6qfn"]
@@ -18,7 +18,39 @@ sky_material = SubResource("PanoramaSkyMaterial_t6fl3")
 [sub_resource type="Environment" id="Environment_g81sl"]
 background_mode = 2
 sky = SubResource("Sky_5hph3")
+fog_enabled = true
+fog_mode = 1
+fog_density = 1.0
+fog_depth_begin = 100.0
+fog_depth_end = 4000.0
 volumetric_fog_density = 0.0
+
+[sub_resource type="FastNoiseLite" id="FastNoiseLite_bjebc"]
+noise_type = 0
+
+[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_kcwpe"]
+seamless = true
+as_normal_map = true
+noise = SubResource("FastNoiseLite_bjebc")
+
+[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_j6qfn"]
+seamless = true
+as_normal_map = true
+noise = SubResource("FastNoiseLite_bjebc")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_5rr72"]
+transparency = 1
+depth_draw_mode = 1
+albedo_color = Color(0, 1, 1, 0.6)
+roughness = 0.0
+normal_enabled = true
+normal_texture = SubResource("NoiseTexture2D_kcwpe")
+refraction_enabled = true
+refraction_texture = SubResource("NoiseTexture2D_j6qfn")
+uv1_world_triplanar = true
+
+[sub_resource type="BoxMesh" id="BoxMesh_2etst"]
+material = SubResource("StandardMaterial3D_5rr72")
 
 [node name="Node3D" type="Node3D"]
 
@@ -177,3 +209,7 @@ transform = Transform3D(0.111226, 0, 0.993795, 0, 1, 0, -0.993795, 0, 0.111226, 
 
 [node name="skull" parent="StaticBody3D19" instance=ExtResource("8_o1mlc")]
 transform = Transform3D(0.999999, 0, -7.45058e-09, 0, 1, 0, 7.45058e-09, 0, 0.999999, 9.69939, 6.85158, 29.6518)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(10000, 0, 0, 0, 115.211, 0, 0, 0, 10000, 12.0219, -884.925, -0.229027)
+mesh = SubResource("BoxMesh_2etst")
