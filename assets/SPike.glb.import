@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://djrsk0yctohsq"
-path="res://.godot/imported/midel wood spike (1).glb-6610c77ddb2577beb15ae4cc70e37e30.scn"
+path="res://.godot/imported/SPike.glb-48b1205811a3719384b703a0d6f09fde.scn"
 
 [deps]
 
-source_file="res://assets/midel wood spike (1).glb"
-dest_files=["res://.godot/imported/midel wood spike (1).glb-6610c77ddb2577beb15ae4cc70e37e30.scn"]
+source_file="res://assets/SPike.glb"
+dest_files=["res://.godot/imported/SPike.glb-48b1205811a3719384b703a0d6f09fde.scn"]
 
 [params]
 

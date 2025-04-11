@@ -1,6 +1,6 @@
 [gd_scene load_steps=17 format=3 uid="uid://pp11buvlytyl"]
 
-[ext_resource type="Script" path="res://scripts/BackGroundMusic.gd" id="1_bjebc"]
+[ext_resource type="Script" uid="uid://q6pcjrbfxr" path="res://scripts/BackGroundMusic.gd" id="1_bjebc"]
 [ext_resource type="PackedScene" uid="uid://d2otn14bnvjn6" path="res://DeathZone.tscn" id="1_rka8t"]
 [ext_resource type="PackedScene" uid="uid://phpa3phmm6uu" path="res://Player.tscn" id="2_5hph3"]
 [ext_resource type="PackedScene" uid="uid://lm1uhplyjr3b" path="res://Slime.tscn" id="5_5rr72"]
