@@ -5,7 +5,7 @@ resource_name = "PitchShift"
 pitch_scale = 0.5
 
 [resource]
-bus/1/name = &"level 4"
+bus/1/name = &"secret"
 bus/1/solo = false
 bus/1/mute = false
 bus/1/bypass_fx = false
