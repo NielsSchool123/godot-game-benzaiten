@@ -1,7 +1,7 @@
 extends Control
 
 @export var main_menu_scene: String = "res://secretlevel1.tscn"
-@export var alt_scene: String = "res://introscreen.tscn"  # Second scene to load
+@export var alt_scene: String = "res://IntroScreen.tscn"  # Second scene to load
 
 @onready var win_sound: AudioStreamPlayer = $Secret
 @onready var button_select: AudioStreamPlayer = $Buttonselect
