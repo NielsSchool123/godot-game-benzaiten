@@ -26,9 +26,6 @@ anchor_left = 0.00260417
 anchor_top = 0.00462963
 anchor_right = 0.0954861
 anchor_bottom = 0.0524691
-offset_right = 1.52588e-05
-offset_bottom = 2.28882e-05
-scale = Vector2(2, 2)
 text = "Fullscreen"
 metadata/_edit_use_anchors_ = true
 
@@ -36,19 +33,18 @@ metadata/_edit_use_anchors_ = true
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.000868056
-anchor_top = 0.143519
+anchor_top = 0.0817901
 anchor_right = 0.0286459
-anchor_bottom = 0.174383
-scale = Vector2(2, 2)
+anchor_bottom = 0.112654
+metadata/_edit_use_anchors_ = true
 
 [node name="IntroScreen" type="Button" parent="."]
 layout_mode = 1
 anchors_preset = -1
-anchor_left = 0.920139
-anchor_top = 0.901235
-anchor_right = 0.959201
-anchor_bottom = 0.949074
-scale = Vector2(2, 2)
+anchor_left = 0.960069
+anchor_top = 0.947531
+anchor_right = 0.999132
+anchor_bottom = 0.99537
 text = "Back"
 metadata/_edit_use_anchors_ = true
 
