@@ -10,7 +10,6 @@ func _ready():
 	$Button.pressed.connect(_on_button_pressed)
 
 func _on_button_pressed():
-	Global.secret_level_visited = true
 	button_select.play()
 	await get_tree().create_timer(0.1).timeout
 	get_tree().change_scene_to_file(main_menu_scene)

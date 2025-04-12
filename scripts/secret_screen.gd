@@ -12,6 +12,7 @@ func _ready():
 	$AltButton.pressed.connect(_on_alt_button_pressed)  # Second button
 
 func _on_button_pressed():
+	Global.secret_level_visited = true
 	await get_tree().create_timer(0.1).timeout
 	button_select.play()
 	get_tree().change_scene_to_file(main_menu_scene)
