@@ -1,7 +1,9 @@
 extends Control
 @onready var button_select: AudioStreamPlayer = $Buttonselect
-
-func _ready(): # logica voor de quit button, als de button text quit is dan runt het de logica om het af te sluiten en aders gebruikt de de funcite daaronder
+@onready var secret_label = $Secretslabel
+ # logica voor de quit button, als de button text quit is dan runt het de logica om het af te sluiten en aders gebruikt de de funcite daaronder
+func _ready():
+	secret_label.text = "Secrets found: " + str(GameData.secrets_found) + "/" + str(GameData.total_secrets)
 	for button in $VBoxContainer.get_children():
 		if button.name == "Quit":
 			button.pressed.connect(func(): get_tree().quit())
@@ -24,6 +26,7 @@ var tooltips = [
 	"Try to find secrets!",
 	"It's watching.",
 	"Jumping just before falling off a ledge gives you more distance.",
+	"Some platforms aren't as stable as they look...",
 	"You can rotate mid-air—use it to align for tight landings.",
 	"Some platforms might not be real. Be aware of details!"
 ]

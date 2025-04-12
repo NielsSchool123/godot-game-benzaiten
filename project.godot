@@ -19,6 +19,7 @@ config/icon="res://assets/images/icon.svg"
 
 Escapefullscreen="*res://scripts/escapefullscreen.gd"
 Global="*res://scripts/BoolSecretlevl.gd"
+GameData="*res://scripts/secretcounter.gd"
 
 [debug]
 
