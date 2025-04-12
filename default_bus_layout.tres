@@ -2,7 +2,7 @@
 
 [sub_resource type="AudioEffectPitchShift" id="AudioEffectPitchShift_j3pel"]
 resource_name = "PitchShift"
-pitch_scale = 0.5
+pitch_scale = 0.3
 
 [resource]
 bus/1/name = &"secret"
