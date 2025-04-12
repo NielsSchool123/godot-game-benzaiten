@@ -33,6 +33,10 @@ transform = Transform3D(0.895985, 0, 0, 0, 0.1, 0, 0, 0, 0.971289, 0, -3.0063, 0
 transform = Transform3D(1, 0, 0, 0, 0.766044, 0.642788, 0, -0.642788, 0.766044, 0.291355, 7.1778, 3.70387)
 attributes = SubResource("CameraAttributesPractical_x1b6m")
 
+[node name="Camera3D2" type="Camera3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.766044, 0.642788, 0, -0.642788, 0.766044, 0.291355, 7.1778, 3.70387)
+attributes = SubResource("CameraAttributesPractical_x1b6m")
+
 [node name="boom" parent="." instance=ExtResource("2_ed2hk")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.67372, -2.55906, -14.7515)
 
