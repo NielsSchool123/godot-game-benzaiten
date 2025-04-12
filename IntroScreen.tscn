@@ -58,3 +58,13 @@ offset_bottom = 419.0
 text = "WARNING: THIS IS THE WEBSITE VERSION, EXPECT TO RUN IN BUGS!
 (No audio, bugged lighting and more)"
 label_settings = SubResource("LabelSettings_66135")
+
+[node name="TooltipLabel" type="Label" parent="."]
+layout_mode = 0
+offset_left = 30.0
+offset_top = 168.0
+offset_right = 476.0
+offset_bottom = 301.0
+text = "PLACEHOLDER"
+horizontal_alignment = 1
+vertical_alignment = 1

@@ -18,6 +18,7 @@ config/icon="res://assets/images/icon.svg"
 [autoload]
 
 Escapefullscreen="*res://scripts/escapefullscreen.gd"
+Global="*res://scripts/BoolSecretlevl.gd"
 
 [debug]
 

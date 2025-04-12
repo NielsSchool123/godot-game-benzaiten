@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://c1doeyf584g70"]
 
-[ext_resource type="PackedScene" uid="uid://cj87gh2ow7xcf" path="res://assets/skull.glb" id="1_smrl3"]
+[ext_resource type="PackedScene" uid="uid://cj87gh2ow7xcf" path="res://assets/models/skull.glb" id="1_smrl3"]
 
 [node name="StaticBody3D" type="StaticBody3D"]
 

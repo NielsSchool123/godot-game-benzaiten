@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://dugq0g2qdbxfv"
-path="res://.godot/imported/Wolk3.glb-9c4ecca4a74eb962eab59c61ca277152.scn"
+path="res://.godot/imported/Wolk3.glb-ef24a07aa0cde088043d3b40afd24808.scn"
 
 [deps]
 
-source_file="res://assets/Wolk3.glb"
-dest_files=["res://.godot/imported/Wolk3.glb-9c4ecca4a74eb962eab59c61ca277152.scn"]
+source_file="res://assets/models/Wolk3.glb"
+dest_files=["res://.godot/imported/Wolk3.glb-ef24a07aa0cde088043d3b40afd24808.scn"]
 
 [params]
 

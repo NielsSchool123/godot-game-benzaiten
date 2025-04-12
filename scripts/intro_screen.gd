@@ -7,6 +7,8 @@ func _ready(): # logica voor de quit button, als de button text quit is dan runt
 			button.pressed.connect(func(): get_tree().quit())
 		else:
 			button.pressed.connect(func(): _on_level_selected(button.name))
+	var random_tip = tooltips[randi() % tooltips.size()]
+	tooltip_label.text = random_tip
 
 
 func _on_level_selected(level_name: String): # logica voor levels laden, het kijkt hij de button heet  en laad dat level
@@ -14,3 +16,14 @@ func _on_level_selected(level_name: String): # logica voor levels laden, het kij
 	await get_tree().create_timer(0.14).timeout
 	var scene_path = "res://" + level_name + ".tscn" 
 	get_tree().change_scene_to_file(scene_path)
+
+
+@onready var tooltip_label = $TooltipLabel
+
+var tooltips = [
+	"Try to find secrets!",
+	"It's watching.",
+	"Jumping just before falling off a ledge gives you more distance.",
+	"You can rotate mid-air—use it to align for tight landings.",
+	"Some platforms might not be real. Be aware of details!"
+]
