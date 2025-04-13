@@ -11,6 +11,7 @@ var tooltips = [
 	"Some platforms aren't as stable as they look...",
 	"You can rotate mid-air—use it to align for tight landings.",
 	"Some things might be locked away forever if your not careful enough...",
+	"Press F11 to escape fullscreen.",
 	"Some platforms might not be real. Be aware of details!"
 ]
 

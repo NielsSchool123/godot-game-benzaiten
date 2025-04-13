@@ -65,7 +65,7 @@ script = ExtResource("1_s24i2")
 transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, 0, -0.751924, 168.236)
 
 [node name="DeathZone" parent="." instance=ExtResource("2_66w8i")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -10, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -5, 0)
 
 [node name="player" parent="." instance=ExtResource("3_80qnk")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.526007, 0)

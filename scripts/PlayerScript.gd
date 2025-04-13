@@ -11,6 +11,8 @@ extends CharacterBody3D
 @onready var death_model: Node3D = $CharachterDeath
 @onready var death_anim: AnimationPlayer = $CharachterDeath/AnimationPlayer
 
+@onready var pause_menu: CanvasLayer = $CanvasLayer
+
 var mouse_captured: bool = false
 var is_dead: bool = false
 
@@ -21,6 +23,10 @@ func _ready():
 func _input(event):
 	if is_dead:
 		return
+	
+	if event is InputEventKey and event.pressed and event.keycode == KEY_ESCAPE:
+		_toggle_pause()
+	
 	if event is InputEventMouseMotion and mouse_captured:
 		rotate_y(-event.relative.x * mouse_sensitivity)  # horizontaal
 		camera.rotate_x(event.relative.y * mouse_sensitivity)  # verticaal
@@ -30,6 +36,7 @@ func _input(event):
 		if event.button_index == MOUSE_BUTTON_RIGHT:
 			mouse_captured = event.pressed
 			Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED if event.pressed else Input.MOUSE_MODE_VISIBLE)
+
 # doet pyshcis
 func _physics_process(delta: float) -> void:
 	if is_dead:
@@ -64,9 +71,18 @@ func _physics_process(delta: float) -> void:
 	else:
 		walk_anim.stop()
 
-
 func die(): # function to play animation when dead
 	is_dead = true
 	walk_model.visible = false
 	death_model.visible = true
 	death_anim.play("Armature|mixamo_com|Layer0")
+
+func _toggle_pause():
+	if Engine.time_scale == 1:
+		Engine.time_scale = 0
+		pause_menu.visible = true
+		Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
+	else:
+		Engine.time_scale = 1
+		pause_menu.visible = false
+		Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)

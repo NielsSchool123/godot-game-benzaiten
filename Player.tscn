@@ -1,9 +1,10 @@
-[gd_scene load_steps=6 format=3 uid="uid://phpa3phmm6uu"]
+[gd_scene load_steps=7 format=3 uid="uid://phpa3phmm6uu"]
 
 [ext_resource type="Script" uid="uid://dmcpnrysn5ivu" path="res://scripts/PlayerScript.gd" id="1_onrkg"]
 [ext_resource type="PackedScene" uid="uid://cqkdj7rm7ds05" path="res://PlayerWalkAnimation.tscn" id="2_kne1u"]
 [ext_resource type="AudioStream" uid="uid://llca46munslo" path="res://assets/sounds/jump.wav" id="3_kne1u"]
 [ext_resource type="PackedScene" uid="uid://dincgrtfnsx2r" path="res://charachter_death.tscn" id="4_e80uo"]
+[ext_resource type="PackedScene" uid="uid://co4x3amvatm6j" path="res://PauseMenu.tscn" id="5_cxr5p"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_onrkg"]
 size = Vector3(1.40004, 0.89682, 0.001)
@@ -25,4 +26,7 @@ stream = ExtResource("3_kne1u")
 volume_db = -20.0
 
 [node name="CharachterDeath" parent="." instance=ExtResource("4_e80uo")]
+visible = false
+
+[node name="CanvasLayer" parent="." instance=ExtResource("5_cxr5p")]
 visible = false

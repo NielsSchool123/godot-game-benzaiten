@@ -7,7 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://brjiarf6ok01m" path="res://PlatfromMoveX.tscn" id="6_0s5r2"]
 [ext_resource type="PackedScene" uid="uid://besrs3ul76nc3" path="res://PlatformMOveZ.tscn" id="7_7dov7"]
 [ext_resource type="PackedScene" uid="uid://bgtir65febws3" path="res://WinPlatform.tscn" id="7_7j8ne"]
-[ext_resource type="Script" uid="uid://bdo7qk8ufymio" path="res://scripts/PlatformMoveScriptX2.gd" id="7_ehv2h"]
+[ext_resource type="Script" uid="uid://bdo7qk8ufymio" path="res://scripts/PlatformMoveScriptx2.gd" id="7_ehv2h"]
 [ext_resource type="Script" uid="uid://bxxqjh27dwfix" path="res://scripts/PlatformMoveScriptX.gd" id="9_eoq84"]
 [ext_resource type="AudioStream" uid="uid://68ore0n8fakj" path="res://assets/sounds/backgroundmusic.wav" id="10_15wb7"]
 [ext_resource type="PackedScene" uid="uid://bb4guv2ig54t4" path="res://Island.tscn" id="11_yl73a"]
@@ -54,7 +54,7 @@ material = SubResource("StandardMaterial3D_yl73a")
 script = ExtResource("1_ehv2h")
 
 [node name="DeathZone" parent="." instance=ExtResource("1_n7ypv")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -10, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -5, 0)
 
 [node name="player" parent="." instance=ExtResource("2_0s5r2")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.526007, 0)

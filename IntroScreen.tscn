@@ -49,13 +49,12 @@ text = "Quit
 "
 
 [node name="TURN TO VISIBLE FOR WEB VERSION" type="Label" parent="."]
-visible = false
 layout_mode = 0
 offset_left = 2.0
 offset_top = 259.0
 offset_right = 521.0
 offset_bottom = 419.0
-text = "WARNING: THIS IS THE WEBSITE VERSION, EXPECT TO RUN IN BUGS!
+text = "WARNING: THIS IS THE WEB VERSION, EXPECT TO RUN IN BUGS!
 (No audio, bugged lighting and more)"
 label_settings = SubResource("LabelSettings_66135")
 
