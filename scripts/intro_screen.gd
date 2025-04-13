@@ -12,6 +12,7 @@ var tooltips = [
 	"You can rotate mid-air—use it to align for tight landings.",
 	"Some things might be locked away forever if your not careful enough...",
 	"Press F11 to escape fullscreen.",
+	"Press Escape to open a ingame pause screen.",
 	"Some platforms might not be real. Be aware of details!"
 ]
 
