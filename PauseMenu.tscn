@@ -19,9 +19,9 @@ metadata/_edit_use_anchors_ = true
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.287326
-anchor_top = 0.682099
+anchor_top = 0.387346
 anchor_right = 0.727431
-anchor_bottom = 0.876543
+anchor_bottom = 0.58179
 text = "Main menu"
 metadata/_edit_use_anchors_ = true
 
@@ -35,14 +35,14 @@ anchor_bottom = 0.28858
 text = "Resume"
 metadata/_edit_use_anchors_ = true
 
-[node name="SettingsButton" type="Button" parent="Control"]
+[node name="QuitButton" type="Button" parent="Control"]
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.28559
-anchor_top = 0.388889
+anchor_top = 0.680556
 anchor_right = 0.725694
-anchor_bottom = 0.583333
-text = "Settings"
+anchor_bottom = 0.875
+text = "Quit"
 metadata/_edit_use_anchors_ = true
 
 [node name="Buttonselect" type="AudioStreamPlayer" parent="."]
