@@ -52,7 +52,9 @@ uv1_world_triplanar = true
 material = SubResource("StandardMaterial3D_yl73a")
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_cicwn"]
-albedo_color = Color(0, 0, 0, 1)
+transparency = 1
+depth_draw_mode = 1
+albedo_color = Color(0, 1, 1, 0.6)
 roughness = 0.0
 
 [sub_resource type="BoxMesh" id="BoxMesh_lj1an"]
