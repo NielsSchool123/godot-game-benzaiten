@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=3 uid="uid://58uq12ehc5mv"]
+[gd_scene load_steps=18 format=3 uid="uid://58uq12ehc5mv"]
 
 [ext_resource type="Script" uid="uid://q6pcjrbfxr" path="res://scripts/BackGroundMusic.gd" id="1_2etst"]
 [ext_resource type="PackedScene" uid="uid://ddv0uw6vn73em" path="res://spike dood.tscn" id="1_kcwpe"]
@@ -8,7 +8,6 @@
 [ext_resource type="Texture2D" uid="uid://b5so7di8cwa53" path="res://assets/images/kloppenheim_07_puresky_2k.exr" id="5_jiqp1"]
 [ext_resource type="PackedScene" uid="uid://dj2wl7y84yg7h" path="res://win_platform wolk.tscn" id="6_uws32"]
 [ext_resource type="PackedScene" uid="uid://clpkehuwcsoao" path="res://wolk no coll.tscn" id="7_vcgqq"]
-[ext_resource type="PackedScene" uid="uid://cj87gh2ow7xcf" path="res://assets/models/skull.glb" id="8_o1mlc"]
 [ext_resource type="AudioStream" uid="uid://68ore0n8fakj" path="res://assets/sounds/backgroundmusic.wav" id="10_vw43l"]
 
 [sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_t6fl3"]
@@ -97,13 +96,10 @@ transform = Transform3D(0.514998, 0, 0, 0, 0.300085, 0, 0, 0, 0.499358, -67.5636
 transform = Transform3D(0.278823, 0, -0.960342, 0, 1, 0, 0.960342, 0, 0.278823, 0, 0, 0)
 
 [node name="StaticBody3D" parent="." instance=ExtResource("3_2etst")]
-transform = Transform3D(-2.36041e-08, 0, -0.54, 0, 0.54, 0, 0.54, 0, -2.36041e-08, 0, 0, 0)
-
-[node name="StaticBody3D2" parent="." instance=ExtResource("3_2etst")]
-transform = Transform3D(-2.36041e-08, 0, -0.54, 0, 0.54, 0, 0.54, 0, -2.36041e-08, -35.4288, 0, 0)
+transform = Transform3D(-3.1809e-08, 0, -0.856651, 0, 0.54, 0, 0.727706, 0, -3.74453e-08, 0, -1.93629, 0)
 
 [node name="StaticBody3D3" parent="." instance=ExtResource("3_2etst")]
-transform = Transform3D(-2.36041e-08, 0, -0.54, 0, 0.54, 0, 0.54, 0, -2.36041e-08, -35.4288, 0, 0)
+transform = Transform3D(-3.38867e-08, 0, -0.859856, 0, 0.54, 0, 0.775239, 0, -3.75854e-08, -35.4288, -1.30645, -1.00287)
 
 [node name="DeathZone" parent="." instance=ExtResource("4_vw43l")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -10, 0)
@@ -112,7 +108,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -10, 0)
 environment = SubResource("Environment_g81sl")
 
 [node name="WinPlatform" parent="." instance=ExtResource("6_uws32")]
-transform = Transform3D(0.00631898, 6.95477e-06, -0.0998002, 1.66785e-05, 0.1, 8.02384e-06, 0.0998002, -1.71518e-05, 0.00631898, -140.831, 0, 0)
+transform = Transform3D(0.00631898, 6.95477e-06, -0.0998002, 1.66785e-05, 0.1, 8.02384e-06, 0.0998002, -1.71518e-05, 0.00631898, -131.349, -0.505573, 0.54269)
 
 [node name="StaticBody3D4" parent="." instance=ExtResource("7_vcgqq")]
 transform = Transform3D(0.0881724, 0, 0, 0, 0.1, 0, 0, 0, 0.275248, -17.3756, 8.23727, -4.95549)
@@ -121,13 +117,13 @@ transform = Transform3D(0.0881724, 0, 0, 0, 0.1, 0, 0, 0, 0.275248, -17.3756, 8.
 transform = Transform3D(0.0881724, 0, 0, 0, 0.1, 0, 0, 0, 0.275248, -17.3756, 8.23727, 5.4983)
 
 [node name="StaticBody3D16" parent="." instance=ExtResource("7_vcgqq")]
-transform = Transform3D(0.00327401, 0, -0.132916, 0, 0.1, 0, 0.11847, 0, 0.00367322, -116.814, 0.403648, 10.5225)
+transform = Transform3D(0.00327401, 0, -0.132916, 0, 0.1, 0, 0.11847, 0, 0.00367322, -113.418, 0.403648, -13.166)
 
 [node name="StaticBody3D17" parent="." instance=ExtResource("7_vcgqq")]
-transform = Transform3D(0.00326664, -0.00670401, -0.132617, 0.00021949, 0.099775, -0.00891071, 0.11847, 0, 0.00367322, -116.814, -5.2861, 10.5225)
+transform = Transform3D(0.00326664, -0.00670401, -0.132617, 0.00021949, 0.099775, -0.00891071, 0.11847, 0, 0.00367322, -113.418, -5.2861, 10.5225)
 
 [node name="StaticBody3D18" parent="." instance=ExtResource("7_vcgqq")]
-transform = Transform3D(0.00326664, -0.00670401, -0.132617, 0.00021949, 0.099775, -0.00891071, 0.11847, 0, 0.00367322, -116.814, -5.2861, -13.4783)
+transform = Transform3D(0.00326664, -0.00670401, -0.132617, 0.00021949, 0.099775, -0.00891071, 0.11847, 0, 0.00367322, -113.418, -5.2861, -13.4783)
 
 [node name="StaticBody3D6" parent="." instance=ExtResource("3_2etst")]
 transform = Transform3D(-5.33169e-09, 0, -0.121975, 0, 0.121975, 0, 0.121975, 0, -5.33169e-09, -56.2516, 0.400196, 0)
@@ -136,10 +132,10 @@ transform = Transform3D(-5.33169e-09, 0, -0.121975, 0, 0.121975, 0, 0.121975, 0,
 transform = Transform3D(-5.33169e-09, 0, -0.121975, 0, 0.121975, 0, 0.121975, 0, -5.33169e-09, -76.6065, 0.400196, 0)
 
 [node name="StaticBody3D10" parent="." instance=ExtResource("3_2etst")]
-transform = Transform3D(-5.33169e-09, 0, -0.121975, 0, 0.121975, 0, 0.121975, 0, -5.33169e-09, -92.5515, 0.400196, 0)
+transform = Transform3D(-5.33169e-09, 0, -0.121975, 0, 0.121975, 0, 0.121975, 0, -5.33169e-09, -92.5523, 0.333531, 0)
 
 [node name="StaticBody3D15" parent="." instance=ExtResource("3_2etst")]
-transform = Transform3D(-5.33169e-09, 0, -0.121975, 0, 0.121975, 0, 0.121975, 0, -5.33169e-09, -116.996, 0.400196, -13.8136)
+transform = Transform3D(-5.33169e-09, 0, -0.121975, 0, 0.121975, 0, 0.121975, 0, -5.33169e-09, -113.424, 0.681123, 10.704)
 
 [node name="StaticBody3D7" parent="." instance=ExtResource("7_vcgqq")]
 transform = Transform3D(0.0952839, 0, 0, 0, 0.1, 0, 0, 0, 0.11178, -67.7216, 0.393639, 0.0665989)
@@ -157,7 +153,7 @@ transform = Transform3D(0.847898, 0, 0, 0, 0.803271, 0, 0, 0, 1.10091, -67.5636,
 transform = Transform3D(0.847898, 0, 0, 0, 0.803271, 0, 0, 0, 1.10091, -67.5636, 1.32699, -6.15058)
 
 [node name="StaticBody3D8" parent="." instance=ExtResource("7_vcgqq")]
-transform = Transform3D(0.0952839, 0, 0, 0, 0.1, 0, 0, 0, 0.285263, -67.7216, 0.393639, -4.0065)
+transform = Transform3D(0.0952839, 0, 0, 0, 0.1, 0, 0, 0, 0.698985, -67.7216, 0.113457, -2.27853)
 
 [node name="Area3D17" parent="." instance=ExtResource("1_kcwpe")]
 transform = Transform3D(0.514998, 0, 0, 0, 0.300085, 0, 0, 0, 0.499358, -85.9116, 0.644904, 6.68005)
@@ -178,7 +174,7 @@ transform = Transform3D(0.847898, 0, 0, 0, 0.803271, 0, 0, 0, 1.10091, -85.9116,
 transform = Transform3D(0.847898, 0, 0, 0, 0.803271, 0, 0, 0, 1.10091, -85.9116, 1.32699, 0.183555)
 
 [node name="StaticBody3D12" parent="." instance=ExtResource("7_vcgqq")]
-transform = Transform3D(0.0952839, 0, 0, 0, 0.1, 0, 0, 0, 0.285263, -86.0697, 0.393639, 2.32763)
+transform = Transform3D(0.0952839, 0, 0, 0, 0.1, 0, 0, 0, 0.735452, -86.0697, 0.393639, 3.49342)
 
 [node name="Area3D22" parent="." instance=ExtResource("1_kcwpe")]
 transform = Transform3D(0.514998, 0, 0, 0, 0.300085, 0, 0, 0, 0.499358, -104.165, 0.644904, 3.7397)
@@ -190,10 +186,10 @@ transform = Transform3D(0.0952839, 0, 0, 0, 0.1, 0, 0, 0, 0.11178, -104.323, 0.3
 transform = Transform3D(0.847898, 0, 0, 0, 0.803271, 0, 0, 0, 1.10091, -104.165, 1.32699, 3.7397)
 
 [node name="Area3D27" parent="." instance=ExtResource("1_kcwpe")]
-transform = Transform3D(0.847898, 0, 0, 0, 0.803271, 0, 0, 0, 1.10091, -116.217, -4.75373, 11.232)
+transform = Transform3D(0.847898, 0, 0, 0, 0.803271, 0, 0, 0, 1.10091, -113.226, -4.1275, 10.5184)
 
 [node name="Area3D28" parent="." instance=ExtResource("1_kcwpe")]
-transform = Transform3D(0.847898, 0, 0, 0, 0.803271, 0, 0, 0, 1.10091, -116.76, -4.75373, -12.7947)
+transform = Transform3D(0.847898, 0, 0, 0, 0.803271, 0, 0, 0, 1.10091, -113.364, -4.40951, -13.9278)
 
 [node name="Area3D24" parent="." instance=ExtResource("1_kcwpe")]
 transform = Transform3D(0.847898, 0, 0, 0, 0.803271, 0, 0, 0, 1.10091, -104.165, 1.32699, 1.21845)
@@ -202,19 +198,13 @@ transform = Transform3D(0.847898, 0, 0, 0, 0.803271, 0, 0, 0, 1.10091, -104.165,
 transform = Transform3D(0.847898, 0, 0, 0, 0.803271, 0, 0, 0, 1.10091, -104.165, 1.32699, -1.24621)
 
 [node name="Area3D26" parent="." instance=ExtResource("1_kcwpe")]
-transform = Transform3D(0.847898, 0, 0, 0, 0.803271, 0, 0, 0, 1.10091, -104.165, 1.32699, -2.7568)
+transform = Transform3D(0.847898, 0, 0, 0, 0.803271, 0, 0, 0, 1.10091, -104.268, 1.33677, -2.79036)
 
 [node name="StaticBody3D14" parent="." instance=ExtResource("7_vcgqq")]
-transform = Transform3D(0.0952839, 0, 0, 0, 0.1, 0, 0, 0, 0.285263, -104.323, 0.393639, -0.612719)
-
-[node name="StaticBody3D19" type="StaticBody3D" parent="."]
-transform = Transform3D(0.111226, 0, 0.993795, 0, 1, 0, -0.993795, 0, 0.111226, -114.895, -5.8636, 10.813)
-
-[node name="skull" parent="StaticBody3D19" instance=ExtResource("8_o1mlc")]
-transform = Transform3D(0.999999, 0, -7.45058e-09, 0, 1, 0, 7.45058e-09, 0, 0.999999, 9.69939, 6.85158, 29.6518)
+transform = Transform3D(0.0952839, 0, 0, 0, 0.255764, 0, 0, 0, 0.728855, -104.56, -0.258609, 0.634095)
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
-transform = Transform3D(10000, 0, 0, 0, 115.211, 0, 0, 0, 10000, 12.0219, -884.925, -0.229027)
+transform = Transform3D(10000, 0, 0, 0, 115.211, 0, 0, 0, 10000, 12.0829, -884.925, -2.40925)
 mesh = SubResource("BoxMesh_2etst")
 
 [node name="Backgroundmusic" type="AudioStreamPlayer" parent="."]

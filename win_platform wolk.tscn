@@ -24,7 +24,7 @@ light_color = Color(1, 1, 0, 1)
 light_energy = 28.385
 
 [node name="kroon" parent="." instance=ExtResource("3_h5gyl")]
-transform = Transform3D(12.5, 0, -21.6506, 0, 25, 0, 21.6506, 0, 12.5, 15.1381, -52.2725, 6.26768)
+transform = Transform3D(9.92917, 0, -10.4086, 0, 25, 0, 17.1978, 0, 6.00944, -20.1536, -24.3689, 6.26768)
 
 [node name="StaticBody3D" parent="." instance=ExtResource("4_5xe1i")]
 transform = Transform3D(7.10569, 0, 0, 0, 7.10569, 0, 0, 0, 7.10569, -23.9212, -4.30645, 14.797)

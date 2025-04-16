@@ -1,7 +1,8 @@
 [gd_scene load_steps=2 format=3 uid="uid://clpkehuwcsoao"]
 
-[ext_resource type="PackedScene" uid="uid://dugq0g2qdbxfv" path="res://assets/models/Wolk3.glb" id="1_l1ivj"]
+[ext_resource type="PackedScene" uid="uid://duv54sg1th1ln" path="res://assets/models/wolk beter.glb" id="1_l1ivj"]
 
 [node name="StaticBody3D" type="StaticBody3D"]
 
-[node name="Wolk3" parent="." instance=ExtResource("1_l1ivj")]
+[node name="wolk beter" parent="." instance=ExtResource("1_l1ivj")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.176234, 0.325288, -0.100893)
