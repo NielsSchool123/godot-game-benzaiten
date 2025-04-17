@@ -87,6 +87,7 @@ horizontal_alignment = 1
 metadata/_edit_use_anchors_ = true
 
 [node name="Label2" type="Label" parent="."]
+visible = false
 layout_mode = 2
 anchor_left = -0.0147569
 anchor_top = 0.975309
