@@ -17,7 +17,7 @@ var tooltips = [
 ]
 
 
-# logica voor de quit button, als de button text quit is dan runt het de logica om het af te sluiten en aders gebruikt de de funcite daaronder
+# logica voor de quit button, als de bubtton text quit is dan runt het de logica om het af te sluiten en aders gebruikt de de funcite daaronder
 func _ready():
 	secret_label.text = "Secrets found: " + str(GameData.secrets_found) + "/" + str(GameData.total_secrets)
 	for button in $VBoxContainer.get_children():
