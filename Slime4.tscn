@@ -8,7 +8,7 @@
 radius = 5.26002
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_hloiw"]
-size = Vector3(1, 0.923828, 1)
+size = Vector3(1, 0.959961, 1)
 
 [node name="slime4" type="CharacterBody3D"]
 transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 0, 0, 0)
@@ -33,5 +33,5 @@ shape = SubResource("BoxShape3D_hloiw")
 stream = ExtResource("3_3l6ya")
 
 [node name="CollisionShape3D2" type="CollisionShape3D" parent="."]
-transform = Transform3D(13.588, 0, -8.03928e-13, 0, 12.618, 0, 6.62047e-13, 0, 16.5, -1.1046, 5.42535, -0.868624)
+transform = Transform3D(13.588, 0, -7.95808e-13, 0, 12.618, 0, 6.82121e-13, 0, 16.5, -1.1046, 5.65331, -0.868624)
 shape = SubResource("BoxShape3D_hloiw")
