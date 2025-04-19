@@ -1,9 +1,10 @@
-[gd_scene load_steps=20 format=3 uid="uid://dd5a1dr3c5vav"]
+[gd_scene load_steps=21 format=3 uid="uid://dd5a1dr3c5vav"]
 
 [ext_resource type="Script" uid="uid://q6pcjrbfxr" path="res://scripts/BackGroundMusic.gd" id="1_7ds5r"]
 [ext_resource type="PackedScene" uid="uid://d2otn14bnvjn6" path="res://DeathZone.tscn" id="2_liaj6"]
 [ext_resource type="PackedScene" uid="uid://phpa3phmm6uu" path="res://Player.tscn" id="3_b60u5"]
 [ext_resource type="Texture2D" uid="uid://b5so7di8cwa53" path="res://assets/images/kloppenheim_07_puresky_2k.exr" id="4_kmy7e"]
+[ext_resource type="PackedScene" uid="uid://idl1nh0wjcg0" path="res://WinScreen3.tscn" id="6_833wy"]
 [ext_resource type="PackedScene" uid="uid://bgtir65febws3" path="res://WinPlatform.tscn" id="7_jvy75"]
 [ext_resource type="AudioStream" uid="uid://68ore0n8fakj" path="res://assets/sounds/backgroundmusic.wav" id="8_g0tlw"]
 [ext_resource type="PackedScene" uid="uid://besrs3ul76nc3" path="res://PlatformMOveZ.tscn" id="9_b60u5"]
@@ -63,6 +64,7 @@ environment = SubResource("Environment_ryrav")
 
 [node name="platformwin" parent="." instance=ExtResource("7_jvy75")]
 transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, 0.0600089, 0, 147.242)
+win_screen_scene = ExtResource("6_833wy")
 
 [node name="Backgroundmusic" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("8_g0tlw")

@@ -1,8 +1,8 @@
-[gd_scene load_steps=5 format=3 uid="uid://bufgukfh7v5qt"]
+[gd_scene load_steps=5 format=3 uid="uid://idl1nh0wjcg0"]
 
-[ext_resource type="Script" uid="uid://bbdj6sfwtvtuj" path="res://scripts/WinScreenScript.gd" id="1_a03an"]
-[ext_resource type="AudioStream" uid="uid://bugmarblwtj2w" path="res://assets/sounds/levelwin.wav" id="2_0eiwq"]
-[ext_resource type="AudioStream" uid="uid://cdxbjdg0ltl4w" path="res://assets/sounds/buttonselect.wav" id="3_cx6km"]
+[ext_resource type="Script" uid="uid://dnvjm3j6rikhw" path="res://WinScreenScript3.gd" id="1_sc1ca"]
+[ext_resource type="AudioStream" uid="uid://bugmarblwtj2w" path="res://assets/sounds/levelwin.wav" id="2_ly5oc"]
+[ext_resource type="AudioStream" uid="uid://cdxbjdg0ltl4w" path="res://assets/sounds/buttonselect.wav" id="3_f81la"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_ok131"]
 font_size = 70
@@ -16,7 +16,7 @@ grow_horizontal = 2
 grow_vertical = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
-script = ExtResource("1_a03an")
+script = ExtResource("1_sc1ca")
 metadata/_edit_use_anchors_ = true
 
 [node name="Label" type="Label" parent="."]
@@ -43,10 +43,23 @@ grow_vertical = 2
 text = "Return to Main Menu"
 metadata/_edit_use_anchors_ = true
 
+[node name="Button2" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.144097
+anchor_top = 0.756173
+anchor_right = 0.856771
+anchor_bottom = 0.92284
+offset_top = 3.05176e-05
+grow_horizontal = 2
+grow_vertical = 2
+text = "Next Level"
+metadata/_edit_use_anchors_ = true
+
 [node name="Levelwin" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("2_0eiwq")
+stream = ExtResource("2_ly5oc")
 volume_db = -20.0
 
 [node name="Buttonselect" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("3_cx6km")
+stream = ExtResource("3_f81la")
 volume_db = -20.0
