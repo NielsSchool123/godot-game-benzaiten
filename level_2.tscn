@@ -17,12 +17,12 @@
 panorama = ExtResource("4_eoq84")
 energy_multiplier = 0.5
 
-[sub_resource type="Sky" id="Sky_7dov7"]
+[sub_resource type="Sky" id="Sky_yl73a"]
 sky_material = SubResource("PanoramaSkyMaterial_7j8ne")
 
 [sub_resource type="Environment" id="Environment_ryrav"]
 background_mode = 2
-sky = SubResource("Sky_7dov7")
+sky = SubResource("Sky_yl73a")
 
 [sub_resource type="FastNoiseLite" id="FastNoiseLite_eoq84"]
 noise_type = 0

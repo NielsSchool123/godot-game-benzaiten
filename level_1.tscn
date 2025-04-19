@@ -9,17 +9,6 @@
 [ext_resource type="AudioStream" uid="uid://68ore0n8fakj" path="res://assets/sounds/backgroundmusic.wav" id="8_5rr72"]
 [ext_resource type="PackedScene" uid="uid://bb4guv2ig54t4" path="res://Island.tscn" id="8_bjebc"]
 
-[sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_fc0e3"]
-panorama = ExtResource("5_bjebc")
-
-[sub_resource type="Sky" id="Sky_bjebc"]
-sky_material = SubResource("PanoramaSkyMaterial_fc0e3")
-
-[sub_resource type="Environment" id="Environment_ryrav"]
-background_mode = 2
-sky = SubResource("Sky_bjebc")
-volumetric_fog_density = 0.0
-
 [sub_resource type="FastNoiseLite" id="FastNoiseLite_bjebc"]
 noise_type = 0
 
@@ -47,6 +36,17 @@ uv1_world_triplanar = true
 [sub_resource type="BoxMesh" id="BoxMesh_sof0w"]
 material = SubResource("StandardMaterial3D_5rr72")
 
+[sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_bjebc"]
+panorama = ExtResource("5_bjebc")
+energy_multiplier = 0.5
+
+[sub_resource type="Sky" id="Sky_7dov7"]
+sky_material = SubResource("PanoramaSkyMaterial_bjebc")
+
+[sub_resource type="Environment" id="Environment_5rr72"]
+background_mode = 2
+sky = SubResource("Sky_7dov7")
+
 [node name="Node3D" type="Node3D"]
 script = ExtResource("1_bjebc")
 
@@ -55,9 +55,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -5, 0)
 
 [node name="player" parent="." instance=ExtResource("2_5hph3")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.526007, 0)
-
-[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
-environment = SubResource("Environment_ryrav")
 
 [node name="slime" parent="." instance=ExtResource("5_5rr72")]
 transform = Transform3D(-0.0818515, 0, 0.996645, 0, 1, 0, -0.996645, 0, -0.0818515, 0, 0, 76.0793)
@@ -86,3 +83,6 @@ transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, 0, 0, 70.947)
 transform = Transform3D(0.842687, 0.182316, -0.506595, 0.138096, 0.836254, 0.530668, 0.520392, -0.517146, 0.679524, 0, 7.40441, 0)
 shadow_enabled = true
 shadow_blur = 3.0
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_5rr72")
