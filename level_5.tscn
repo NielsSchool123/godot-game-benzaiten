@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=3 uid="uid://58uq12ehc5mv"]
+[gd_scene load_steps=19 format=3 uid="uid://58uq12ehc5mv"]
 
 [ext_resource type="Script" uid="uid://q6pcjrbfxr" path="res://scripts/BackGroundMusic.gd" id="1_2etst"]
 [ext_resource type="PackedScene" uid="uid://ddv0uw6vn73em" path="res://spike dood.tscn" id="1_kcwpe"]
@@ -8,6 +8,7 @@
 [ext_resource type="Texture2D" uid="uid://b5so7di8cwa53" path="res://assets/images/kloppenheim_07_puresky_2k.exr" id="5_jiqp1"]
 [ext_resource type="PackedScene" uid="uid://dj2wl7y84yg7h" path="res://win_platform wolk.tscn" id="6_uws32"]
 [ext_resource type="PackedScene" uid="uid://clpkehuwcsoao" path="res://wolk no coll.tscn" id="7_vcgqq"]
+[ext_resource type="PackedScene" uid="uid://ba5d3woxvr6r" path="res://WinScreenBLANK.tscn" id="8_2etst"]
 [ext_resource type="AudioStream" uid="uid://68ore0n8fakj" path="res://assets/sounds/backgroundmusic.wav" id="10_vw43l"]
 
 [sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_t6fl3"]
@@ -109,6 +110,7 @@ environment = SubResource("Environment_g81sl")
 
 [node name="WinPlatform" parent="." instance=ExtResource("6_uws32")]
 transform = Transform3D(0.00631898, 6.95477e-06, -0.0998002, 1.66785e-05, 0.1, 8.02384e-06, 0.0998002, -1.71518e-05, 0.00631898, -131.349, -0.505573, 0.54269)
+win_screen_scene = ExtResource("8_2etst")
 
 [node name="StaticBody3D4" parent="." instance=ExtResource("7_vcgqq")]
 transform = Transform3D(0.0881724, 0, 0, 0, 0.1, 0, 0, 0, 0.275248, -17.3756, 8.23727, -4.95549)
