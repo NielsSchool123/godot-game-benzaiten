@@ -1,6 +1,6 @@
 [gd_scene load_steps=5 format=3 uid="uid://idl1nh0wjcg0"]
 
-[ext_resource type="Script" uid="uid://dnvjm3j6rikhw" path="res://WinScreenScript3.gd" id="1_sc1ca"]
+[ext_resource type="Script" uid="uid://dnvjm3j6rikhw" path="res://scripts/WinScreenScript3.gd" id="1_sc1ca"]
 [ext_resource type="AudioStream" uid="uid://bugmarblwtj2w" path="res://assets/sounds/levelwin.wav" id="2_ly5oc"]
 [ext_resource type="AudioStream" uid="uid://cdxbjdg0ltl4w" path="res://assets/sounds/buttonselect.wav" id="3_f81la"]
 

@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://co4x3amvatm6j"]
 
-[ext_resource type="Script" uid="uid://bh5il3k27dt1t" path="res://pause_menu.gd" id="1_nov15"]
+[ext_resource type="Script" uid="uid://bh5il3k27dt1t" path="res://scripts/pause_menu.gd" id="1_nov15"]
 [ext_resource type="AudioStream" uid="uid://cdxbjdg0ltl4w" path="res://assets/sounds/buttonselect.wav" id="2_etnfi"]
 
 [node name="CanvasLayer" type="CanvasLayer"]
