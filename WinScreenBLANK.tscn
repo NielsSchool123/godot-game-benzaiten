@@ -1,5 +1,6 @@
-[gd_scene load_steps=5 format=3 uid="uid://ba5d3woxvr6r"]
+[gd_scene load_steps=6 format=3 uid="uid://ba5d3woxvr6r"]
 
+[ext_resource type="Theme" uid="uid://bmrctah2v8orj" path="res://assets/theme.tres" id="1_0pb2b"]
 [ext_resource type="Script" uid="uid://5fbgclctc7ch" path="res://scripts/WinScreenScriptBlank.gd" id="1_5wxyl"]
 [ext_resource type="AudioStream" uid="uid://bugmarblwtj2w" path="res://assets/sounds/levelwin.wav" id="2_0pb2b"]
 [ext_resource type="AudioStream" uid="uid://cdxbjdg0ltl4w" path="res://assets/sounds/buttonselect.wav" id="3_7mnqq"]
@@ -16,6 +17,7 @@ grow_horizontal = 2
 grow_vertical = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
+theme = ExtResource("1_0pb2b")
 script = ExtResource("1_5wxyl")
 metadata/_edit_use_anchors_ = true
 
@@ -40,7 +42,7 @@ anchor_bottom = 0.683642
 offset_top = 3.05176e-05
 grow_horizontal = 2
 grow_vertical = 2
-text = "Return to Main Menu"
+text = "Return to main menu"
 metadata/_edit_use_anchors_ = true
 
 [node name="Levelwin" type="AudioStreamPlayer" parent="."]

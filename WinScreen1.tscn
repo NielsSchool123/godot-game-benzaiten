@@ -1,6 +1,7 @@
-[gd_scene load_steps=5 format=3 uid="uid://bufgukfh7v5qt"]
+[gd_scene load_steps=6 format=3 uid="uid://bufgukfh7v5qt"]
 
 [ext_resource type="Script" uid="uid://bbdj6sfwtvtuj" path="res://scripts/WinScreenScript.gd" id="1_kait7"]
+[ext_resource type="Theme" uid="uid://bmrctah2v8orj" path="res://assets/theme.tres" id="1_ki286"]
 [ext_resource type="AudioStream" uid="uid://bugmarblwtj2w" path="res://assets/sounds/levelwin.wav" id="2_ki286"]
 [ext_resource type="AudioStream" uid="uid://cdxbjdg0ltl4w" path="res://assets/sounds/buttonselect.wav" id="3_v1r3c"]
 
@@ -16,6 +17,7 @@ grow_horizontal = 2
 grow_vertical = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
+theme = ExtResource("1_ki286")
 script = ExtResource("1_kait7")
 metadata/_edit_use_anchors_ = true
 
@@ -40,7 +42,7 @@ anchor_bottom = 0.683642
 offset_top = 3.05176e-05
 grow_horizontal = 2
 grow_vertical = 2
-text = "Return to Main Menu"
+text = "Return to main menu"
 metadata/_edit_use_anchors_ = true
 
 [node name="Button2" type="Button" parent="."]
@@ -53,7 +55,7 @@ anchor_bottom = 0.908951
 offset_top = 3.05176e-05
 grow_horizontal = 2
 grow_vertical = 2
-text = "Next Level"
+text = "Next level"
 metadata/_edit_use_anchors_ = true
 
 [node name="Levelwin" type="AudioStreamPlayer" parent="."]

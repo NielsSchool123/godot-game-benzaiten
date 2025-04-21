@@ -1,10 +1,10 @@
 extends Control
 
-@onready var fullscreen_checkbox = $Fullscreen
-@onready var fps_option = $"FPS limit"
+@onready var fullscreen_checkbox = $VBoxContainer/Fullscreen
+@onready var fps_option = $VBoxContainer/"FPS limit"
 @onready var back_button = $IntroScreen
 @onready var click_sound = $Buttonselect
-@onready var volume_slider = $HSlider  # Add reference to the volume slider
+@onready var volume_slider = $VBoxContainer/HSlider 
 
 # Default volume value (you can change this or load it from settings)
 var default_volume: float = 1

@@ -1,5 +1,6 @@
-[gd_scene load_steps=4 format=3 uid="uid://bm0er5v0cblc5"]
+[gd_scene load_steps=5 format=3 uid="uid://bm0er5v0cblc5"]
 
+[ext_resource type="Theme" uid="uid://bmrctah2v8orj" path="res://assets/theme.tres" id="1_37a8j"]
 [ext_resource type="Script" uid="uid://652luabav2r1" path="res://scripts/settings.gd" id="1_mx4kw"]
 [ext_resource type="PackedScene" uid="uid://dne0falxcvvqj" path="res://settingsbackground.tscn" id="3_mx4kw"]
 [ext_resource type="AudioStream" uid="uid://cdxbjdg0ltl4w" path="res://assets/sounds/buttonselect.wav" id="3_sfvul"]
@@ -12,6 +13,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 size_flags_horizontal = 3
+theme = ExtResource("1_37a8j")
 script = ExtResource("1_mx4kw")
 metadata/_edit_use_anchors_ = true
 
@@ -19,64 +21,51 @@ metadata/_edit_use_anchors_ = true
 stream = ExtResource("3_sfvul")
 volume_db = -20.0
 
-[node name="Fullscreen" type="CheckBox" parent="."]
-layout_mode = 1
-anchors_preset = -1
-anchor_left = 0.00347222
-anchor_top = 0.00462963
-anchor_right = 0.0963542
-anchor_bottom = 0.0524691
-text = "Fullscreen"
-metadata/_edit_use_anchors_ = true
-
-[node name="FPS limit" type="OptionButton" parent="."]
-layout_mode = 1
-anchors_preset = -1
-anchor_left = 0.00347222
-anchor_top = 0.140432
-anchor_right = 0.0312501
-anchor_bottom = 0.171296
-metadata/_edit_use_anchors_ = true
-
 [node name="IntroScreen" type="Button" parent="."]
 layout_mode = 1
 anchors_preset = -1
-anchor_left = 0.962674
-anchor_top = 0.947531
-anchor_right = 1.00174
-anchor_bottom = 0.99537
-text = "Back"
+anchor_left = 0.822049
+anchor_top = 0.95216
+anchor_right = 1.00087
+anchor_bottom = 1.0
+text = "Return to main menu"
 metadata/_edit_use_anchors_ = true
 
 [node name="Node3D" parent="." instance=ExtResource("3_mx4kw")]
 
-[node name="HSlider" type="HSlider" parent="."]
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
 layout_mode = 1
 anchors_preset = -1
-anchor_left = 0.00347222
-anchor_top = 0.21142
-anchor_right = 0.165799
-anchor_bottom = 0.359568
-max_value = 1.0
-step = 0.01
+anchor_left = 0.00694444
+anchor_top = 0.0138889
+anchor_right = 0.203125
+anchor_bottom = 0.510802
+offset_right = -93.0
+offset_bottom = -141.0
+theme_override_constants/separation = 20
 metadata/_edit_use_anchors_ = true
 
-[node name="Label" type="Label" parent="."]
-layout_mode = 1
-anchors_preset = -1
-anchor_left = 0.00347222
-anchor_top = 0.205247
-anchor_right = 0.0546875
-anchor_bottom = 0.240741
+[node name="Fullscreen" type="CheckBox" parent="VBoxContainer"]
+layout_mode = 2
+text = "Fullscreen"
+metadata/_edit_use_anchors_ = true
+
+[node name="Label2" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+text = "FPS lock"
+metadata/_edit_use_anchors_ = true
+
+[node name="FPS limit" type="OptionButton" parent="VBoxContainer"]
+layout_mode = 2
+metadata/_edit_use_anchors_ = true
+
+[node name="Label" type="Label" parent="VBoxContainer"]
+layout_mode = 2
 text = "Volume"
 metadata/_edit_use_anchors_ = true
 
-[node name="Label2" type="Label" parent="."]
-layout_mode = 1
-anchors_preset = -1
-anchor_left = 0.00347222
-anchor_top = 0.0787037
-anchor_right = 0.0581597
-anchor_bottom = 0.114198
-text = "FPS lock"
+[node name="HSlider" type="HSlider" parent="VBoxContainer"]
+layout_mode = 2
+max_value = 1.0
+step = 0.01
 metadata/_edit_use_anchors_ = true
