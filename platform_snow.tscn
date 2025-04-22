@@ -1,0 +1,53 @@
+[gd_scene load_steps=5 format=4 uid="uid://difuqwq64vrsj"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_mi635"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_v7x5n"]
+resource_name = "Material.001"
+cull_mode = 2
+albedo_color = Color(0.756863, 0.909804, 1, 1)
+roughness = 0.5
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_yhwa2"]
+_surfaces = [{
+"aabb": AABB(-200.049, -3.87262, -100.73, 400.099, 7.74524, 201.459),
+"format": 34896613377,
+"index_count": 36,
+"index_data": PackedByteArray("AAABAAIAAAADAAEABAACAAEAAwAEAAEABQAAAAIAAwAAAAUABAAGAAIABQACAAYAAwAHAAQAAwAFAAcABwAGAAQABwAFAAYA"),
+"name": "Material.001",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 8,
+"vertex_data": PackedByteArray("AAAAAP//AAAAAP//AAAAAAAA/////wAAAAAAAAAAAAD/////AAAAAP//AAD//wAA////////AAD//wAAAAAAAA==")
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_f7oas"]
+resource_name = "Block_Cube_001"
+_surfaces = [{
+"aabb": AABB(-200.049, -3.87262, -100.73, 400.099, 7.74524, 201.459),
+"attribute_data": PackedByteArray("/1////+f/7//n////1//v/9f/7//n/9//5//v/9f/3//X/9//5//P/+f/3//X/8//1//P/+fAAD/n/8//18AAP8f/3//X/8//1//f/8f/z//n/9//9//P//f/3//n/8/"),
+"format": 34896613399,
+"index_count": 36,
+"index_data": PackedByteArray("AAABAAIAAAADAAEABAAFAAYABAAHAAUACAAJAAoACAALAAkADAANAA4ADAAPAA0AEAARABIAEAATABEAFAAVABYAFAAXABUA"),
+"material": SubResource("StandardMaterial3D_v7x5n"),
+"name": "Material.001",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 24,
+"vertex_data": PackedByteArray("AAAAAP//VNUAAP//AABU1QAA/////1TVAAAAAAAAVNUAAAAAAAD///////8AAP//AAD//wAA/////wAAAAD/////AAAAAFTV////////VNX/////AABU1f//AAD//1TV//8AAP///78AAP//////v/////////+/AAAAAP///78AAAAAAAD/v///AAD///+///8AAAAA/78AAAAA////v/////8AAP//AAD///////8AAP//AAD/////////////VNVU1VTVVNVU1VTVVNVU1f+//7//v/+//7//v/+//7+qKqoqqiqqKqoqqiqqKqoq/////////////////////wAA/38AAP9/AAD/fwAA/3//f/+//3//v/9//7//f/+/")
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_yhwa2")
+
+[node name="platformSnow" type="StaticBody3D"]
+transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, 0, 0, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(120, 0, 0, 0, 10, 0, 0, 0, 120, 0, 2.88055, 0)
+shape = SubResource("BoxShape3D_mi635")
+
+[node name="Cube" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.306, 0, 0, 0, 0.929, 0, 0, 0, 0.583, -0.219177, 3.87262, 0.473404)
+mesh = SubResource("ArrayMesh_f7oas")
+skeleton = NodePath("")

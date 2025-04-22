@@ -34,6 +34,10 @@ text = "World 1"
 layout_mode = 2
 text = "World 2"
 
+[node name="World3" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+text = "World 3"
+
 [node name="IntroScreen" type="Button" parent="VBoxContainer"]
 layout_mode = 2
 text = "Back to intro screen

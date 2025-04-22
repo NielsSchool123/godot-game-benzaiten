@@ -1,0 +1,180 @@
+[gd_scene load_steps=25 format=3 uid="uid://drqnlbymxh7od"]
+
+[ext_resource type="Script" uid="uid://q6pcjrbfxr" path="res://scripts/BackGroundMusic.gd" id="1_a721k"]
+[ext_resource type="PackedScene" uid="uid://phpa3phmm6uu" path="res://Player.tscn" id="2_7amt0"]
+[ext_resource type="PackedScene" uid="uid://bgtir65febws3" path="res://WinPlatform.tscn" id="3_w5e11"]
+[ext_resource type="PackedScene" uid="uid://ba5d3woxvr6r" path="res://WinScreenBLANK.tscn" id="4_e3b7f"]
+[ext_resource type="AudioStream" uid="uid://68ore0n8fakj" path="res://assets/sounds/backgroundmusic.wav" id="5_aie2w"]
+[ext_resource type="Texture2D" uid="uid://b5so7di8cwa53" path="res://assets/images/kloppenheim_07_puresky_2k.exr" id="6_lv1pg"]
+[ext_resource type="PackedScene" uid="uid://difuqwq64vrsj" path="res://platform_snow.tscn" id="7_1wgld"]
+[ext_resource type="PackedScene" uid="uid://bie54pk5siu4a" path="res://laser.tscn" id="8_7amt0"]
+[ext_resource type="PackedScene" uid="uid://cy132fv3vo5py" path="res://LaserY.tscn" id="9_w5e11"]
+
+[sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_bjebc"]
+panorama = ExtResource("6_lv1pg")
+energy_multiplier = 0.5
+
+[sub_resource type="Sky" id="Sky_7dov7"]
+sky_material = SubResource("PanoramaSkyMaterial_bjebc")
+
+[sub_resource type="Environment" id="Environment_5rr72"]
+background_mode = 2
+sky = SubResource("Sky_7dov7")
+fog_enabled = true
+fog_sun_scatter = 0.5
+fog_density = 0.02
+fog_sky_affect = 0.7
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_2ibqd"]
+resource_name = "Material.001"
+cull_mode = 2
+albedo_color = Color(0.756863, 0.909804, 1, 1)
+roughness = 0.5
+
+[sub_resource type="PrismMesh" id="PrismMesh_ky2ik"]
+material = SubResource("StandardMaterial3D_2ibqd")
+
+[sub_resource type="Gradient" id="Gradient_2ibqd"]
+offsets = PackedFloat32Array(0, 0.481818, 0.990909)
+colors = PackedColorArray(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_ky2ik"]
+gradient = SubResource("Gradient_2ibqd")
+
+[sub_resource type="Curve" id="Curve_2ibqd"]
+_data = [Vector2(0, 0), 0.0, 0.0, 0, 0, Vector2(0.227941, 1), -1.27341, -1.27341, 0, 0, Vector2(1, 0.438202), 0.0, 0.0, 0, 0]
+point_count = 3
+
+[sub_resource type="CurveTexture" id="CurveTexture_ky2ik"]
+curve = SubResource("Curve_2ibqd")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_2ibqd"]
+emission_shape = 3
+emission_box_extents = Vector3(30, 2, 100)
+direction = Vector3(0, -1, 0)
+initial_velocity_min = 3.0
+initial_velocity_max = 6.0
+gravity = Vector3(0, -5.5, 0)
+radial_accel_min = -4.0
+radial_accel_max = 4.0
+tangential_accel_min = -8.0
+tangential_accel_max = 8.0
+damping_max = 4.0
+scale_min = 0.5
+scale_curve = SubResource("CurveTexture_ky2ik")
+color = Color(0.873298, 0.873298, 0.873298, 1)
+color_ramp = SubResource("GradientTexture1D_ky2ik")
+
+[sub_resource type="Gradient" id="Gradient_ky2ik"]
+offsets = PackedFloat32Array(0.27193, 0.754386)
+colors = PackedColorArray(1, 1, 1, 1, 0.239216, 0.239216, 0.239216, 0)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_qqxcc"]
+gradient = SubResource("Gradient_ky2ik")
+fill = 1
+fill_from = Vector2(0.5, 0.5)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_yr1m6"]
+transparency = 1
+shading_mode = 0
+vertex_color_use_as_albedo = true
+albedo_texture = SubResource("GradientTexture2D_qqxcc")
+billboard_mode = 1
+billboard_keep_scale = true
+
+[sub_resource type="QuadMesh" id="QuadMesh_6i4tg"]
+material = SubResource("StandardMaterial3D_yr1m6")
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_2ibqd"]
+size = Vector3(0.792297, 1, 1)
+
+[node name="Node3D" type="Node3D"]
+script = ExtResource("1_a721k")
+
+[node name="player" parent="." instance=ExtResource("2_7amt0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.954788, 5.70761)
+
+[node name="winplatform" parent="." instance=ExtResource("3_w5e11")]
+transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, 1.9608, 0.679111, 157.141)
+win_screen_scene = ExtResource("4_e3b7f")
+
+[node name="Backgroundmusic" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("5_aie2w")
+volume_db = -10.0
+autoplay = true
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(0.842687, 0.182316, -0.506595, 0.138096, 0.836254, 0.530668, 0.520392, -0.517146, 0.679524, 0, 7.40441, 0)
+shadow_enabled = true
+shadow_blur = 3.0
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_5rr72")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="."]
+transform = Transform3D(37.9526, 2.98809e-06, 0, -3.31792e-06, 34.1797, 0, 0, 0, -191.284, -31.6997, 5.1201, 92.1416)
+mesh = SubResource("PrismMesh_ky2ik")
+
+[node name="MeshInstance3D4" type="MeshInstance3D" parent="."]
+transform = Transform3D(-1.65896e-06, 2.25594e-13, -100.744, 5.73069e-06, 34.1797, -2.85508e-20, -37.9526, 5.161e-06, 4.40364e-06, 0.471203, 2.68272, -5.94903)
+mesh = SubResource("PrismMesh_ky2ik")
+
+[node name="MeshInstance3D5" type="MeshInstance3D" parent="."]
+transform = Transform3D(-1.65896e-06, 2.25594e-13, -100.744, 5.73069e-06, 34.1797, -2.85508e-20, -37.9526, 5.161e-06, 4.40364e-06, 0.471203, 2.68272, 188.406)
+mesh = SubResource("PrismMesh_ky2ik")
+
+[node name="MeshInstance3D3" type="MeshInstance3D" parent="."]
+transform = Transform3D(37.9526, 2.98809e-06, 0, -3.31792e-06, 34.1797, 0, 0, 0, -191.284, 31.8207, 5.1201, 92.1416)
+mesh = SubResource("PrismMesh_ky2ik")
+
+[node name="platformSnow" parent="." instance=ExtResource("7_1wgld")]
+transform = Transform3D(0.360791, 0, 0, 0, 0.1, 0, 0, 0, 1.61791, 0, 0, 93.5781)
+
+[node name="GPUParticles3D" type="GPUParticles3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00771379, 24.0114, 101.731)
+amount = 256
+lifetime = 3.5
+visibility_aabb = AABB(-50.688, -59.7486, -49.5762, 98.4226, 62.7128, 86.5817)
+process_material = SubResource("ParticleProcessMaterial_2ibqd")
+draw_pass_1 = SubResource("QuadMesh_6i4tg")
+
+[node name="laser" parent="." instance=ExtResource("8_7amt0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.53287, 1.79489, 28.7368)
+
+[node name="laser2" parent="." instance=ExtResource("8_7amt0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.53287, 1.79489, 48.3996)
+
+[node name="laser3" parent="." instance=ExtResource("8_7amt0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.53287, 1.79489, 68.028)
+
+[node name="laser4" parent="." instance=ExtResource("8_7amt0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.53287, 1.79489, 93.7634)
+
+[node name="LaserY" parent="." instance=ExtResource("9_w5e11")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.53287, 1.79489, 111.768)
+
+[node name="LaserY2" parent="." instance=ExtResource("9_w5e11")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.53287, 1.79489, 123.867)
+
+[node name="LaserY3" parent="." instance=ExtResource("9_w5e11")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.53287, 1.79489, 136.329)
+
+[node name="Area3D" type="Area3D" parent="."]
+
+[node name="StaticBody3D" type="StaticBody3D" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
+transform = Transform3D(37.9526, 2.98811e-06, 0, -3.31792e-06, 34.1797, 0, 0, 0, -191.283, 34.5552, 5.21, 92.1416)
+shape = SubResource("BoxShape3D_2ibqd")
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="StaticBody3D"]
+transform = Transform3D(37.9526, 2.98813e-06, 0, -3.31792e-06, 34.1797, 0, 0, 0, -191.282, -33.8484, 5.21, 91.8646)
+shape = SubResource("BoxShape3D_2ibqd")
+
+[node name="CollisionShape3D3" type="CollisionShape3D" parent="StaticBody3D"]
+transform = Transform3D(-1.65896e-06, 1.30613e-13, 191.282, 3.31792e-06, 34.1797, 0, 37.9526, -2.98809e-06, 8.36119e-06, 4.54228, 5.21, -10.5275)
+shape = SubResource("BoxShape3D_2ibqd")
+
+[node name="CollisionShape3D4" type="CollisionShape3D" parent="StaticBody3D"]
+transform = Transform3D(-1.65896e-06, 1.30613e-13, 191.282, 3.31792e-06, 34.1797, 0, 37.9526, -2.98809e-06, 8.36119e-06, 4.54228, 5.21, 194.52)
+shape = SubResource("BoxShape3D_2ibqd")

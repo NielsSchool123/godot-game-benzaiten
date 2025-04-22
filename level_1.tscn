@@ -46,6 +46,10 @@ sky_material = SubResource("PanoramaSkyMaterial_bjebc")
 [sub_resource type="Environment" id="Environment_5rr72"]
 background_mode = 2
 sky = SubResource("Sky_7dov7")
+fog_enabled = true
+fog_sun_scatter = 0.5
+fog_density = 0.02
+fog_sky_affect = 0.7
 
 [node name="Node3D" type="Node3D"]
 script = ExtResource("1_bjebc")
