@@ -18,8 +18,8 @@ config/icon="res://assets/images/icon.svg"
 [autoload]
 
 Escapefullscreen="*res://scripts/escapefullscreen.gd"
-Global="*res://scripts/BoolSecretlevl.gd"
-GameData="*res://scripts/secretcounter.gd"
+SecretLevelVisited="*res://scripts/SecretLevelVisited.gd"
+GameData="*res://scripts/GameData.gd"
 
 [debug]
 

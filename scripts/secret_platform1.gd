@@ -4,7 +4,7 @@ extends StaticBody3D
 
 func _ready():  # decteert of iemand in de hotbox is
 	$Area3D.body_entered.connect(_on_body_entered)
-	if Global.secret_level_visited:
+	if SecretLevelVisited.secret_level1_visited:
 		queue_free()
 
 
