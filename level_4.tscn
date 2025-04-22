@@ -83,7 +83,7 @@ win_screen_scene = ExtResource("7_rrs1j")
 
 [node name="Backgroundmusic" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("8_0yqnl")
-volume_db = -20.0
+volume_db = -10.0
 autoplay = true
 
 [node name="platformchangeGFASTR4" parent="." instance=ExtResource("8_s24i2")]

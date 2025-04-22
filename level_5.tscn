@@ -211,3 +211,4 @@ mesh = SubResource("BoxMesh_2etst")
 
 [node name="Backgroundmusic" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("10_vw43l")
+volume_db = -10.0
