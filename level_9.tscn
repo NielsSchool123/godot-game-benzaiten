@@ -139,25 +139,25 @@ process_material = SubResource("ParticleProcessMaterial_2ibqd")
 draw_pass_1 = SubResource("QuadMesh_6i4tg")
 
 [node name="laser" parent="." instance=ExtResource("8_7amt0")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.53287, 1.79489, 28.7368)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.53287, 1.79489, 31.2396)
 
 [node name="laser2" parent="." instance=ExtResource("8_7amt0")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.53287, 1.79489, 48.3996)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.53287, 1.79489, 51.4178)
 
 [node name="laser3" parent="." instance=ExtResource("8_7amt0")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.53287, 1.79489, 68.028)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.53287, 1.79489, 72.2942)
 
 [node name="laser4" parent="." instance=ExtResource("8_7amt0")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.53287, 1.79489, 93.7634)
 
 [node name="LaserY" parent="." instance=ExtResource("9_w5e11")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.53287, 1.79489, 111.768)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.53287, 7.16891, 111.768)
 
 [node name="LaserY2" parent="." instance=ExtResource("9_w5e11")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.53287, 1.79489, 123.867)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.53287, 7.16891, 123.867)
 
 [node name="LaserY3" parent="." instance=ExtResource("9_w5e11")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.53287, 1.79489, 136.329)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.53287, 7.16891, 136.329)
 
 [node name="Area3D" type="Area3D" parent="."]
 
