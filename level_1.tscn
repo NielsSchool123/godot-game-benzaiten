@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=3 uid="uid://pp11buvlytyl"]
+[gd_scene load_steps=18 format=3 uid="uid://pp11buvlytyl"]
 
 [ext_resource type="Script" uid="uid://q6pcjrbfxr" path="res://scripts/BackGroundMusic.gd" id="1_bjebc"]
 [ext_resource type="PackedScene" uid="uid://d2otn14bnvjn6" path="res://DeathZone.tscn" id="1_rka8t"]
@@ -8,6 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://bgtir65febws3" path="res://WinPlatform.tscn" id="6_5hph3"]
 [ext_resource type="AudioStream" uid="uid://68ore0n8fakj" path="res://assets/sounds/backgroundmusic.wav" id="8_5rr72"]
 [ext_resource type="PackedScene" uid="uid://bb4guv2ig54t4" path="res://Island.tscn" id="8_bjebc"]
+[ext_resource type="PackedScene" uid="uid://bs4gi64v42x00" path="res://TutorialSign.tscn" id="9_5rr72"]
 
 [sub_resource type="FastNoiseLite" id="FastNoiseLite_bjebc"]
 noise_type = 0
@@ -43,10 +44,9 @@ energy_multiplier = 0.5
 [sub_resource type="Sky" id="Sky_7dov7"]
 sky_material = SubResource("PanoramaSkyMaterial_bjebc")
 
-[sub_resource type="Environment" id="Environment_5rr72"]
+[sub_resource type="Environment" id="Environment_bjebc"]
 background_mode = 2
 sky = SubResource("Sky_7dov7")
-fog_enabled = true
 fog_sun_scatter = 0.5
 fog_density = 0.02
 fog_sky_affect = 0.7
@@ -90,4 +90,7 @@ shadow_enabled = true
 shadow_blur = 3.0
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
-environment = SubResource("Environment_5rr72")
+environment = SubResource("Environment_bjebc")
+
+[node name="StaticBody3D" parent="." instance=ExtResource("9_5rr72")]
+transform = Transform3D(-1.40738, 0, 1.42101, 0, 2, 0, -1.42101, 0, -1.40738, -4.24855, -0.970545, 7.74824)

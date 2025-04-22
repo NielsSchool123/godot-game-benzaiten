@@ -17,7 +17,7 @@ energy_multiplier = 0.5
 [sub_resource type="Sky" id="Sky_7dov7"]
 sky_material = SubResource("PanoramaSkyMaterial_bjebc")
 
-[sub_resource type="Environment" id="Environment_5rr72"]
+[sub_resource type="Environment" id="Environment_w5e11"]
 background_mode = 2
 sky = SubResource("Sky_7dov7")
 fog_enabled = true
@@ -109,7 +109,7 @@ shadow_enabled = true
 shadow_blur = 3.0
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
-environment = SubResource("Environment_5rr72")
+environment = SubResource("Environment_w5e11")
 
 [node name="MeshInstance3D2" type="MeshInstance3D" parent="."]
 transform = Transform3D(37.9526, 2.98809e-06, 0, -3.31792e-06, 34.1797, 0, 0, 0, -191.284, -31.6997, 5.1201, 92.1416)
