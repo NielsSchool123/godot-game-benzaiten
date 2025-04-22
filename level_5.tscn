@@ -118,9 +118,6 @@ transform = Transform3D(0.0881724, 0, 0, 0, 0.1, 0, 0, 0, 0.275248, -17.3756, 8.
 [node name="StaticBody3D5" parent="." instance=ExtResource("7_vcgqq")]
 transform = Transform3D(0.0881724, 0, 0, 0, 0.1, 0, 0, 0, 0.275248, -17.3756, 8.23727, 5.4983)
 
-[node name="StaticBody3D16" parent="." instance=ExtResource("7_vcgqq")]
-transform = Transform3D(0.00828757, 0, -0.299886, 0, 0.3, 0, 0.299886, 0, 0.00828757, -113.418, 0.403648, -13.166)
-
 [node name="StaticBody3D17" parent="." instance=ExtResource("7_vcgqq")]
 transform = Transform3D(0.00326664, -0.00670401, -0.132617, 0.00021949, 0.099775, -0.00891071, 0.11847, 0, 0.00367322, -113.418, -5.2861, 10.5225)
 
@@ -138,6 +135,9 @@ transform = Transform3D(-1.31134e-08, 0, -0.3, 0, 0.3, 0, 0.3, 0, -1.31134e-08, 
 
 [node name="StaticBody3D15" parent="." instance=ExtResource("3_2etst")]
 transform = Transform3D(-8.74228e-09, 0, -0.2, 0, 0.2, 0, 0.2, 0, -8.74228e-09, -113.447, 0.670865, 10.7125)
+
+[node name="StaticBody3D16" parent="." instance=ExtResource("3_2etst")]
+transform = Transform3D(-8.74228e-09, 0, -0.2, 0, 0.2, 0, 0.2, 0, -8.74228e-09, -113.447, 0.671, -14)
 
 [node name="StaticBody3D7" parent="." instance=ExtResource("7_vcgqq")]
 transform = Transform3D(0.0952839, 0, 0, 0, 0.1, 0, 0, 0, 0.11178, -67.7216, 0.393639, 0.0665989)
