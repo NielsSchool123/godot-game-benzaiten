@@ -1,6 +1,7 @@
-[gd_scene load_steps=5 format=3 uid="uid://dktctapc0cslb"]
+[gd_scene load_steps=6 format=3 uid="uid://dktctapc0cslb"]
 
 [ext_resource type="Script" uid="uid://bp6rp8qag1hpe" path="res://scripts/intro_screen.gd" id="1_66135"]
+[ext_resource type="Theme" uid="uid://bmrctah2v8orj" path="res://assets/theme.tres" id="1_tf6mp"]
 [ext_resource type="PackedScene" uid="uid://baq7oqjbffu1k" path="res://IntroScreenBackGround.tscn" id="3_66135"]
 [ext_resource type="AudioStream" uid="uid://cdxbjdg0ltl4w" path="res://assets/sounds/buttonselect.wav" id="3_yd5l1"]
 
@@ -12,9 +13,12 @@ layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_left = 1.0
+offset_right = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 size_flags_horizontal = 3
+theme = ExtResource("1_tf6mp")
 script = ExtResource("1_66135")
 metadata/_edit_use_anchors_ = true
 
@@ -26,9 +30,10 @@ volume_db = -20.0
 
 [node name="VBoxContainer" type="VBoxContainer" parent="."]
 layout_mode = 0
-offset_top = 307.0
-offset_right = 500.0
-offset_bottom = 957.0
+anchor_top = 0.416667
+anchor_right = 0.434028
+anchor_bottom = 1.41975
+metadata/_edit_use_anchors_ = true
 
 [node name="MainMenu" type="Button" parent="VBoxContainer"]
 layout_mode = 2
@@ -61,20 +66,23 @@ label_settings = SubResource("LabelSettings_66135")
 
 [node name="TooltipLabel" type="Label" parent="."]
 layout_mode = 0
-offset_left = 30.0
-offset_top = 168.0
-offset_right = 476.0
-offset_bottom = 301.0
+anchor_left = 0.0260417
+anchor_top = 0.259259
+anchor_right = 0.413194
+anchor_bottom = 0.464506
 text = "PLACEHOLDER"
 horizontal_alignment = 1
 vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
 
 [node name="Secretslabel" type="Label" parent="."]
-layout_mode = 0
-offset_left = 30.0
-offset_top = 472.0
-offset_right = 476.0
-offset_bottom = 605.0
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.0260417
+anchor_top = 0.570988
+anchor_right = 0.413194
+anchor_bottom = 0.776235
 text = "PLACEHOLDER"
 horizontal_alignment = 1
 vertical_alignment = 1
+metadata/_edit_use_anchors_ = true

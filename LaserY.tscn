@@ -1,0 +1,27 @@
+[gd_scene load_steps=6 format=3 uid="uid://cy132fv3vo5py"]
+
+[ext_resource type="Script" uid="uid://v1nswr348dfe" path="res://LaserY.gd" id="1_y3ylt"]
+[ext_resource type="AudioStream" uid="uid://wronojwepiv5" path="res://assets/sounds/death.wav" id="2_ouf8e"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_6vqwg"]
+transparency = 1
+albedo_color = Color(1, 0, 0, 0.498039)
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_fn5yt"]
+material = SubResource("StandardMaterial3D_6vqwg")
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_6vqwg"]
+
+[node name="LaserY" type="Area3D"]
+script = ExtResource("1_y3ylt")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="."]
+transform = Transform3D(-4.37114e-08, -36.0156, 0, 1, -1.57429e-06, 0, 0, 0, 1, 0, 0, 0)
+mesh = SubResource("CapsuleMesh_fn5yt")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(-4.37114e-08, -36.5496, 0, 1, -1.59763e-06, 0, 0, 0, 1, 0, 0, 0)
+shape = SubResource("CapsuleShape3D_6vqwg")
+
+[node name="Death" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("2_ouf8e")

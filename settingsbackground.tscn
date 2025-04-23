@@ -1,6 +1,6 @@
 [gd_scene load_steps=11 format=3 uid="uid://dne0falxcvvqj"]
 
-[ext_resource type="PackedScene" uid="uid://db21nmw2v5t8r" path="res://Platrform.tscn" id="1_cpdla"]
+[ext_resource type="PackedScene" uid="uid://db21nmw2v5t8r" path="res://Platform.tscn" id="1_cpdla"]
 [ext_resource type="Script" uid="uid://5bj5tkk1bh4i" path="res://scripts/settingsbackground.gd" id="1_ed2hk"]
 [ext_resource type="PackedScene" uid="uid://cpipsmpcc0gs4" path="res://assets/models/boom.glb" id="2_ed2hk"]
 [ext_resource type="Texture2D" uid="uid://cwbpls1njfmp3" path="res://assets/images/NightSkyHDRI008_2K-HDR.exr" id="4_tsw4r"]

@@ -1,0 +1,67 @@
+[gd_scene load_steps=6 format=3 uid="uid://pelo7ci80yxg"]
+
+[ext_resource type="Theme" uid="uid://bmrctah2v8orj" path="res://assets/theme.tres" id="1_61evt"]
+[ext_resource type="Script" uid="uid://c4b7bu08gmaop" path="res://scripts/WinScreenScript2.gd" id="1_rho5q"]
+[ext_resource type="AudioStream" uid="uid://bugmarblwtj2w" path="res://assets/sounds/levelwin.wav" id="2_61evt"]
+[ext_resource type="AudioStream" uid="uid://cdxbjdg0ltl4w" path="res://assets/sounds/buttonselect.wav" id="3_1odte"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_ok131"]
+font_size = 70
+
+[node name="WinScreen" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme = ExtResource("1_61evt")
+script = ExtResource("1_rho5q")
+metadata/_edit_use_anchors_ = true
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.00303819
+anchor_right = 0.996962
+anchor_bottom = 0.99537
+grow_horizontal = 2
+text = "LEVEL BEATEN"
+label_settings = SubResource("LabelSettings_ok131")
+horizontal_alignment = 1
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.144097
+anchor_top = 0.516975
+anchor_right = 0.856771
+anchor_bottom = 0.683642
+offset_top = 3.05176e-05
+grow_horizontal = 2
+grow_vertical = 2
+text = "Return to main menu"
+metadata/_edit_use_anchors_ = true
+
+[node name="Button2" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.144097
+anchor_top = 0.748457
+anchor_right = 0.856771
+anchor_bottom = 0.915124
+offset_top = 3.05176e-05
+grow_horizontal = 2
+grow_vertical = 2
+text = "Next level"
+metadata/_edit_use_anchors_ = true
+
+[node name="Levelwin" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("2_61evt")
+volume_db = -20.0
+
+[node name="Buttonselect" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_1odte")
+volume_db = -20.0

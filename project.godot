@@ -13,13 +13,12 @@ config_version=5
 config/name="Benzaiten"
 run/main_scene="uid://dktctapc0cslb"
 config/features=PackedStringArray("4.4", "Forward Plus")
-config/icon="res://assets/images/icon.svg"
 
 [autoload]
 
 Escapefullscreen="*res://scripts/escapefullscreen.gd"
-Global="*res://scripts/BoolSecretlevl.gd"
-GameData="*res://scripts/secretcounter.gd"
+SecretLevelVisited="*res://scripts/SecretLevelVisited.gd"
+GameData="*res://scripts/GameData.gd"
 
 [debug]
 

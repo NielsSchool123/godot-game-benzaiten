@@ -1,9 +1,10 @@
-[gd_scene load_steps=23 format=3 uid="uid://ba3glaa7qnuda"]
+[gd_scene load_steps=24 format=3 uid="uid://ba3glaa7qnuda"]
 
 [ext_resource type="Script" uid="uid://q6pcjrbfxr" path="res://scripts/BackGroundMusic.gd" id="1_s24i2"]
 [ext_resource type="PackedScene" uid="uid://d2otn14bnvjn6" path="res://DeathZone.tscn" id="2_66w8i"]
 [ext_resource type="PackedScene" uid="uid://phpa3phmm6uu" path="res://Player.tscn" id="3_80qnk"]
 [ext_resource type="Texture2D" uid="uid://b5so7di8cwa53" path="res://assets/images/kloppenheim_07_puresky_2k.exr" id="5_80qnk"]
+[ext_resource type="PackedScene" uid="uid://ba5d3woxvr6r" path="res://WinScreenBLANK.tscn" id="7_rrs1j"]
 [ext_resource type="PackedScene" uid="uid://bgtir65febws3" path="res://WinPlatform.tscn" id="7_xxbfp"]
 [ext_resource type="AudioStream" uid="uid://68ore0n8fakj" path="res://assets/sounds/backgroundmusic.wav" id="8_0yqnl"]
 [ext_resource type="PackedScene" uid="uid://bpjnse0ji0y3b" path="res://PlatformFallFAST4.tscn" id="8_s24i2"]
@@ -15,6 +16,7 @@
 
 [sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_fc0e3"]
 panorama = ExtResource("5_80qnk")
+energy_multiplier = 0.5
 
 [sub_resource type="Sky" id="Sky_5hph3"]
 sky_material = SubResource("PanoramaSkyMaterial_fc0e3")
@@ -77,10 +79,11 @@ environment = SubResource("Environment_ryrav")
 
 [node name="winplatform" parent="." instance=ExtResource("7_xxbfp")]
 transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, -0.333206, -3.8147e-06, 223.557)
+win_screen_scene = ExtResource("7_rrs1j")
 
 [node name="Backgroundmusic" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("8_0yqnl")
-volume_db = -20.0
+volume_db = -10.0
 autoplay = true
 
 [node name="platformchangeGFASTR4" parent="." instance=ExtResource("8_s24i2")]

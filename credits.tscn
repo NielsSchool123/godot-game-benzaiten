@@ -1,5 +1,6 @@
-[gd_scene load_steps=6 format=3 uid="uid://b0dphdjryugrh"]
+[gd_scene load_steps=7 format=3 uid="uid://b0dphdjryugrh"]
 
+[ext_resource type="Theme" uid="uid://bmrctah2v8orj" path="res://assets/theme.tres" id="1_g4wvt"]
 [ext_resource type="PackedScene" uid="uid://c0as3cvhybnve" path="res://CreditsBackground.tscn" id="2_c1t8d"]
 [ext_resource type="AudioStream" uid="uid://cdxbjdg0ltl4w" path="res://assets/sounds/buttonselect.wav" id="3_g4wvt"]
 
@@ -35,6 +36,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+theme = ExtResource("1_g4wvt")
 script = SubResource("GDScript_c1t8d")
 metadata/_edit_use_anchors_ = true
 
@@ -45,6 +47,9 @@ anchor_left = 0.849826
 anchor_top = 0.95216
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_left = -32.9995
+offset_top = 0.000305176
+offset_bottom = 0.000305176
 grow_horizontal = 2
 grow_vertical = 2
 metadata/_edit_use_anchors_ = true
@@ -52,7 +57,7 @@ metadata/_edit_use_anchors_ = true
 [node name="IntroScreen" type="Button" parent="VBoxContainer"]
 layout_mode = 2
 size_flags_vertical = 3
-text = "Return to Main Menu"
+text = "Return to main menu"
 metadata/_edit_use_anchors_ = true
 
 [node name="Buttonselect" type="AudioStreamPlayer" parent="."]
@@ -84,14 +89,17 @@ Bas & All gametesters
 "
 label_settings = SubResource("LabelSettings_t5rx0")
 horizontal_alignment = 1
+vertical_alignment = 1
 metadata/_edit_use_anchors_ = true
 
 [node name="Label2" type="Label" parent="."]
+visible = false
 layout_mode = 2
-anchor_left = -0.0147569
-anchor_top = 0.975309
-anchor_right = 0.1875
-anchor_bottom = 1.03241
+anchor_left = 0.266493
+anchor_top = 0.867284
+anchor_right = 0.46875
+anchor_bottom = 0.924385
+scale = Vector2(2.55402, 2.23778)
 text = "Website Hosting & Unnecessary Glory: Zen
 "
 label_settings = SubResource("LabelSettings_c1t8d")

@@ -28,12 +28,8 @@ func _on_hitbox_entered(body):
 			body.die()
 			death.play()
 			await get_tree().create_timer(3.0).timeout  # wacht 3 seconden zodat animatie afspeelt
-		reset_game()
+			get_tree().reload_current_scene()
 
-
-
-func reset_game():
-	get_tree().reload_current_scene()
 
 func _physics_process(delta: float) -> void:
 	velocity.y += gravity * delta
