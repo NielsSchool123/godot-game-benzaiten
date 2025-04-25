@@ -1,6 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://bs4gi64v42x00"]
-
-[ext_resource type="FontFile" uid="uid://b8aktpckehjtq" path="res://assets/fonts/AzeretMono-Regular.ttf" id="1_sflk2"]
+[gd_scene load_steps=6 format=3 uid="uid://bs4gi64v42x00"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_3f06w"]
 albedo_color = Color(0.592157, 0.427451, 0.34902, 1)
@@ -10,11 +8,9 @@ material = SubResource("StandardMaterial3D_3f06w")
 
 [sub_resource type="TextMesh" id="TextMesh_a5rgg"]
 text = "WASD or arrow keys to move"
-font = ExtResource("1_sflk2")
 
-[sub_resource type="TextMesh" id="TextMesh_rrt0o"]
-text = "Space to jump"
-font = ExtResource("1_sflk2")
+[sub_resource type="TextMesh" id="TextMesh_ilvr6"]
+text = "Press Space to jump"
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_sflk2"]
 size = Vector3(2.27917, 2.24988, 0.591248)
@@ -31,8 +27,8 @@ transform = Transform3D(0.8, 0, 0, 0, 1.6, 0, 0, 0, 0.8, 0.0198938, 2.91133, 0.1
 mesh = SubResource("TextMesh_a5rgg")
 
 [node name="MeshInstance3D4" type="MeshInstance3D" parent="."]
-transform = Transform3D(0.8, 0, 0, 0, 1.6, 0, 0, 0, 0.8, -0.0271727, 2.28791, 0.17177)
-mesh = SubResource("TextMesh_rrt0o")
+transform = Transform3D(0.8, 0, 0, 0, 1.6, 0, 0, 0, 0.8, 0.0198938, 2.22831, 0.162042)
+mesh = SubResource("TextMesh_ilvr6")
 
 [node name="MeshInstance3D2" type="MeshInstance3D" parent="."]
 transform = Transform3D(0.444419, 0, 0, 0, 1.4047, 0, 0, 0, 0.338856, 0, 1.12504, 0)

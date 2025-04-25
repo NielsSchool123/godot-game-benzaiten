@@ -54,7 +54,7 @@ theme_override_colors/font_color = Color(1, 0, 0, 1)
 theme_override_colors/font_focus_color = Color(1, 0, 0, 1)
 theme_override_colors/font_pressed_color = Color(1, 0, 0, 1)
 theme_override_constants/outline_size = 3
-text = "level 4-B"
+text = "level B-1"
 
 [node name="MainMenu" type="Button" parent="VBoxContainer"]
 layout_mode = 2
