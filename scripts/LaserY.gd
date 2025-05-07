@@ -18,7 +18,7 @@ func _process(delta):
 		direction *= -1
 
 func _on_body_entered(body):
-	if body.is_in_group("player"):
+	if body.is_in_group("player") and not body.is_dead:
 		if body.has_method("die"):
 			body.die()
 			death.play()
