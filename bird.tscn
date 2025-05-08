@@ -10,7 +10,7 @@ radius = 5.26002
 [sub_resource type="BoxShape3D" id="BoxShape3D_axl6x"]
 size = Vector3(1.32977, 1.10168, 0.885487)
 
-[node name="CharacterBody3D" type="CharacterBody3D"]
+[node name="vogel" type="CharacterBody3D"]
 script = ExtResource("1_j88tq")
 
 [node name="bird" parent="." instance=ExtResource("2_j88tq")]

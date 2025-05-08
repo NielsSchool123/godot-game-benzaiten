@@ -158,29 +158,29 @@ transform = Transform3D(23.418, 0, 0, 0, 5, 0, 0, 0, 5, 0.31477, 20.0256, 152.55
 jump_force = Vector3(0, 50, 0)
 
 [node name="spike" parent="." instance=ExtResource("9_pyblp")]
-transform = Transform3D(19.853, 0, 0, 0, 1, 0, 0, 0, 20.2003, 0, 43.3688, 158.236)
+transform = Transform3D(-21.0108, 0.0891999, 0, -0.639372, -2.93126, 0, 0, 0, 20.2003, 0.0858707, 59.9625, 158.223)
 
 [node name="StaticBody3D" type="StaticBody3D" parent="."]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
 transform = Transform3D(2.27598, 0, 0, 0, 1, 0, 0, 0, 21.9226, -11.3584, 23.8467, -7.8014)
 shape = SubResource("BoxShape3D_pyblp")
-debug_color = Color(0, 0, 0.701961, 1)
+debug_color = Color(0, 1, 0.701961, 1)
 
 [node name="CollisionShape3D2" type="CollisionShape3D" parent="StaticBody3D"]
 transform = Transform3D(2.27598, 0, 0, 0, 1, 0, 0, 0, 21.9226, -11.3584, 23.8467, 321.95)
 shape = SubResource("BoxShape3D_pyblp")
-debug_color = Color(0, 0, 0.701961, 1)
+debug_color = Color(0, 1, 0.701961, 1)
 
 [node name="CollisionShape3D4" type="CollisionShape3D" parent="StaticBody3D"]
 transform = Transform3D(-4.49588e-07, 0, -41.6324, 0, 1.69355, 0, 10.2854, 0, -1.81981e-06, -109.97, 22.2292, 225.332)
 shape = SubResource("BoxShape3D_pyblp")
-debug_color = Color(0, 0, 0.701961, 1)
+debug_color = Color(0, 1, 0.701961, 1)
 
 [node name="CollisionShape3D5" type="CollisionShape3D" parent="StaticBody3D"]
 transform = Transform3D(-4.49588e-07, 0, -41.6324, 0, 1.69355, 0, 10.2854, 0, -1.81981e-06, 69.8691, 22.2292, 225.332)
 shape = SubResource("BoxShape3D_pyblp")
-debug_color = Color(0, 0, 0.701961, 1)
+debug_color = Color(0, 1, 0.701961, 1)
 
 [node name="WinPlatform" parent="." instance=ExtResource("8_pyblp")]
 transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, 0, 19.2116, 211.289)
@@ -195,5 +195,14 @@ script = ExtResource("11_helgx")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="rups gast/Area3D"]
 transform = Transform3D(50, 0, 0, 0, 50, 0, 0, 0, 50, 0, 3.92815, 0.0155334)
 shape = SubResource("SphereShape3D_iqnen")
+debug_color = Color(1, 0, 0.701961, 1)
+
+[node name="Area3D2" type="Area3D" parent="rups gast"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="rups gast/Area3D2"]
+transform = Transform3D(50, 0, 0, 0, 50, 0, 0, 0, 50, 0, 3.92815, 0.0155334)
+shape = SubResource("SphereShape3D_iqnen")
+debug_color = Color(1, 0, 0.701961, 1)
 
 [connection signal="body_entered" from="rups gast/Area3D" to="rups gast" method="_on_area_3d_body_entered"]
+[connection signal="body_entered" from="rups gast/Area3D2" to="rups gast" method="_on_area_3d_body_entered"]
