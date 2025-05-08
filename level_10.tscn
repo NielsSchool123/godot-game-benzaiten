@@ -95,7 +95,7 @@ script = ExtResource("1_pyblp")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.954788, 14.6581)
 
 [node name="winplatform" parent="." instance=ExtResource("3_helgx")]
-transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, 1.9608, 0.679111, 157.141)
+transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, 1.9608, 20.2714, 211.45)
 win_screen_scene = ExtResource("4_iqnen")
 
 [node name="Backgroundmusic" type="AudioStreamPlayer" parent="."]
@@ -147,7 +147,7 @@ draw_pass_1 = SubResource("QuadMesh_6i4tg")
 [node name="Area3D" type="Area3D" parent="."]
 
 [node name="jumppad" parent="." instance=ExtResource("8_cv5j8")]
-transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, 0.31477, 0.399487, 41.102)
+transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, 0.367104, 0.552959, 41.1688)
 
 [node name="jumppad2" parent="." instance=ExtResource("8_cv5j8")]
 transform = Transform3D(23.418, 0, 0, 0, 5, 0, 0, 0, 5, 0.31477, 20.0256, 152.55)
