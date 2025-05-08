@@ -1,0 +1,31 @@
+[gd_scene load_steps=6 format=3 uid="uid://ba3xxdrg3rxn0"]
+
+[ext_resource type="Script" uid="uid://cof3bdqwun8uc" path="res://scripts/PlatformWInScript.gd" id="1_k1xt4"]
+[ext_resource type="PackedScene" uid="uid://bufgukfh7v5qt" path="res://WinScreen1.tscn" id="2_cdy5g"]
+[ext_resource type="PackedScene" uid="uid://difuqwq64vrsj" path="res://platform_snow.tscn" id="4_k1xt4"]
+[ext_resource type="PackedScene" uid="uid://dttckuk2adbts" path="res://assets/models/kroon.glb" id="4_vefqj"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_cdy5g"]
+size = Vector3(0.685425, 1.59668, 0.575745)
+
+[node name="WinPlatform" type="StaticBody3D"]
+transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, 0, 0, 0)
+script = ExtResource("1_k1xt4")
+win_screen_scene = ExtResource("2_cdy5g")
+
+[node name="Area3D" type="Area3D" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D"]
+transform = Transform3D(200, 0, 0, 0, 12.1323, 0, 0, 0, 200, 7.63342, 5.99953, 16.8803)
+shape = SubResource("BoxShape3D_cdy5g")
+
+[node name="OmniLight3D" type="OmniLight3D" parent="."]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 10, -1.98508, 18.0523, 10.8111)
+light_color = Color(1, 1, 0, 1)
+light_energy = 28.385
+
+[node name="kroon" parent="." instance=ExtResource("4_vefqj")]
+transform = Transform3D(12.5, 0, -21.6506, 0, 25, 0, 21.6506, 0, 12.5, 15.1381, -52.2725, 6.26768)
+
+[node name="platformSnow" parent="." instance=ExtResource("4_k1xt4")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.87291, 14.5683)

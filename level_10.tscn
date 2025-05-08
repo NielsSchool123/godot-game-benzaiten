@@ -1,14 +1,16 @@
-[gd_scene load_steps=25 format=3 uid="uid://cq1w8pbok688f"]
+[gd_scene load_steps=28 format=3 uid="uid://cq1w8pbok688f"]
 
 [ext_resource type="Script" uid="uid://q6pcjrbfxr" path="res://scripts/BackGroundMusic.gd" id="1_pyblp"]
 [ext_resource type="PackedScene" uid="uid://phpa3phmm6uu" path="res://Player.tscn" id="2_jjmbq"]
-[ext_resource type="PackedScene" uid="uid://bgtir65febws3" path="res://WinPlatform.tscn" id="3_helgx"]
 [ext_resource type="PackedScene" uid="uid://ba5d3woxvr6r" path="res://WinScreenBLANK.tscn" id="4_iqnen"]
 [ext_resource type="AudioStream" uid="uid://68ore0n8fakj" path="res://assets/sounds/backgroundmusic.wav" id="5_bx6au"]
 [ext_resource type="Texture2D" uid="uid://b5so7di8cwa53" path="res://assets/images/kloppenheim_07_puresky_2k.exr" id="6_348an"]
 [ext_resource type="PackedScene" uid="uid://difuqwq64vrsj" path="res://platform_snow.tscn" id="7_1jiv0"]
 [ext_resource type="PackedScene" uid="uid://cdrep7fy61gc3" path="res://jumppad.tscn" id="8_cv5j8"]
+[ext_resource type="PackedScene" uid="uid://ba3xxdrg3rxn0" path="res://snowwinplatform.tscn" id="8_pyblp"]
 [ext_resource type="PackedScene" uid="uid://ddv0uw6vn73em" path="res://spike dood.tscn" id="9_pyblp"]
+[ext_resource type="PackedScene" uid="uid://cqdmd237vujjo" path="res://assets/models/rups gast.glb" id="10_jjmbq"]
+[ext_resource type="Script" uid="uid://djg03snyo0h2i" path="res://scripts/rups_gast.gd" id="11_helgx"]
 
 [sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_bjebc"]
 panorama = ExtResource("6_348an")
@@ -88,15 +90,13 @@ material = SubResource("StandardMaterial3D_yr1m6")
 [sub_resource type="BoxShape3D" id="BoxShape3D_pyblp"]
 size = Vector3(88.5762, 51.9282, 1.3335)
 
+[sub_resource type="SphereShape3D" id="SphereShape3D_iqnen"]
+
 [node name="Node3D" type="Node3D"]
 script = ExtResource("1_pyblp")
 
 [node name="player" parent="." instance=ExtResource("2_jjmbq")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.954788, 14.6581)
-
-[node name="winplatform" parent="." instance=ExtResource("3_helgx")]
-transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, 1.9608, 20.2714, 211.45)
-win_screen_scene = ExtResource("4_iqnen")
 
 [node name="Backgroundmusic" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("5_bx6au")
@@ -130,11 +130,14 @@ mesh = SubResource("PrismMesh_ky2ik")
 [node name="platformSnow" parent="." instance=ExtResource("7_1jiv0")]
 transform = Transform3D(1.50717, 0, 0, 0, 0.1, 0, 0, 0, 4.76083, 0, 0, 93.5781)
 
-[node name="platformSnow2" parent="." instance=ExtResource("7_1jiv0")]
-transform = Transform3D(0.381994, 0, 0, 0, 0.396369, 0, 0, 0, -0.431673, 0.039444, 16.712, 89.1906)
+[node name="platformSnow4" parent="." instance=ExtResource("7_1jiv0")]
+transform = Transform3D(0.381994, 0, 0, 0, 3.57195, 0, 0, 0, -0.431673, 0.039444, -6.39378, 160.431)
 
-[node name="platformSnow3" parent="." instance=ExtResource("7_1jiv0")]
-transform = Transform3D(0.381994, 0, 0, 0, 0.396369, 0, 0, 0, -0.431673, 0.039444, 16.712, 161.796)
+[node name="platformSnow6" parent="." instance=ExtResource("7_1jiv0")]
+transform = Transform3D(0.381994, 0, 0, 0, 3.57195, 0, 0, 0, -0.431673, 0.039444, -6.39378, 89.3781)
+
+[node name="platformSnow5" parent="." instance=ExtResource("7_1jiv0")]
+transform = Transform3D(0.102234, 0, 0, 0, 3.57195, 0, 0, 0, -0.1018, 0.748525, -7.58033, 212.432)
 
 [node name="GPUParticles3D" type="GPUParticles3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00771379, 24.0114, 101.731)
@@ -148,6 +151,7 @@ draw_pass_1 = SubResource("QuadMesh_6i4tg")
 
 [node name="jumppad" parent="." instance=ExtResource("8_cv5j8")]
 transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, 0.367104, 0.552959, 41.1688)
+jump_force = Vector3(0, 25, 0)
 
 [node name="jumppad2" parent="." instance=ExtResource("8_cv5j8")]
 transform = Transform3D(23.418, 0, 0, 0, 5, 0, 0, 0, 5, 0.31477, 20.0256, 152.55)
@@ -177,3 +181,19 @@ debug_color = Color(0, 0, 0.701961, 1)
 transform = Transform3D(-4.49588e-07, 0, -41.6324, 0, 1.69355, 0, 10.2854, 0, -1.81981e-06, 69.8691, 22.2292, 225.332)
 shape = SubResource("BoxShape3D_pyblp")
 debug_color = Color(0, 0, 0.701961, 1)
+
+[node name="WinPlatform" parent="." instance=ExtResource("8_pyblp")]
+transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, 0, 19.2116, 211.289)
+win_screen_scene = ExtResource("4_iqnen")
+
+[node name="rups gast" parent="." instance=ExtResource("10_jjmbq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.0475, -0.765772, 221.627)
+script = ExtResource("11_helgx")
+
+[node name="Area3D" type="Area3D" parent="rups gast"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="rups gast/Area3D"]
+transform = Transform3D(50, 0, 0, 0, 50, 0, 0, 0, 50, 0, 3.92815, 0.0155334)
+shape = SubResource("SphereShape3D_iqnen")
+
+[connection signal="body_entered" from="rups gast/Area3D" to="rups gast" method="_on_area_3d_body_entered"]
