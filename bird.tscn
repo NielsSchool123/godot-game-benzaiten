@@ -1,0 +1,32 @@
+[gd_scene load_steps=6 format=3 uid="uid://dk2dqb7tft67x"]
+
+[ext_resource type="Script" uid="uid://bk08kwpd37otr" path="res://character_body_3d.gd" id="1_j88tq"]
+[ext_resource type="PackedScene" uid="uid://c68qdydba7d83" path="res://bird.glb" id="2_j88tq"]
+[ext_resource type="AudioStream" uid="uid://wronojwepiv5" path="res://assets/sounds/death.wav" id="3_cchwj"]
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_6ljjq"]
+radius = 5.26002
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_axl6x"]
+size = Vector3(1.32977, 1.10168, 0.885487)
+
+[node name="CharacterBody3D" type="CharacterBody3D"]
+script = ExtResource("1_j88tq")
+
+[node name="bird" parent="." instance=ExtResource("2_j88tq")]
+
+[node name="DetectionZone" type="Area3D" parent="."]
+transform = Transform3D(16.3049, 0, 0, 0, 7.47307, 0, 0, 0, 22.546, 0, 3.90022, -1.56241)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="DetectionZone"]
+transform = Transform3D(3.67757, 0, 0, 0, 5.60718, 0, 0, 0, 169.649, 0, 0, 0)
+shape = SubResource("SphereShape3D_6ljjq")
+
+[node name="Hitbox" type="Area3D" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Hitbox"]
+transform = Transform3D(0.45584, 0, -7.33085e-14, 0, 0.392703, 0, 1.85087e-14, 0, 1.80548, -0.414886, 4.59437, -5.16875)
+shape = SubResource("BoxShape3D_axl6x")
+
+[node name="Death" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_cchwj")

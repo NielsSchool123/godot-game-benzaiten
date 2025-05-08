@@ -14,12 +14,12 @@
 [sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_t6fl3"]
 panorama = ExtResource("5_jiqp1")
 
-[sub_resource type="Sky" id="Sky_5hph3"]
+[sub_resource type="Sky" id="Sky_2etst"]
 sky_material = SubResource("PanoramaSkyMaterial_t6fl3")
 
 [sub_resource type="Environment" id="Environment_g81sl"]
 background_mode = 2
-sky = SubResource("Sky_5hph3")
+sky = SubResource("Sky_2etst")
 fog_enabled = true
 fog_mode = 1
 fog_density = 1.0
@@ -27,20 +27,20 @@ fog_depth_begin = 100.0
 fog_depth_end = 4000.0
 volumetric_fog_density = 0.0
 
-[sub_resource type="FastNoiseLite" id="FastNoiseLite_bjebc"]
+[sub_resource type="FastNoiseLite" id="FastNoiseLite_vw43l"]
 noise_type = 0
 
 [sub_resource type="NoiseTexture2D" id="NoiseTexture2D_kcwpe"]
 seamless = true
 as_normal_map = true
-noise = SubResource("FastNoiseLite_bjebc")
+noise = SubResource("FastNoiseLite_vw43l")
 
 [sub_resource type="NoiseTexture2D" id="NoiseTexture2D_j6qfn"]
 seamless = true
 as_normal_map = true
-noise = SubResource("FastNoiseLite_bjebc")
+noise = SubResource("FastNoiseLite_vw43l")
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_5rr72"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_jiqp1"]
 transparency = 1
 depth_draw_mode = 1
 albedo_color = Color(0, 1, 1, 0.6)
@@ -52,7 +52,7 @@ refraction_texture = SubResource("NoiseTexture2D_j6qfn")
 uv1_world_triplanar = true
 
 [sub_resource type="BoxMesh" id="BoxMesh_2etst"]
-material = SubResource("StandardMaterial3D_5rr72")
+material = SubResource("StandardMaterial3D_jiqp1")
 
 [node name="Node3D" type="Node3D"]
 script = ExtResource("1_2etst")

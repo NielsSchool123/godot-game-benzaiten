@@ -28,6 +28,10 @@ metadata/_edit_use_anchors_ = true
 layout_mode = 2
 text = "level 1-2"
 
+[node name="level_6" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+text = "level 2-2"
+
 [node name="MainMenu" type="Button" parent="VBoxContainer"]
 layout_mode = 2
 text = "Back to main menu"
