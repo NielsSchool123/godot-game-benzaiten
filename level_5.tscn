@@ -54,7 +54,7 @@ uv1_world_triplanar = true
 [sub_resource type="BoxMesh" id="BoxMesh_2etst"]
 material = SubResource("StandardMaterial3D_jiqp1")
 
-[node name="Node3D" type="Node3D"]
+[node name="Node3D2" type="Node3D"]
 script = ExtResource("1_2etst")
 
 [node name="Area3D" parent="." instance=ExtResource("1_kcwpe")]
