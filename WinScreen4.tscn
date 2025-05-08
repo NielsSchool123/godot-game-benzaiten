@@ -1,7 +1,7 @@
 [gd_scene load_steps=6 format=3 uid="uid://d4mtybnh1cfen"]
 
 [ext_resource type="Theme" uid="uid://bmrctah2v8orj" path="res://assets/theme.tres" id="1_yodg6"]
-[ext_resource type="Script" uid="uid://stvooogmqwkj" path="res://scripts/win_screen_5.gd" id="2_yodg6"]
+[ext_resource type="Script" path="res://scripts/win_screen_5.gd" id="2_yodg6"]
 [ext_resource type="AudioStream" uid="uid://bugmarblwtj2w" path="res://assets/sounds/levelwin.wav" id="3_tfh25"]
 [ext_resource type="AudioStream" uid="uid://cdxbjdg0ltl4w" path="res://assets/sounds/buttonselect.wav" id="4_r7x6e"]
 

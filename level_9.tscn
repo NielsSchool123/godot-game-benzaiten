@@ -3,7 +3,7 @@
 [ext_resource type="Script" uid="uid://q6pcjrbfxr" path="res://scripts/BackGroundMusic.gd" id="1_a721k"]
 [ext_resource type="PackedScene" uid="uid://phpa3phmm6uu" path="res://Player.tscn" id="2_7amt0"]
 [ext_resource type="PackedScene" uid="uid://bgtir65febws3" path="res://WinPlatform.tscn" id="3_w5e11"]
-[ext_resource type="PackedScene" uid="uid://cqlh5xyukyuqq" path="res://WinScreen4.tscn" id="4_w5e11"]
+[ext_resource type="PackedScene" uid="uid://d4mtybnh1cfen" path="res://WinScreen4.tscn" id="4_w5e11"]
 [ext_resource type="AudioStream" uid="uid://68ore0n8fakj" path="res://assets/sounds/backgroundmusic.wav" id="5_aie2w"]
 [ext_resource type="Texture2D" uid="uid://b5so7di8cwa53" path="res://assets/images/kloppenheim_07_puresky_2k.exr" id="6_lv1pg"]
 [ext_resource type="PackedScene" uid="uid://difuqwq64vrsj" path="res://platform_snow.tscn" id="7_1wgld"]
