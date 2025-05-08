@@ -106,4 +106,4 @@ win_screen_scene = ExtResource("6_ejlf8")
 transform = Transform3D(-0.996629, 0, 0.0820254, 0, 1, 0, -0.0820254, 0, -0.996629, -2.90295, 1.99363, 9.29472)
 
 [node name="CharacterBody3D" parent="." instance=ExtResource("8_dxhc4")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.41389, 0, 36.1212)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.54676, 7.73403, 28.3852)
