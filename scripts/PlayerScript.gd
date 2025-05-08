@@ -16,6 +16,9 @@ extends CharacterBody3D
 var mouse_captured: bool = false
 var is_dead: bool = false
 
+func apply_jump_pad_force(force: Vector3):
+	velocity += force
+
 func _ready():
 	death_model.visible = false
 
@@ -63,6 +66,7 @@ func _physics_process(delta: float) -> void:
 		jump_sound.play()
 	
 	move_and_slide()
+	
 	
 	var horizontal_speed = Vector2(velocity.x, velocity.z).length()
 	if horizontal_speed > 0.1:

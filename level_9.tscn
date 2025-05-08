@@ -3,7 +3,7 @@
 [ext_resource type="Script" uid="uid://q6pcjrbfxr" path="res://scripts/BackGroundMusic.gd" id="1_a721k"]
 [ext_resource type="PackedScene" uid="uid://phpa3phmm6uu" path="res://Player.tscn" id="2_7amt0"]
 [ext_resource type="PackedScene" uid="uid://bgtir65febws3" path="res://WinPlatform.tscn" id="3_w5e11"]
-[ext_resource type="PackedScene" uid="uid://ba5d3woxvr6r" path="res://WinScreenBLANK.tscn" id="4_e3b7f"]
+[ext_resource type="PackedScene" uid="uid://cqlh5xyukyuqq" path="res://WinScreen4.tscn" id="4_w5e11"]
 [ext_resource type="AudioStream" uid="uid://68ore0n8fakj" path="res://assets/sounds/backgroundmusic.wav" id="5_aie2w"]
 [ext_resource type="Texture2D" uid="uid://b5so7di8cwa53" path="res://assets/images/kloppenheim_07_puresky_2k.exr" id="6_lv1pg"]
 [ext_resource type="PackedScene" uid="uid://difuqwq64vrsj" path="res://platform_snow.tscn" id="7_1wgld"]
@@ -21,8 +21,9 @@ sky_material = SubResource("PanoramaSkyMaterial_bjebc")
 background_mode = 2
 sky = SubResource("Sky_7dov7")
 fog_enabled = true
+fog_mode = 1
 fog_sun_scatter = 0.5
-fog_density = 0.02
+fog_density = 1.0
 fog_sky_affect = 0.7
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_2ibqd"]
@@ -96,7 +97,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.954788, 5.70761)
 
 [node name="winplatform" parent="." instance=ExtResource("3_w5e11")]
 transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, 1.9608, 0.679111, 157.141)
-win_screen_scene = ExtResource("4_e3b7f")
+win_screen_scene = ExtResource("4_w5e11")
 
 [node name="Backgroundmusic" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("5_aie2w")

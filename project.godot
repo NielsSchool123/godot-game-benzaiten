@@ -24,6 +24,10 @@ GameData="*res://scripts/GameData.gd"
 
 settings/fps_display=true
 
+[display]
+
+window/vsync/vsync_mode=0
+
 [input]
 
 move_right={
