@@ -1,4 +1,4 @@
-[gd_scene load_steps=28 format=3 uid="uid://cq1w8pbok688f"]
+[gd_scene load_steps=29 format=3 uid="uid://cq1w8pbok688f"]
 
 [ext_resource type="Script" uid="uid://q6pcjrbfxr" path="res://scripts/BackGroundMusic.gd" id="1_pyblp"]
 [ext_resource type="PackedScene" uid="uid://phpa3phmm6uu" path="res://Player.tscn" id="2_jjmbq"]
@@ -10,6 +10,7 @@
 [ext_resource type="PackedScene" uid="uid://ba3xxdrg3rxn0" path="res://snowwinplatform.tscn" id="8_pyblp"]
 [ext_resource type="PackedScene" uid="uid://cqdmd237vujjo" path="res://assets/models/rups gast.glb" id="10_jjmbq"]
 [ext_resource type="Script" uid="uid://djg03snyo0h2i" path="res://scripts/rups_gast.gd" id="11_helgx"]
+[ext_resource type="Script" uid="uid://dkxcly0in6gw8" path="res://laserlvl10.gd" id="12_bx6au"]
 [ext_resource type="PackedScene" uid="uid://bie54pk5siu4a" path="res://laser.tscn" id="12_iqnen"]
 
 [sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_bjebc"]
@@ -154,11 +155,11 @@ transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, 0.367104, 0.552959, 41.1688)
 jump_force = Vector3(0, 25, 0)
 
 [node name="jumppad2" parent="." instance=ExtResource("8_cv5j8")]
-transform = Transform3D(23.418, 0, 0, 0, 5, 0, 0, 0, 5, 0.31477, 20.0256, 149.481)
+transform = Transform3D(23.418, 0, 0, 0, 15.191, 0, 0, 0, 5, 0.30986, 21.0305, 149.48)
 jump_force = Vector3(0, 50, 0)
 
-[node name="jumppad3" parent="." instance=ExtResource("8_cv5j8")]
-transform = Transform3D(23.418, 0, 0, 0, 5, 0, 0, 0, 5, 0.31477, 20.0256, 172.245)
+[node name="jumppad4" parent="." instance=ExtResource("8_cv5j8")]
+transform = Transform3D(23.418, 0, 0, 0, 15.191, 0, 0, 0, 5, 0.30986, 21.0305, 172.159)
 jump_force = Vector3(0, 50, 0)
 
 [node name="StaticBody3D" type="StaticBody3D" parent="."]
@@ -199,7 +200,7 @@ shape = SubResource("SphereShape3D_iqnen")
 debug_color = Color(1, 0, 0.701961, 1)
 
 [node name="Laser" parent="." instance=ExtResource("12_iqnen")]
-transform = Transform3D(4.77824, 0, 0, 0, 7.63128, 0, 0, 0, 58.1527, 0, 47.3959, 155.895)
-script = null
+transform = Transform3D(100, 0, 0, 0, 100, 0, 0, 0, 100, 0, 91.9622, 159.444)
+script = ExtResource("12_bx6au")
 
 [connection signal="body_entered" from="rups gast/Area3D" to="rups gast" method="_on_area_3d_body_entered"]
