@@ -4,4 +4,3 @@ extends Node3D
 
 func _ready():
 	backgroundmusic.play()
-	Engine.time_scale = 1
