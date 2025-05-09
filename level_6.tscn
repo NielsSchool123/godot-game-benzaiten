@@ -13,12 +13,12 @@
 [sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_d82mb"]
 panorama = ExtResource("3_vp58d")
 
-[sub_resource type="Sky" id="Sky_5hph3"]
+[sub_resource type="Sky" id="Sky_soim0"]
 sky_material = SubResource("PanoramaSkyMaterial_d82mb")
 
 [sub_resource type="Environment" id="Environment_p5akr"]
 background_mode = 2
-sky = SubResource("Sky_5hph3")
+sky = SubResource("Sky_soim0")
 fog_enabled = true
 fog_mode = 1
 fog_density = 1.0

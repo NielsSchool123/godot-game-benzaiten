@@ -1,0 +1,30 @@
+[gd_scene load_steps=6 format=3 uid="uid://b3xvmmx40kilh"]
+
+[ext_resource type="PackedScene" uid="uid://b8dknbp08rpm4" path="res://teleporter.tscn" id="1_sdr50"]
+[ext_resource type="PackedScene" uid="uid://cw1ntk2rw7kpg" path="res://TP.glb" id="2_5qenf"]
+[ext_resource type="Script" uid="uid://c1hg0g4nblfs0" path="res://area_3d.gd" id="3_84akd"]
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_b822e"]
+height = 0.0523376
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_cbd6u"]
+height = 3.10718
+
+[node name="Node3D" type="Node3D"]
+
+[node name="StaticBody3D" parent="." instance=ExtResource("1_sdr50")]
+
+[node name="TP2" parent="." instance=ExtResource("2_5qenf")]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(10.331, 0, 0, 0, 10.331, 0, 0, 0, 10.331, 4.15104, 0.572191, -4.69936)
+shape = SubResource("CylinderShape3D_b822e")
+
+[node name="Area3D" type="Area3D" parent="." groups=["player", "teleport_zone"]]
+script = ExtResource("3_84akd")
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="Area3D"]
+transform = Transform3D(2.45958, 0, 0, 0, 2.45958, 0, 0, 0, 2.20991, 4.11812, 4.92668, -4.28318)
+shape = SubResource("CylinderShape3D_cbd6u")
+
+[connection signal="body_entered" from="Area3D" to="Area3D" method="_on_area_body_entered"]

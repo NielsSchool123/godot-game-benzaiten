@@ -27,20 +27,20 @@ fog_depth_begin = 100.0
 fog_depth_end = 4000.0
 volumetric_fog_density = 0.0
 
-[sub_resource type="FastNoiseLite" id="FastNoiseLite_vw43l"]
+[sub_resource type="FastNoiseLite" id="FastNoiseLite_2etst"]
 noise_type = 0
 
 [sub_resource type="NoiseTexture2D" id="NoiseTexture2D_kcwpe"]
 seamless = true
 as_normal_map = true
-noise = SubResource("FastNoiseLite_vw43l")
+noise = SubResource("FastNoiseLite_2etst")
 
 [sub_resource type="NoiseTexture2D" id="NoiseTexture2D_j6qfn"]
 seamless = true
 as_normal_map = true
-noise = SubResource("FastNoiseLite_vw43l")
+noise = SubResource("FastNoiseLite_2etst")
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_jiqp1"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_vw43l"]
 transparency = 1
 depth_draw_mode = 1
 albedo_color = Color(0, 1, 1, 0.6)
@@ -52,7 +52,7 @@ refraction_texture = SubResource("NoiseTexture2D_j6qfn")
 uv1_world_triplanar = true
 
 [sub_resource type="BoxMesh" id="BoxMesh_2etst"]
-material = SubResource("StandardMaterial3D_jiqp1")
+material = SubResource("StandardMaterial3D_vw43l")
 
 [node name="Node3D2" type="Node3D"]
 script = ExtResource("1_2etst")

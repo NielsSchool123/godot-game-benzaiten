@@ -1,0 +1,64 @@
+[gd_scene load_steps=12 format=3 uid="uid://b6i1e6mv26yxk"]
+
+[ext_resource type="Texture2D" uid="uid://b5so7di8cwa53" path="res://assets/images/kloppenheim_07_puresky_2k.exr" id="2_w0fgk"]
+[ext_resource type="PackedScene" uid="uid://d2otn14bnvjn6" path="res://DeathZone.tscn" id="3_0wqyy"]
+[ext_resource type="AudioStream" uid="uid://68ore0n8fakj" path="res://assets/sounds/backgroundmusic.wav" id="4_axb3o"]
+
+[sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_p07bb"]
+panorama = ExtResource("2_w0fgk")
+
+[sub_resource type="Sky" id="Sky_5hph3"]
+sky_material = SubResource("PanoramaSkyMaterial_p07bb")
+
+[sub_resource type="Environment" id="Environment_pfhdb"]
+background_mode = 2
+sky = SubResource("Sky_5hph3")
+fog_enabled = true
+fog_mode = 1
+fog_density = 1.0
+fog_depth_begin = 100.0
+fog_depth_end = 4000.0
+volumetric_fog_density = 0.0
+
+[sub_resource type="FastNoiseLite" id="FastNoiseLite_vw43l"]
+noise_type = 0
+
+[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_cvd2s"]
+seamless = true
+as_normal_map = true
+noise = SubResource("FastNoiseLite_vw43l")
+
+[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_8t08o"]
+seamless = true
+as_normal_map = true
+noise = SubResource("FastNoiseLite_vw43l")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_jiqp1"]
+transparency = 1
+depth_draw_mode = 1
+albedo_color = Color(0, 1, 1, 0.6)
+roughness = 0.0
+normal_enabled = true
+normal_texture = SubResource("NoiseTexture2D_cvd2s")
+refraction_enabled = true
+refraction_texture = SubResource("NoiseTexture2D_8t08o")
+uv1_world_triplanar = true
+
+[sub_resource type="BoxMesh" id="BoxMesh_gjgpw"]
+material = SubResource("StandardMaterial3D_jiqp1")
+
+[node name="Node3D" type="Node3D"]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_pfhdb")
+
+[node name="DeathZone2" parent="." instance=ExtResource("3_0wqyy")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -558.237, -257.861, -108.205)
+
+[node name="Backgroundmusic" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_axb3o")
+volume_db = -10.0
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(10000, 0, 0, 0, 115.211, 0, 0, 0, 10000, 10.0936, -883.533, -0.443002)
+mesh = SubResource("BoxMesh_gjgpw")
