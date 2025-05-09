@@ -1,6 +1,7 @@
-[gd_scene load_steps=17 format=3 uid="uid://daqlyeu3sudir"]
+[gd_scene load_steps=18 format=3 uid="uid://daqlyeu3sudir"]
 
 [ext_resource type="PackedScene" uid="uid://cn1ovhleelier" path="res://wolk.tscn" id="1_brkdw"]
+[ext_resource type="Script" uid="uid://q6pcjrbfxr" path="res://scripts/BackGroundMusic.gd" id="1_soim0"]
 [ext_resource type="PackedScene" uid="uid://d2otn14bnvjn6" path="res://DeathZone.tscn" id="2_soim0"]
 [ext_resource type="Texture2D" uid="uid://b5so7di8cwa53" path="res://assets/images/kloppenheim_07_puresky_2k.exr" id="3_vp58d"]
 [ext_resource type="AudioStream" uid="uid://68ore0n8fakj" path="res://assets/sounds/backgroundmusic.wav" id="4_3eqwd"]
@@ -53,6 +54,7 @@ uv1_world_triplanar = true
 material = SubResource("StandardMaterial3D_5rr72")
 
 [node name="Node3D" type="Node3D"]
+script = ExtResource("1_soim0")
 
 [node name="StaticBody3D3" parent="." instance=ExtResource("1_brkdw")]
 transform = Transform3D(-1.28217e-08, 0, -0.325344, 0, 0.20432, 0, 0.293327, 0, -1.42212e-08, -3.31254, 1.17345, 9.17859)

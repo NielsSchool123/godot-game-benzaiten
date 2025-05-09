@@ -7,6 +7,7 @@ func _ready():  # decteert of iemand in de hotbox is
 
 func _on_body_entered(body): # als iemand in de hitbox is doe show win script
 	if body.is_in_group("player"):
+		Engine.time_scale = 0
 		show_win_screen()
 
 func show_win_screen(): # laat het winscreen zien
