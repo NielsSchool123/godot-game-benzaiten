@@ -8,9 +8,9 @@
 [ext_resource type="PackedScene" uid="uid://difuqwq64vrsj" path="res://platform_snow.tscn" id="7_1jiv0"]
 [ext_resource type="PackedScene" uid="uid://cdrep7fy61gc3" path="res://jumppad.tscn" id="8_cv5j8"]
 [ext_resource type="PackedScene" uid="uid://ba3xxdrg3rxn0" path="res://snowwinplatform.tscn" id="8_pyblp"]
-[ext_resource type="PackedScene" uid="uid://ddv0uw6vn73em" path="res://spike dood.tscn" id="9_pyblp"]
 [ext_resource type="PackedScene" uid="uid://cqdmd237vujjo" path="res://assets/models/rups gast.glb" id="10_jjmbq"]
 [ext_resource type="Script" uid="uid://djg03snyo0h2i" path="res://scripts/rups_gast.gd" id="11_helgx"]
+[ext_resource type="PackedScene" uid="uid://bie54pk5siu4a" path="res://laser.tscn" id="12_iqnen"]
 
 [sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_bjebc"]
 panorama = ExtResource("6_348an")
@@ -154,11 +154,12 @@ transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, 0.367104, 0.552959, 41.1688)
 jump_force = Vector3(0, 25, 0)
 
 [node name="jumppad2" parent="." instance=ExtResource("8_cv5j8")]
-transform = Transform3D(23.418, 0, 0, 0, 5, 0, 0, 0, 5, 0.31477, 20.0256, 152.55)
+transform = Transform3D(23.418, 0, 0, 0, 5, 0, 0, 0, 5, 0.31477, 20.0256, 149.481)
 jump_force = Vector3(0, 50, 0)
 
-[node name="spike" parent="." instance=ExtResource("9_pyblp")]
-transform = Transform3D(-21.0108, 0.0891999, 0, -0.639372, -2.93126, 0, 0, 0, 20.2003, 0.0858707, 59.9625, 158.223)
+[node name="jumppad3" parent="." instance=ExtResource("8_cv5j8")]
+transform = Transform3D(23.418, 0, 0, 0, 5, 0, 0, 0, 5, 0.31477, 20.0256, 172.245)
+jump_force = Vector3(0, 50, 0)
 
 [node name="StaticBody3D" type="StaticBody3D" parent="."]
 
@@ -193,16 +194,12 @@ script = ExtResource("11_helgx")
 [node name="Area3D" type="Area3D" parent="rups gast"]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="rups gast/Area3D"]
-transform = Transform3D(50, 0, 0, 0, 50, 0, 0, 0, 50, 0, 3.92815, 0.0155334)
+transform = Transform3D(75, 0, 0, 0, 75, 0, 0, 0, 75, 0, 3.92815, 0.0155334)
 shape = SubResource("SphereShape3D_iqnen")
 debug_color = Color(1, 0, 0.701961, 1)
 
-[node name="Area3D2" type="Area3D" parent="rups gast"]
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="rups gast/Area3D2"]
-transform = Transform3D(50, 0, 0, 0, 50, 0, 0, 0, 50, 0, 3.92815, 0.0155334)
-shape = SubResource("SphereShape3D_iqnen")
-debug_color = Color(1, 0, 0.701961, 1)
+[node name="Laser" parent="." instance=ExtResource("12_iqnen")]
+transform = Transform3D(4.77824, 0, 0, 0, 7.63128, 0, 0, 0, 58.1527, 0, 47.3959, 155.895)
+script = null
 
 [connection signal="body_entered" from="rups gast/Area3D" to="rups gast" method="_on_area_3d_body_entered"]
-[connection signal="body_entered" from="rups gast/Area3D2" to="rups gast" method="_on_area_3d_body_entered"]
