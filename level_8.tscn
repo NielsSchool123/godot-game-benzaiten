@@ -1,0 +1,87 @@
+[gd_scene load_steps=17 format=3 uid="uid://cfsbfm8wxsgos"]
+
+[ext_resource type="Texture2D" uid="uid://b5so7di8cwa53" path="res://assets/images/kloppenheim_07_puresky_2k.exr" id="1_o6l31"]
+[ext_resource type="PackedScene" uid="uid://d2otn14bnvjn6" path="res://DeathZone.tscn" id="2_72r3b"]
+[ext_resource type="AudioStream" uid="uid://68ore0n8fakj" path="res://assets/sounds/backgroundmusic.wav" id="3_1xcjx"]
+[ext_resource type="PackedScene" uid="uid://cn1ovhleelier" path="res://wolk.tscn" id="4_23fq3"]
+[ext_resource type="PackedScene" uid="uid://phpa3phmm6uu" path="res://Player.tscn" id="5_mjcbx"]
+[ext_resource type="PackedScene" uid="uid://ddv0uw6vn73em" path="res://spike dood.tscn" id="6_ms1hu"]
+[ext_resource type="PackedScene" uid="uid://dk2dqb7tft67x" path="res://bird.tscn" id="7_ddlhw"]
+[ext_resource type="PackedScene" uid="uid://c13tjmt2rb5we" path="res://teleporter.tscn" id="8_72r3b"]
+
+[sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_w53co"]
+panorama = ExtResource("1_o6l31")
+
+[sub_resource type="Sky" id="Sky_5hph3"]
+sky_material = SubResource("PanoramaSkyMaterial_w53co")
+
+[sub_resource type="Environment" id="Environment_6muk6"]
+background_mode = 2
+sky = SubResource("Sky_5hph3")
+fog_enabled = true
+fog_mode = 1
+fog_density = 1.0
+fog_depth_begin = 100.0
+fog_depth_end = 4000.0
+volumetric_fog_density = 0.0
+
+[sub_resource type="FastNoiseLite" id="FastNoiseLite_vw43l"]
+noise_type = 0
+
+[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_ebxmt"]
+seamless = true
+as_normal_map = true
+noise = SubResource("FastNoiseLite_vw43l")
+
+[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_3ejit"]
+seamless = true
+as_normal_map = true
+noise = SubResource("FastNoiseLite_vw43l")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_jiqp1"]
+transparency = 1
+depth_draw_mode = 1
+albedo_color = Color(0, 1, 1, 0.6)
+roughness = 0.0
+normal_enabled = true
+normal_texture = SubResource("NoiseTexture2D_ebxmt")
+refraction_enabled = true
+refraction_texture = SubResource("NoiseTexture2D_3ejit")
+uv1_world_triplanar = true
+
+[sub_resource type="BoxMesh" id="BoxMesh_ruu5p"]
+material = SubResource("StandardMaterial3D_jiqp1")
+
+[node name="Node3D" type="Node3D"]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_6muk6")
+
+[node name="DeathZone2" parent="." instance=ExtResource("2_72r3b")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -558.237, -257.861, -108.205)
+
+[node name="Backgroundmusic" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_1xcjx")
+volume_db = -10.0
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(10000, 0, 0, 0, 115.211, 0, 0, 0, 10000, 10.0936, -883.533, -0.443002)
+mesh = SubResource("BoxMesh_ruu5p")
+
+[node name="StaticBody3D5" parent="." instance=ExtResource("4_23fq3")]
+transform = Transform3D(-1.28217e-08, 0, -0.325344, 0, 0.20432, 0, 0.293327, 0, -1.42212e-08, -0.271056, 1.17345, 0.115507)
+
+[node name="player" parent="." instance=ExtResource("5_mjcbx")]
+transform = Transform3D(0.146998, 0, 0.989136, 0, 1, 0, -0.989136, 0, 0.146998, 0, 2.22087, 0)
+
+[node name="Area3D10" parent="." instance=ExtResource("6_ms1hu")]
+transform = Transform3D(0.514998, 0, 0, 0, 0.300085, 0, 0, 0, 0.499358, 19.5944, 8.5623, 7.78642)
+
+[node name="vogel" parent="." instance=ExtResource("7_ddlhw")]
+transform = Transform3D(-0.054417, 0, -1.28336, 0, 1.28451, 0, 1.28336, 0, -0.054417, -176.645, 17.8446, 5.022)
+
+[node name="teleporter9" parent="." instance=ExtResource("8_72r3b")]
+transform = Transform3D(0.638872, 0, 0, 0, 0.638872, 0, 0, 0, 0.638872, 14.1637, 3.45944, 2.42307)
+
+[node name="teleporter10" parent="." instance=ExtResource("8_72r3b")]
+transform = Transform3D(0.638872, 0, 0, 0, 0.638872, 0, 0, 0, 0.638872, 106.211, 3.45944, 2.42307)

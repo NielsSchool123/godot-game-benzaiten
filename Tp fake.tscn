@@ -1,0 +1,25 @@
+[gd_scene load_steps=5 format=3 uid="uid://cat7feq8bqkhk"]
+
+[ext_resource type="Script" uid="uid://duvv1ce001san" path="res://tp_fake.gd" id="1_pwqh8"]
+[ext_resource type="PackedScene" uid="uid://cw1ntk2rw7kpg" path="res://TP.glb" id="1_u3d43"]
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_pwqh8"]
+height = 0.0523376
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_u3d43"]
+height = 4.6532
+
+[node name="StaticBody3D" type="StaticBody3D"]
+script = ExtResource("1_pwqh8")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(13.9949, 0, 0, 0, 10.331, 0, 0, 0, 13.821, 4.15104, 0.572191, -4.69936)
+shape = SubResource("CylinderShape3D_pwqh8")
+
+[node name="TP" parent="." instance=ExtResource("1_u3d43")]
+
+[node name="Area3D" type="Area3D" parent="." groups=["player"]]
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="Area3D"]
+transform = Transform3D(3.00307, 0, 0, 0, 3.2164, 0, 0, 0, 3.51507, 4.11812, 7.33976, -4.88691)
+shape = SubResource("CylinderShape3D_u3d43")
