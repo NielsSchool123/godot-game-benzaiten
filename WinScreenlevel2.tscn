@@ -1,9 +1,9 @@
-[gd_scene load_steps=6 format=3 uid="uid://cesiq1unxaemq"]
+[gd_scene load_steps=6 format=3 uid="uid://pelo7ci80yxg"]
 
-[ext_resource type="Theme" uid="uid://bmrctah2v8orj" path="res://assets/theme.tres" id="1_a4n6i"]
-[ext_resource type="Script" uid="uid://stvooogmqwkj" path="res://scripts/winscreenlevel5.gd" id="2_a4n6i"]
-[ext_resource type="AudioStream" uid="uid://bugmarblwtj2w" path="res://assets/sounds/levelwin.wav" id="3_w7oi3"]
-[ext_resource type="AudioStream" uid="uid://cdxbjdg0ltl4w" path="res://assets/sounds/buttonselect.wav" id="4_m68oo"]
+[ext_resource type="Theme" uid="uid://bmrctah2v8orj" path="res://assets/theme.tres" id="1_xa2cm"]
+[ext_resource type="Script" uid="uid://c4b7bu08gmaop" path="res://scripts/WinScreenlevel2.gd" id="2_am2n7"]
+[ext_resource type="AudioStream" uid="uid://bugmarblwtj2w" path="res://assets/sounds/levelwin.wav" id="3_ei4v3"]
+[ext_resource type="AudioStream" uid="uid://cdxbjdg0ltl4w" path="res://assets/sounds/buttonselect.wav" id="4_8tixi"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_ok131"]
 font_size = 70
@@ -17,8 +17,8 @@ grow_horizontal = 2
 grow_vertical = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
-theme = ExtResource("1_a4n6i")
-script = ExtResource("2_a4n6i")
+theme = ExtResource("1_xa2cm")
+script = ExtResource("2_am2n7")
 metadata/_edit_use_anchors_ = true
 
 [node name="Label" type="Label" parent="."]
@@ -49,9 +49,9 @@ metadata/_edit_use_anchors_ = true
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.144097
-anchor_top = 0.756173
+anchor_top = 0.748457
 anchor_right = 0.856771
-anchor_bottom = 0.92284
+anchor_bottom = 0.915124
 offset_top = 3.05176e-05
 grow_horizontal = 2
 grow_vertical = 2
@@ -59,9 +59,9 @@ text = "Next level"
 metadata/_edit_use_anchors_ = true
 
 [node name="Levelwin" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("3_w7oi3")
+stream = ExtResource("3_ei4v3")
 volume_db = -20.0
 
 [node name="Buttonselect" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("4_m68oo")
+stream = ExtResource("4_8tixi")
 volume_db = -20.0

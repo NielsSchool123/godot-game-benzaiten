@@ -54,6 +54,7 @@ text = "Quit
 "
 
 [node name="TURN TO VISIBLE FOR WEB VERSION" type="Label" parent="."]
+visible = false
 layout_mode = 0
 offset_left = 1.0
 offset_top = 162.0

@@ -8,7 +8,7 @@
 [ext_resource type="Texture2D" uid="uid://b5so7di8cwa53" path="res://assets/images/kloppenheim_07_puresky_2k.exr" id="5_jiqp1"]
 [ext_resource type="PackedScene" uid="uid://dj2wl7y84yg7h" path="res://win_platform wolk.tscn" id="6_uws32"]
 [ext_resource type="PackedScene" uid="uid://clpkehuwcsoao" path="res://wolk no coll.tscn" id="7_vcgqq"]
-[ext_resource type="PackedScene" uid="uid://baq4dhugb2rrw" path="res://WinScreen5.tscn" id="8_2etst"]
+[ext_resource type="PackedScene" uid="uid://d4mtybnh1cfen" path="res://WinScreenlevel5.tscn" id="8_2etst"]
 [ext_resource type="AudioStream" uid="uid://68ore0n8fakj" path="res://assets/sounds/backgroundmusic.wav" id="10_vw43l"]
 
 [sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_t6fl3"]

@@ -5,7 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://phpa3phmm6uu" path="res://Player.tscn" id="2_0s5r2"]
 [ext_resource type="Texture2D" uid="uid://b5so7di8cwa53" path="res://assets/images/kloppenheim_07_puresky_2k.exr" id="4_eoq84"]
 [ext_resource type="PackedScene" uid="uid://brjiarf6ok01m" path="res://PlatfromMoveX.tscn" id="6_0s5r2"]
-[ext_resource type="PackedScene" uid="uid://pelo7ci80yxg" path="res://WinScreen2.tscn" id="6_yl73a"]
+[ext_resource type="PackedScene" uid="uid://pelo7ci80yxg" path="res://WinScreenlevel2.tscn" id="6_yl73a"]
 [ext_resource type="PackedScene" uid="uid://besrs3ul76nc3" path="res://PlatformMOveZ.tscn" id="7_7dov7"]
 [ext_resource type="PackedScene" uid="uid://bgtir65febws3" path="res://WinPlatform.tscn" id="7_7j8ne"]
 [ext_resource type="Script" uid="uid://bdo7qk8ufymio" path="res://scripts/PlatformMoveScriptx2.gd" id="7_ehv2h"]

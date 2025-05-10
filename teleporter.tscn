@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=3 uid="uid://c13tjmt2rb5we"]
 
-[ext_resource type="PackedScene" uid="uid://cw1ntk2rw7kpg" path="res://TP.glb" id="1_eumkw"]
-[ext_resource type="Script" uid="uid://c14b1l76sgpdj" path="res://teleporter.gd" id="1_tuehi"]
+[ext_resource type="PackedScene" uid="uid://cw1ntk2rw7kpg" path="res://assets/models/TP.glb" id="1_eumkw"]
+[ext_resource type="Script" uid="uid://c14b1l76sgpdj" path="res://scripts/teleporter.gd" id="1_tuehi"]
 
 [sub_resource type="CylinderShape3D" id="CylinderShape3D_tuehi"]
 height = 0.0523376

@@ -34,3 +34,4 @@ shape = SubResource("BoxShape3D_cwriv")
 
 [node name="Death" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("3_oh23g")
+volume_db = -10.0

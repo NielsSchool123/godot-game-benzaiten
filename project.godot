@@ -14,6 +14,10 @@ config/name="Benzaiten"
 run/main_scene="uid://dktctapc0cslb"
 config/features=PackedStringArray("4.4", "Forward Plus")
 
+[audio]
+
+buses/default_bus_layout="res://assets/default_bus_layout.tres"
+
 [autoload]
 
 Escapefullscreen="*res://scripts/escapefullscreen.gd"

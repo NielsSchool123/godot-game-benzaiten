@@ -1,6 +1,7 @@
 extends StaticBody3D
 
 var can_teleport := true  # cooldown flag
+@onready var teleport_sound = $Area3D/Teleport
 
 func _on_area_3d_body_entered(body: Node3D) -> void:
 	# Check that the body is the player (by group, more reliable than name)
@@ -35,5 +36,5 @@ func _on_area_3d_body_entered(body: Node3D) -> void:
 		print("No valid teleport destination found")
 
 	# Optional cooldown delay to prevent bouncing
-	await get_tree().create_timer(0.5).timeout
+	await get_tree().create_timer(1).timeout
 	can_teleport = true

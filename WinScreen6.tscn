@@ -1,7 +1,7 @@
-[gd_scene load_steps=6 format=3 uid="uid://bi5woo541kmr"]
+[gd_scene load_steps=6 format=3 uid="uid://du3crm5g43k86"]
 
 [ext_resource type="Theme" uid="uid://bmrctah2v8orj" path="res://assets/theme.tres" id="1_46la8"]
-[ext_resource type="Script" uid="uid://stvooogmqwkj" path="res://scripts/win_screen_5.gd" id="2_4mxo2"]
+[ext_resource type="Script" uid="uid://stvooogmqwkj" path="res://scripts/winscreenlevel5.gd" id="2_46la8"]
 [ext_resource type="AudioStream" uid="uid://bugmarblwtj2w" path="res://assets/sounds/levelwin.wav" id="3_vfm22"]
 [ext_resource type="AudioStream" uid="uid://cdxbjdg0ltl4w" path="res://assets/sounds/buttonselect.wav" id="4_p7jpn"]
 
@@ -18,7 +18,7 @@ grow_vertical = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 theme = ExtResource("1_46la8")
-script = ExtResource("2_4mxo2")
+script = ExtResource("2_46la8")
 metadata/_edit_use_anchors_ = true
 
 [node name="Label" type="Label" parent="."]

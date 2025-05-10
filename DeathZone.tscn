@@ -13,3 +13,4 @@ shape = SubResource("WorldBoundaryShape3D_aleya")
 
 [node name="Death" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("2_j53p1")
+volume_db = -10.0

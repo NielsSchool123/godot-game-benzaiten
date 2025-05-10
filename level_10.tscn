@@ -10,7 +10,7 @@
 [ext_resource type="PackedScene" uid="uid://ba3xxdrg3rxn0" path="res://snowwinplatform.tscn" id="8_pyblp"]
 [ext_resource type="PackedScene" uid="uid://cqdmd237vujjo" path="res://assets/models/rups gast.glb" id="10_jjmbq"]
 [ext_resource type="Script" uid="uid://djg03snyo0h2i" path="res://scripts/rups_gast.gd" id="11_helgx"]
-[ext_resource type="Script" uid="uid://dkxcly0in6gw8" path="res://laserlvl10.gd" id="12_bx6au"]
+[ext_resource type="Script" uid="uid://dkxcly0in6gw8" path="res://scripts/laserlvl10.gd" id="12_bx6au"]
 [ext_resource type="PackedScene" uid="uid://bie54pk5siu4a" path="res://laser.tscn" id="12_iqnen"]
 
 [sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_bjebc"]
@@ -138,7 +138,7 @@ transform = Transform3D(0.381994, 0, 0, 0, 3.57195, 0, 0, 0, -0.431673, 0.039444
 transform = Transform3D(0.381994, 0, 0, 0, 3.57195, 0, 0, 0, -0.431673, 0.039444, -6.39378, 89.3781)
 
 [node name="platformSnow5" parent="." instance=ExtResource("7_1jiv0")]
-transform = Transform3D(0.102234, 0, 0, 0, 3.57195, 0, 0, 0, -0.1018, 0.748525, -7.58033, 212.432)
+transform = Transform3D(0.100201, 0, 0, 0, 3.57195, 0, 0, 0, -0.1018, -0.0460769, -7.58033, 212.741)
 
 [node name="GPUParticles3D" type="GPUParticles3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00771379, 24.0114, 101.731)
