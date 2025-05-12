@@ -1,9 +1,8 @@
-[gd_scene load_steps=6 format=3 uid="uid://cesiq1unxaemq"]
+[gd_scene load_steps=5 format=3 uid="uid://254bcbqdij33"]
 
-[ext_resource type="Theme" uid="uid://bmrctah2v8orj" path="res://assets/theme.tres" id="1_a4n6i"]
-[ext_resource type="Script" uid="uid://stvooogmqwkj" path="res://scripts/winscreenlevel5.gd" id="2_a4n6i"]
-[ext_resource type="AudioStream" uid="uid://bugmarblwtj2w" path="res://assets/sounds/levelwin.wav" id="3_w7oi3"]
-[ext_resource type="AudioStream" uid="uid://cdxbjdg0ltl4w" path="res://assets/sounds/buttonselect.wav" id="4_m68oo"]
+[ext_resource type="Theme" uid="uid://bmrctah2v8orj" path="res://assets/theme.tres" id="1_j2ddd"]
+[ext_resource type="AudioStream" uid="uid://bugmarblwtj2w" path="res://assets/sounds/levelwin.wav" id="3_wt7yl"]
+[ext_resource type="AudioStream" uid="uid://cdxbjdg0ltl4w" path="res://assets/sounds/buttonselect.wav" id="4_21v8k"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_ok131"]
 font_size = 70
@@ -18,8 +17,7 @@ grow_horizontal = 2
 grow_vertical = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
-theme = ExtResource("1_a4n6i")
-script = ExtResource("2_a4n6i")
+theme = ExtResource("1_j2ddd")
 metadata/_edit_use_anchors_ = true
 
 [node name="Label" type="Label" parent="."]
@@ -60,9 +58,9 @@ text = "Next level"
 metadata/_edit_use_anchors_ = true
 
 [node name="Levelwin" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("3_w7oi3")
+stream = ExtResource("3_wt7yl")
 volume_db = -20.0
 
 [node name="Buttonselect" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("4_m68oo")
+stream = ExtResource("4_21v8k")
 volume_db = -20.0

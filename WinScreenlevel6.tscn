@@ -1,7 +1,7 @@
 [gd_scene load_steps=6 format=3 uid="uid://pewbnhb716sq"]
 
 [ext_resource type="Theme" uid="uid://bmrctah2v8orj" path="res://assets/theme.tres" id="1_m2uiy"]
-[ext_resource type="Script" uid="uid://balhswxg4p8gd" path="res://scripts/win_screenlevel7.gd" id="2_m2uiy"]
+[ext_resource type="Script" uid="uid://balhswxg4p8gd" path="res://scripts/win_screenlevel6.gd" id="2_m2uiy"]
 [ext_resource type="AudioStream" uid="uid://bugmarblwtj2w" path="res://assets/sounds/levelwin.wav" id="3_khnpd"]
 [ext_resource type="AudioStream" uid="uid://cdxbjdg0ltl4w" path="res://assets/sounds/buttonselect.wav" id="4_v5d4s"]
 
@@ -9,6 +9,7 @@
 font_size = 70
 
 [node name="WinScreen" type="Control"]
+process_mode = 3
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0

@@ -54,6 +54,7 @@ uv1_world_triplanar = true
 material = SubResource("StandardMaterial3D_5rr72")
 
 [node name="Node3D" type="Node3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 62.522, -29.0143, 3.90769)
 script = ExtResource("1_soim0")
 
 [node name="StaticBody3D3" parent="." instance=ExtResource("1_brkdw")]

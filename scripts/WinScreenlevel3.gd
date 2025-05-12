@@ -12,11 +12,13 @@ func _ready():
 
 
 func _on_button_pressed():
+	Engine.time_scale = 1
 	button_select.play()
 	await get_tree().create_timer(0.1).timeout
 	get_tree().change_scene_to_file(main_menu_scene)
 	
 func _on_button2_pressed():
+	Engine.time_scale = 1
 	button_select.play()
 	await get_tree().create_timer(0.1).timeout
 	get_tree().change_scene_to_file("res://level_4.tscn")
