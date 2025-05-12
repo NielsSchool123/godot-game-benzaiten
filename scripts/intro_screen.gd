@@ -10,9 +10,9 @@ var tooltips = [
 	"Jumping just before falling off a ledge gives you more distance.",
 	"Some platforms aren't as stable as they look...",
 	"You can rotate mid-air, use it to align for tight landings.",
-	"Some things might be locked away forever if your not careful enough...",
+	"Some things might be locked away forever if you're not careful enough...",
 	"Press F11 to escape fullscreen.",
-	"Press Escape to open a ingame pause screen.",
+	"Press Escape to open an ingame pause screen.",
 	"Some platforms might not be real. Be aware of details!"
 ]
 
