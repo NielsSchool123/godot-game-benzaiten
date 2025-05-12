@@ -8,7 +8,7 @@ func _on_area_3d_body_entered(body: Node3D) -> void:
 	if not body.is_in_group("player"):
 		print("Ignored body:", body.name)
 		return
-
+	teleport_sound.play()
 	print("Player entered teleport zone")
 
 	if not can_teleport:
@@ -36,5 +36,5 @@ func _on_area_3d_body_entered(body: Node3D) -> void:
 		print("No valid teleport destination found")
 
 	# Optional cooldown delay to prevent bouncing
-	await get_tree().create_timer(1).timeout
+	await get_tree().create_timer(2).timeout
 	can_teleport = true
