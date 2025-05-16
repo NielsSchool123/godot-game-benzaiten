@@ -12,4 +12,3 @@ func _on_body_entered(body): # als iemand in de hitbox is doe show win script
 func show_win_screen(): # laat het winscreen zien
 	var win_screen = win_screen_scene.instantiate()
 	get_tree().current_scene.add_child(win_screen)
-	Engine.time_scale = 0
