@@ -2,11 +2,11 @@
 
 [ext_resource type="Script" uid="uid://q6pcjrbfxr" path="res://scripts/BackGroundMusic.gd" id="1_pyblp"]
 [ext_resource type="PackedScene" uid="uid://phpa3phmm6uu" path="res://Player.tscn" id="2_jjmbq"]
-[ext_resource type="PackedScene" uid="uid://ba5d3woxvr6r" path="res://WinScreenBLANK.tscn" id="4_iqnen"]
 [ext_resource type="AudioStream" uid="uid://68ore0n8fakj" path="res://assets/sounds/backgroundmusic.wav" id="5_bx6au"]
 [ext_resource type="Texture2D" uid="uid://b5so7di8cwa53" path="res://assets/images/kloppenheim_07_puresky_2k.exr" id="6_348an"]
 [ext_resource type="PackedScene" uid="uid://difuqwq64vrsj" path="res://platform_snow.tscn" id="7_1jiv0"]
 [ext_resource type="PackedScene" uid="uid://cdrep7fy61gc3" path="res://jumppad.tscn" id="8_cv5j8"]
+[ext_resource type="PackedScene" uid="uid://bluilspfofslh" path="res://WinScreenlevel10.tscn" id="8_iqnen"]
 [ext_resource type="PackedScene" uid="uid://ba3xxdrg3rxn0" path="res://snowwinplatform.tscn" id="8_pyblp"]
 [ext_resource type="PackedScene" uid="uid://cqdmd237vujjo" path="res://assets/models/rups gast.glb" id="10_jjmbq"]
 [ext_resource type="Script" uid="uid://djg03snyo0h2i" path="res://scripts/rups_gast.gd" id="11_helgx"]
@@ -186,7 +186,7 @@ debug_color = Color(0, 1, 0.701961, 1)
 
 [node name="WinPlatform" parent="." instance=ExtResource("8_pyblp")]
 transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, 0, 19.2116, 211.289)
-win_screen_scene = ExtResource("4_iqnen")
+win_screen_scene = ExtResource("8_iqnen")
 
 [node name="rups gast" parent="." instance=ExtResource("10_jjmbq")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.0475, -0.765772, 221.627)

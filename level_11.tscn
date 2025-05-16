@@ -1,4 +1,4 @@
-[gd_scene load_steps=23 format=3 uid="uid://c0w24rnllf2mu"]
+[gd_scene load_steps=26 format=3 uid="uid://c0w24rnllf2mu"]
 
 [ext_resource type="Script" uid="uid://q6pcjrbfxr" path="res://scripts/BackGroundMusic.gd" id="1_1222l"]
 [ext_resource type="PackedScene" uid="uid://phpa3phmm6uu" path="res://Player.tscn" id="2_xvakj"]
@@ -7,6 +7,9 @@
 [ext_resource type="AudioStream" uid="uid://68ore0n8fakj" path="res://assets/sounds/backgroundmusic.wav" id="5_ruelg"]
 [ext_resource type="Texture2D" uid="uid://b5so7di8cwa53" path="res://assets/images/kloppenheim_07_puresky_2k.exr" id="6_sbg0w"]
 [ext_resource type="PackedScene" uid="uid://difuqwq64vrsj" path="res://platform_snow.tscn" id="7_k2wvl"]
+[ext_resource type="PackedScene" uid="uid://4w5knjv3csqq" path="res://alternating platform.tscn" id="8_6u6ka"]
+[ext_resource type="Script" uid="uid://dg1no1bhqm11r" path="res://scripts/countdownUI.gd" id="9_1222l"]
+[ext_resource type="Theme" uid="uid://bmrctah2v8orj" path="res://assets/theme.tres" id="10_xvakj"]
 
 [sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_bjebc"]
 panorama = ExtResource("6_sbg0w")
@@ -94,7 +97,7 @@ script = ExtResource("1_1222l")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.954788, 5.70761)
 
 [node name="winplatform" parent="." instance=ExtResource("3_ddgpj")]
-transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, 1.9608, 0.679111, 157.141)
+transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, 1.9608, 12.2662, 126.136)
 win_screen_scene = ExtResource("4_aepq5")
 
 [node name="Backgroundmusic" type="AudioStreamPlayer" parent="."]
@@ -156,3 +159,17 @@ shape = SubResource("BoxShape3D_2ibqd")
 [node name="CollisionShape3D4" type="CollisionShape3D" parent="StaticBody3D"]
 transform = Transform3D(-1.65896e-06, 1.30613e-13, 191.282, 3.31792e-06, 34.1797, 0, 37.9526, -2.98809e-06, 8.36119e-06, 4.54228, 5.21, 194.52)
 shape = SubResource("BoxShape3D_2ibqd")
+
+[node name="alternatingplatform" parent="." instance=ExtResource("8_6u6ka")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0, 2.6827, 35.9721)
+
+[node name="alternatingplatform2" parent="." instance=ExtResource("8_6u6ka")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0, 6.3867, 69.4697)
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+script = ExtResource("9_1222l")
+
+[node name="Label" type="Label" parent="CanvasLayer"]
+offset_right = 40.0
+offset_bottom = 23.0
+theme = ExtResource("10_xvakj")

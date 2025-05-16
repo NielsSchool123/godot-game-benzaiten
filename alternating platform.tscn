@@ -1,0 +1,45 @@
+[gd_scene load_steps=7 format=3 uid="uid://4w5knjv3csqq"]
+
+[ext_resource type="Script" uid="uid://tde383fds5eg" path="res://scripts/alternatingplatform.gd" id="1_wrm2e"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_wrm2e"]
+size = Vector3(1, 0.413513, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_wrm2e"]
+albedo_color = Color(0, 0, 1, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_t3v1x"]
+material = SubResource("StandardMaterial3D_wrm2e")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_54r7x"]
+albedo_color = Color(1, 0, 0, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_661r8"]
+material = SubResource("StandardMaterial3D_54r7x")
+
+[node name="alternatingplatform" type="Node3D"]
+script = ExtResource("1_wrm2e")
+
+[node name="PlatformA" type="StaticBody3D" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="PlatformA"]
+transform = Transform3D(5, 0, 0, 0, 1, 0, 0, 0, 5, 1.33084, -0.00961304, 0)
+shape = SubResource("BoxShape3D_wrm2e")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="PlatformA"]
+transform = Transform3D(5, 0, 0, 0, 1, 0, 0, 0, 5, 1.33084, 0, 0)
+mesh = SubResource("BoxMesh_t3v1x")
+
+[node name="PlatformB" type="StaticBody3D" parent="."]
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="PlatformB"]
+transform = Transform3D(5, 0, 0, 0, 1, 0, 0, 0, 5, 19.4103, 0, 0)
+mesh = SubResource("BoxMesh_661r8")
+skeleton = NodePath("../../PlatformA")
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="PlatformB"]
+transform = Transform3D(5, 0, 0, 0, 1, 0, 0, 0, 5, 19.3974, -0.00961304, 0)
+shape = SubResource("BoxShape3D_wrm2e")
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 2.5
