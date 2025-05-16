@@ -1,4 +1,4 @@
-[gd_scene load_steps=6 format=3 uid="uid://c13tjmt2rb5we"]
+[gd_scene load_steps=7 format=3 uid="uid://c13tjmt2rb5we"]
 
 [ext_resource type="PackedScene" uid="uid://cw1ntk2rw7kpg" path="res://assets/models/TP.glb" id="1_eumkw"]
 [ext_resource type="Script" uid="uid://c14b1l76sgpdj" path="res://scripts/teleporter.gd" id="1_tuehi"]
@@ -9,6 +9,9 @@ height = 0.0523376
 
 [sub_resource type="CylinderShape3D" id="CylinderShape3D_kk6yu"]
 height = 4.6532
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_kk6yu"]
+size = Vector3(16.2174, 5.51343, 13.5963)
 
 [node name="teleporter" type="StaticBody3D" groups=["teleport_zone"]]
 script = ExtResource("1_tuehi")
@@ -27,5 +30,9 @@ shape = SubResource("CylinderShape3D_kk6yu")
 
 [node name="Teleport" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("3_kk6yu")
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.49628, -2.10974, -4.64423)
+shape = SubResource("BoxShape3D_kk6yu")
 
 [connection signal="body_entered" from="Area3D" to="." method="_on_area_3d_body_entered"]
