@@ -126,7 +126,7 @@ transform = Transform3D(-1.65896e-06, 2.25594e-13, -100.744, 5.73069e-06, 34.179
 mesh = SubResource("PrismMesh_ky2ik")
 
 [node name="MeshInstance3D3" type="MeshInstance3D" parent="."]
-transform = Transform3D(37.9526, 2.98809e-06, 0, -3.31792e-06, 34.1797, 0, 0, 0, -191.284, 31.8207, 5.1201, 92.1416)
+transform = Transform3D(37.9526, 2.98809e-06, 0, -3.31792e-06, 34.1797, 0, 0, 0, -191.284, 31.819, 5.10626, 92.1406)
 mesh = SubResource("PrismMesh_ky2ik")
 
 [node name="platformSnow" parent="." instance=ExtResource("7_k2wvl")]
