@@ -8,9 +8,9 @@
 [ext_resource type="PackedScene" uid="uid://ddv0uw6vn73em" path="res://spike dood.tscn" id="6_ms1hu"]
 [ext_resource type="PackedScene" uid="uid://dk2dqb7tft67x" path="res://bird.tscn" id="7_ddlhw"]
 [ext_resource type="PackedScene" uid="uid://c13tjmt2rb5we" path="res://teleporter.tscn" id="8_72r3b"]
-[ext_resource type="PackedScene" uid="uid://dj2wl7y84yg7h" path="res://win_platform wolk.tscn" id="9_23fq3"]
+[ext_resource type="PackedScene" uid="uid://dj2wl7y84yg7h" path="res://win_platform_wolk.tscn" id="9_23fq3"]
 [ext_resource type="PackedScene" uid="uid://ba5d3woxvr6r" path="res://WinScreenBLANK.tscn" id="10_mjcbx"]
-[ext_resource type="PackedScene" uid="uid://clpkehuwcsoao" path="res://wolk no coll.tscn" id="11_mjcbx"]
+[ext_resource type="PackedScene" uid="uid://clpkehuwcsoao" path="res://wolk_no_coll.tscn" id="11_mjcbx"]
 
 [sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_w53co"]
 panorama = ExtResource("1_o6l31")
@@ -55,7 +55,7 @@ uv1_world_triplanar = true
 [sub_resource type="BoxMesh" id="BoxMesh_ruu5p"]
 material = SubResource("StandardMaterial3D_jiqp1")
 
-[node name="Node3D" type="Node3D"]
+[node name="Node3D2" type="Node3D"]
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_6muk6")

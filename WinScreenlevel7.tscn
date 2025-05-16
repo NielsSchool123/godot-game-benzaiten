@@ -1,6 +1,7 @@
-[gd_scene load_steps=5 format=3 uid="uid://254bcbqdij33"]
+[gd_scene load_steps=6 format=3 uid="uid://254bcbqdij33"]
 
 [ext_resource type="Theme" uid="uid://bmrctah2v8orj" path="res://assets/theme.tres" id="1_j2ddd"]
+[ext_resource type="Script" uid="uid://desve5hpmydao" path="res://winscreenlevel7.gd" id="2_j2ddd"]
 [ext_resource type="AudioStream" uid="uid://bugmarblwtj2w" path="res://assets/sounds/levelwin.wav" id="3_wt7yl"]
 [ext_resource type="AudioStream" uid="uid://cdxbjdg0ltl4w" path="res://assets/sounds/buttonselect.wav" id="4_21v8k"]
 
@@ -18,6 +19,7 @@ grow_vertical = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 theme = ExtResource("1_j2ddd")
+script = ExtResource("2_j2ddd")
 metadata/_edit_use_anchors_ = true
 
 [node name="Label" type="Label" parent="."]

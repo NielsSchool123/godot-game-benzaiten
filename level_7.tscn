@@ -7,7 +7,7 @@
 [ext_resource type="AudioStream" uid="uid://68ore0n8fakj" path="res://assets/sounds/backgroundmusic.wav" id="4_axb3o"]
 [ext_resource type="PackedScene" uid="uid://phpa3phmm6uu" path="res://Player.tscn" id="5_n5k06"]
 [ext_resource type="PackedScene" uid="uid://c13tjmt2rb5we" path="res://teleporter.tscn" id="6_w12s5"]
-[ext_resource type="PackedScene" uid="uid://dj2wl7y84yg7h" path="res://win_platform wolk.tscn" id="8_axb3o"]
+[ext_resource type="PackedScene" uid="uid://dj2wl7y84yg7h" path="res://win_platform_wolk.tscn" id="8_axb3o"]
 [ext_resource type="PackedScene" uid="uid://254bcbqdij33" path="res://WinScreenlevel7.tscn" id="8_w12s5"]
 [ext_resource type="PackedScene" uid="uid://ddv0uw6vn73em" path="res://spike dood.tscn" id="9_axb3o"]
 [ext_resource type="PackedScene" uid="uid://cat7feq8bqkhk" path="res://Tp fake.tscn" id="10_n5k06"]

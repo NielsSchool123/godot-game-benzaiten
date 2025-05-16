@@ -1,16 +1,16 @@
 [gd_scene load_steps=6 format=3 uid="uid://dj2wl7y84yg7h"]
 
-[ext_resource type="Script" uid="uid://cof3bdqwun8uc" path="res://scripts/PlatformWInScript.gd" id="1_165fm"]
-[ext_resource type="PackedScene" uid="uid://bufgukfh7v5qt" path="res://WinScreenlevel1.tscn" id="2_jpbhs"]
-[ext_resource type="PackedScene" uid="uid://dttckuk2adbts" path="res://assets/models/kroon.glb" id="3_h5gyl"]
-[ext_resource type="PackedScene" uid="uid://cn1ovhleelier" path="res://wolk.tscn" id="4_5xe1i"]
+[ext_resource type="Script" uid="uid://cof3bdqwun8uc" path="res://scripts/PlatformWInScript.gd" id="1_c8in7"]
+[ext_resource type="PackedScene" uid="uid://bufgukfh7v5qt" path="res://WinScreenlevel1.tscn" id="2_gp2l6"]
+[ext_resource type="PackedScene" uid="uid://dttckuk2adbts" path="res://assets/models/kroon.glb" id="3_exlhw"]
+[ext_resource type="PackedScene" uid="uid://cn1ovhleelier" path="res://wolk.tscn" id="4_dki4f"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_165fm"]
 
 [node name="WinPlatform" type="StaticBody3D"]
 transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, 0, 0, 0)
-script = ExtResource("1_165fm")
-win_screen_scene = ExtResource("2_jpbhs")
+script = ExtResource("1_c8in7")
+win_screen_scene = ExtResource("2_gp2l6")
 
 [node name="Area3D" type="Area3D" parent="."]
 
@@ -24,13 +24,8 @@ transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 10, -1.98508, 18.0523, 10.8111
 light_color = Color(1, 1, 0, 1)
 light_energy = 28.385
 
-[node name="kroon" parent="." instance=ExtResource("3_h5gyl")]
+[node name="kroon" parent="." instance=ExtResource("3_exlhw")]
 transform = Transform3D(10, 0, -17.3205, 0, 20, 0, 17.3205, 0, 10, -8.48462, -3.17017, 6.26768)
 
-[node name="StaticBody3D" parent="." instance=ExtResource("4_5xe1i")]
+[node name="StaticBody3D" parent="." instance=ExtResource("4_dki4f")]
 transform = Transform3D(7.10569, 0, 0, 0, 7.10569, 0, 0, 0, 7.10569, -23.9212, -1.97977, 14.797)
-
-[node name="CollisionShape3D2" type="CollisionShape3D" parent="."]
-transform = Transform3D(109.423, 0, 0, 0, 12.1323, 0, 0, 0, 122.138, -22.0621, 28.2078, 9.50815)
-shape = SubResource("BoxShape3D_165fm")
-debug_color = Color(1, 0, 0, 1)

@@ -6,8 +6,8 @@
 [ext_resource type="PackedScene" uid="uid://cn1ovhleelier" path="res://wolk.tscn" id="3_2etst"]
 [ext_resource type="PackedScene" uid="uid://d2otn14bnvjn6" path="res://DeathZone.tscn" id="4_vw43l"]
 [ext_resource type="Texture2D" uid="uid://b5so7di8cwa53" path="res://assets/images/kloppenheim_07_puresky_2k.exr" id="5_jiqp1"]
-[ext_resource type="PackedScene" uid="uid://dj2wl7y84yg7h" path="res://win_platform wolk.tscn" id="6_uws32"]
-[ext_resource type="PackedScene" uid="uid://clpkehuwcsoao" path="res://wolk no coll.tscn" id="7_vcgqq"]
+[ext_resource type="PackedScene" uid="uid://dj2wl7y84yg7h" path="res://win_platform_wolk.tscn" id="6_uws32"]
+[ext_resource type="PackedScene" uid="uid://clpkehuwcsoao" path="res://wolk_no_coll.tscn" id="7_vcgqq"]
 [ext_resource type="PackedScene" uid="uid://d4mtybnh1cfen" path="res://WinScreenlevel5.tscn" id="8_2etst"]
 [ext_resource type="AudioStream" uid="uid://68ore0n8fakj" path="res://assets/sounds/backgroundmusic.wav" id="10_vw43l"]
 
