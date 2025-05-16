@@ -97,7 +97,7 @@ script = ExtResource("1_1222l")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.954788, 5.70761)
 
 [node name="winplatform" parent="." instance=ExtResource("3_ddgpj")]
-transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, 1.9608, 12.2662, 126.136)
+transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, -0.677548, 6.88563, 119.249)
 win_screen_scene = ExtResource("4_aepq5")
 
 [node name="Backgroundmusic" type="AudioStreamPlayer" parent="."]
@@ -165,6 +165,9 @@ transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0, 2.6
 
 [node name="alternatingplatform2" parent="." instance=ExtResource("8_6u6ka")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0, 6.3867, 69.4697)
+
+[node name="alternatingplatform3" parent="." instance=ExtResource("8_6u6ka")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0, 6.3867, 104.299)
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 script = ExtResource("9_1222l")
