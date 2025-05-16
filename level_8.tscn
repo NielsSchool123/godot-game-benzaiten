@@ -10,7 +10,7 @@
 [ext_resource type="PackedScene" uid="uid://dj2wl7y84yg7h" path="res://win_platform_wolk.tscn" id="9_23fq3"]
 [ext_resource type="PackedScene" uid="uid://ba5d3woxvr6r" path="res://WinScreenBLANK.tscn" id="10_mjcbx"]
 [ext_resource type="PackedScene" uid="uid://clpkehuwcsoao" path="res://wolk_no_coll.tscn" id="11_mjcbx"]
-[ext_resource type="PackedScene" uid="uid://2tw6s1v2im4i" path="res://vogel-8.tscn" id="11_ms1hu"]
+[ext_resource type="PackedScene" path="res://vogel-8.tscn" id="11_ms1hu"]
 
 [sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_w53co"]
 panorama = ExtResource("1_o6l31")
