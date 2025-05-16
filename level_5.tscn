@@ -133,9 +133,6 @@ transform = Transform3D(-1.31134e-08, 0, -0.3, 0, 0.3, 0, 0.3, 0, -1.31134e-08, 
 [node name="StaticBody3D10" parent="." instance=ExtResource("3_2etst")]
 transform = Transform3D(-1.31134e-08, 0, -0.3, 0, 0.3, 0, 0.3, 0, -1.31134e-08, -92.5523, 0.333531, 0)
 
-[node name="StaticBody3D15" parent="." instance=ExtResource("3_2etst")]
-transform = Transform3D(-8.74228e-09, 0, -0.2, 0, 0.2, 0, 0.2, 0, -8.74228e-09, -113.447, 0.670865, 10.7125)
-
 [node name="StaticBody3D16" parent="." instance=ExtResource("3_2etst")]
 transform = Transform3D(-8.74228e-09, 0, -0.2, 0, 0.2, 0, 0.2, 0, -8.74228e-09, -113.447, 0.671, -14)
 
@@ -212,3 +209,6 @@ mesh = SubResource("BoxMesh_2etst")
 [node name="Backgroundmusic" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("10_vw43l")
 volume_db = -10.0
+
+[node name="StaticBody3D2" parent="." instance=ExtResource("7_vcgqq")]
+transform = Transform3D(0.0105802, 0, -0.376893, 0, 0.377041, 0, 0.376893, 0, 0.0105802, -114.391, 0, 10.4266)
