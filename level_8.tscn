@@ -6,11 +6,11 @@
 [ext_resource type="PackedScene" uid="uid://cn1ovhleelier" path="res://wolk.tscn" id="4_23fq3"]
 [ext_resource type="PackedScene" uid="uid://phpa3phmm6uu" path="res://Player.tscn" id="5_mjcbx"]
 [ext_resource type="PackedScene" uid="uid://ddv0uw6vn73em" path="res://spike dood.tscn" id="6_ms1hu"]
-[ext_resource type="PackedScene" uid="uid://dk2dqb7tft67x" path="res://bird.tscn" id="7_ddlhw"]
 [ext_resource type="PackedScene" uid="uid://c13tjmt2rb5we" path="res://teleporter.tscn" id="8_72r3b"]
 [ext_resource type="PackedScene" uid="uid://dj2wl7y84yg7h" path="res://win_platform_wolk.tscn" id="9_23fq3"]
 [ext_resource type="PackedScene" uid="uid://ba5d3woxvr6r" path="res://WinScreenBLANK.tscn" id="10_mjcbx"]
 [ext_resource type="PackedScene" uid="uid://clpkehuwcsoao" path="res://wolk_no_coll.tscn" id="11_mjcbx"]
+[ext_resource type="PackedScene" uid="uid://2tw6s1v2im4i" path="res://vogel-8.tscn" id="11_ms1hu"]
 
 [sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_w53co"]
 panorama = ExtResource("1_o6l31")
@@ -122,9 +122,6 @@ transform = Transform3D(0.020569, 0, -0.49896, 0, 0.300085, 0, 0.514587, 0, 0.01
 [node name="Area3D14" parent="." instance=ExtResource("6_ms1hu")]
 transform = Transform3D(0.020569, 0, -0.49896, 0, 0.300085, 0, 0.514587, 0, 0.0199443, 352.297, 3.89605, -878.725)
 
-[node name="vogel" parent="." instance=ExtResource("7_ddlhw")]
-transform = Transform3D(-0.054417, 0, -1.28336, 0, 1.28451, 0, 1.28336, 0, -0.054417, -176.645, 17.8446, 5.022)
-
 [node name="teleporter9" parent="." instance=ExtResource("8_72r3b")]
 transform = Transform3D(0.638872, 0, 0, 0, 0.638872, 0, 0, 0, 0.638872, 14.1637, 3.45944, 2.42307)
 
@@ -162,3 +159,6 @@ transform = Transform3D(-0.16342, 0, 0.00534126, 0, 0.163507, 0, -0.00534126, 0,
 
 [node name="StaticBody3D3" parent="." instance=ExtResource("11_mjcbx")]
 transform = Transform3D(-0.16342, 0, 0.00534126, 0, 0.163507, 0, -0.00534126, 0, -0.16342, 378.342, 0.669832, -867.695)
+
+[node name="CharacterBody3D" parent="." instance=ExtResource("11_ms1hu")]
+transform = Transform3D(0.999317, 0, -0.0369401, 0, 1, 0, 0.0369401, 0, 0.999317, -230.977, 0, 2.59546)
