@@ -1,14 +1,15 @@
-[gd_scene load_steps=26 format=3 uid="uid://c0w24rnllf2mu"]
+[gd_scene load_steps=27 format=3 uid="uid://c0w24rnllf2mu"]
 
 [ext_resource type="Script" uid="uid://q6pcjrbfxr" path="res://scripts/BackGroundMusic.gd" id="1_1222l"]
 [ext_resource type="PackedScene" uid="uid://phpa3phmm6uu" path="res://Player.tscn" id="2_xvakj"]
-[ext_resource type="PackedScene" uid="uid://bgtir65febws3" path="res://WinPlatform.tscn" id="3_ddgpj"]
 [ext_resource type="PackedScene" uid="uid://ba5d3woxvr6r" path="res://WinScreenBLANK.tscn" id="4_xvakj"]
 [ext_resource type="AudioStream" uid="uid://68ore0n8fakj" path="res://assets/sounds/backgroundmusic.wav" id="5_ruelg"]
 [ext_resource type="Texture2D" uid="uid://b5so7di8cwa53" path="res://assets/images/kloppenheim_07_puresky_2k.exr" id="6_sbg0w"]
+[ext_resource type="PackedScene" uid="uid://j3mo3tysp6bk" path="res://warninglevel11.tscn" id="7_ddgpj"]
 [ext_resource type="PackedScene" uid="uid://difuqwq64vrsj" path="res://platform_snow.tscn" id="7_k2wvl"]
 [ext_resource type="PackedScene" uid="uid://4w5knjv3csqq" path="res://alternating platform.tscn" id="8_6u6ka"]
 [ext_resource type="Script" uid="uid://dg1no1bhqm11r" path="res://scripts/countdownUI.gd" id="9_1222l"]
+[ext_resource type="PackedScene" uid="uid://ba3xxdrg3rxn0" path="res://snowwinplatform.tscn" id="9_xvakj"]
 [ext_resource type="Theme" uid="uid://bmrctah2v8orj" path="res://assets/theme.tres" id="10_xvakj"]
 
 [sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_bjebc"]
@@ -96,10 +97,6 @@ script = ExtResource("1_1222l")
 [node name="player" parent="." instance=ExtResource("2_xvakj")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.954788, 5.70761)
 
-[node name="winplatform" parent="." instance=ExtResource("3_ddgpj")]
-transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, -0.677548, 6.88563, 119.249)
-win_screen_scene = ExtResource("4_xvakj")
-
 [node name="Backgroundmusic" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("5_ruelg")
 volume_db = -10.0
@@ -163,8 +160,20 @@ shape = SubResource("BoxShape3D_2ibqd")
 [node name="alternatingplatform" parent="." instance=ExtResource("8_6u6ka")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0, 2.6827, 35.9721)
 
+[node name="warning" parent="alternatingplatform" instance=ExtResource("7_ddgpj")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -2.41007, 0)
+
+[node name="warning2" parent="alternatingplatform" instance=ExtResource("7_ddgpj")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -18.0004, -2.41007, -7.86821e-07)
+
 [node name="alternatingplatform2" parent="." instance=ExtResource("8_6u6ka")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0, 6.3867, 69.4697)
+
+[node name="warning" parent="alternatingplatform2" instance=ExtResource("7_ddgpj")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -6.13099, 0)
+
+[node name="warning2" parent="alternatingplatform2" instance=ExtResource("7_ddgpj")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -18.2431, -6.13099, -7.97432e-07)
 
 [node name="alternatingplatform3" parent="." instance=ExtResource("8_6u6ka")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0, 6.3867, 104.299)
@@ -176,3 +185,19 @@ script = ExtResource("9_1222l")
 offset_right = 40.0
 offset_bottom = 23.0
 theme = ExtResource("10_xvakj")
+
+[node name="WinPlatform" parent="." instance=ExtResource("9_xvakj")]
+transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, 0, 7.07831, 120.787)
+win_screen_scene = ExtResource("4_xvakj")
+
+[node name="platformSnow5" parent="." instance=ExtResource("7_k2wvl")]
+transform = Transform3D(0.100201, 0, 0, 0, 3.57195, 0, 0, 0, -0.1018, -0.0460769, -19.8907, 122.356)
+
+[node name="alternatingplatform4" parent="." instance=ExtResource("8_6u6ka")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0, 6.3867, 104.149)
+
+[node name="warning" parent="alternatingplatform4" instance=ExtResource("7_ddgpj")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -6.13099, 0)
+
+[node name="warning2" parent="alternatingplatform4" instance=ExtResource("7_ddgpj")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -18.2431, -6.13099, -7.97432e-07)
