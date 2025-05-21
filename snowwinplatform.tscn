@@ -6,7 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://dttckuk2adbts" path="res://assets/models/kroon.glb" id="4_vefqj"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_cdy5g"]
-size = Vector3(0.685425, 1.59668, 0.575745)
+size = Vector3(0.547226, 1.59668, 0.518204)
 
 [node name="WinPlatform" type="StaticBody3D"]
 transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, 0, 0, 0)
@@ -16,7 +16,7 @@ win_screen_scene = ExtResource("2_cdy5g")
 [node name="Area3D" type="Area3D" parent="."]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D"]
-transform = Transform3D(200, 0, 0, 0, 12.1323, 0, 0, 0, 200, 7.63342, 5.99953, 16.8803)
+transform = Transform3D(200, 0, 0, 0, 12.1323, 0, 0, 0, 200, -0.772653, 5.99953, 15.5482)
 shape = SubResource("BoxShape3D_cdy5g")
 
 [node name="OmniLight3D" type="OmniLight3D" parent="."]
