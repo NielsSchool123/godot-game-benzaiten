@@ -1,6 +1,6 @@
 extends CharacterBody3D
 
-@export var speed: float = 30.0  # Vliegsnelheid
+@export var speed: float = 40.0  # Vliegsnelheid
 @onready var player: CharacterBody3D = get_tree().get_first_node_in_group("player")
 @onready var detection_zone: Area3D = $DetectionZone  # Om speler te detecteren
 @onready var hitbox: Area3D = $Hitbox  # Voor botsing
