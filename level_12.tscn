@@ -1,4 +1,4 @@
-[gd_scene load_steps=24 format=3 uid="uid://bk6ahk821vv86"]
+[gd_scene load_steps=25 format=3 uid="uid://bk6ahk821vv86"]
 
 [ext_resource type="Script" uid="uid://q6pcjrbfxr" path="res://scripts/BackGroundMusic.gd" id="1_acv33"]
 [ext_resource type="PackedScene" uid="uid://phpa3phmm6uu" path="res://Player.tscn" id="2_1o446"]
@@ -7,6 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://difuqwq64vrsj" path="res://platform_snow.tscn" id="5_dw0gb"]
 [ext_resource type="PackedScene" uid="uid://cdrep7fy61gc3" path="res://jumppad.tscn" id="6_1o446"]
 [ext_resource type="PackedScene" uid="uid://bluilspfofslh" path="res://WinScreenlevel10.tscn" id="8_vdsbi"]
+[ext_resource type="PackedScene" uid="uid://4w5knjv3csqq" path="res://alternating platform.tscn" id="9_qarqa"]
 [ext_resource type="PackedScene" uid="uid://ba3xxdrg3rxn0" path="res://snowwinplatform.tscn" id="10_p4vr0"]
 
 [sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_bjebc"]
@@ -164,3 +165,6 @@ debug_color = Color(0, 1, 0.701961, 1)
 [node name="WinPlatform" parent="." instance=ExtResource("10_p4vr0")]
 transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, 0, 19.2116, 211.289)
 win_screen_scene = ExtResource("8_vdsbi")
+
+[node name="alternatingplatform" parent="." instance=ExtResource("9_qarqa")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -13.7991, 17.8867, 81.979)
