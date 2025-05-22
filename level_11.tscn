@@ -184,11 +184,11 @@ offset_bottom = 23.0
 theme = ExtResource("10_xvakj")
 
 [node name="WinPlatform" parent="." instance=ExtResource("9_xvakj")]
-transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, 0, 10.6514, 120.787)
+transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, 0, 11.0181, 120.787)
 win_screen_scene = ExtResource("4_xvakj")
 
 [node name="platformSnow5" parent="." instance=ExtResource("7_k2wvl")]
-transform = Transform3D(0.100201, 0, 0, 0, 3.57195, 0, 0, 0, -0.1018, -0.0460769, -16.2514, 122.356)
+transform = Transform3D(0.100201, 0, 0, 0, 3.57195, 0, 0, 0, -0.1018, -0.0460769, -15.6647, 122.356)
 
 [node name="alternatingplatform4" parent="." instance=ExtResource("8_6u6ka")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0, 7.39076, 104.149)

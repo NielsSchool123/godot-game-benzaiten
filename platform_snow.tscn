@@ -44,7 +44,7 @@ shadow_mesh = SubResource("ArrayMesh_yhwa2")
 transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, 0, 0, 0)
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
-transform = Transform3D(120, 0, 0, 0, 10, 0, 0, 0, 120, 0, 2.88055, 0)
+transform = Transform3D(120, 0, 0, 0, 10, 0, 0, 0, 120, -0.350323, 2.88055, 0.237603)
 shape = SubResource("BoxShape3D_mi635")
 
 [node name="Cube" type="MeshInstance3D" parent="."]
