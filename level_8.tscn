@@ -59,7 +59,7 @@ uv1_world_triplanar = true
 [sub_resource type="BoxMesh" id="BoxMesh_ruu5p"]
 material = SubResource("StandardMaterial3D_3ejit")
 
-[node name="Node3D2" type="Node3D"]
+[node name="Node3D3" type="Node3D"]
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_6muk6")
