@@ -1,4 +1,4 @@
-[gd_scene load_steps=25 format=3 uid="uid://bk6ahk821vv86"]
+[gd_scene load_steps=28 format=3 uid="uid://bk6ahk821vv86"]
 
 [ext_resource type="Script" uid="uid://q6pcjrbfxr" path="res://scripts/BackGroundMusic.gd" id="1_acv33"]
 [ext_resource type="PackedScene" uid="uid://phpa3phmm6uu" path="res://Player.tscn" id="2_1o446"]
@@ -8,7 +8,10 @@
 [ext_resource type="PackedScene" uid="uid://cdrep7fy61gc3" path="res://jumppad.tscn" id="6_1o446"]
 [ext_resource type="PackedScene" uid="uid://bluilspfofslh" path="res://WinScreenlevel10.tscn" id="8_vdsbi"]
 [ext_resource type="PackedScene" uid="uid://4w5knjv3csqq" path="res://alternating platform.tscn" id="9_qarqa"]
+[ext_resource type="Script" uid="uid://dg1no1bhqm11r" path="res://scripts/countdownUI.gd" id="10_acv33"]
 [ext_resource type="PackedScene" uid="uid://ba3xxdrg3rxn0" path="res://snowwinplatform.tscn" id="10_p4vr0"]
+[ext_resource type="Theme" uid="uid://bmrctah2v8orj" path="res://assets/theme.tres" id="11_1o446"]
+[ext_resource type="PackedScene" uid="uid://dv3ewjt6pni6r" path="res://laserStill.tscn" id="12_1o446"]
 
 [sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_bjebc"]
 panorama = ExtResource("4_l3bgt")
@@ -88,7 +91,7 @@ material = SubResource("StandardMaterial3D_yr1m6")
 [sub_resource type="BoxShape3D" id="BoxShape3D_pyblp"]
 size = Vector3(88.5762, 51.9282, 1.3335)
 
-[node name="Node3D" type="Node3D"]
+[node name="Node3D2" type="Node3D"]
 script = ExtResource("1_acv33")
 
 [node name="player" parent="." instance=ExtResource("2_1o446")]
@@ -140,6 +143,14 @@ draw_pass_1 = SubResource("QuadMesh_6i4tg")
 transform = Transform3D(84.138, 0, 0, 0, 5, 0, 0, 0, 5, -34.341, 0.552959, 41.1688)
 jump_force = Vector3(0, 25, 0)
 
+[node name="jumppad2" parent="." instance=ExtResource("6_1o446")]
+transform = Transform3D(1000, 0, 0, 0, 200, 0, 0, 0, 5, -34.341, 19.0749, 133.744)
+jump_force = Vector3(0, 25, 0)
+
+[node name="jumppad3" parent="." instance=ExtResource("6_1o446")]
+transform = Transform3D(84.138, 0, 0, 0, 5, 0, 0, 0, 5, -34.341, 29.2444, 166.561)
+jump_force = Vector3(0, 25, 0)
+
 [node name="StaticBody3D" type="StaticBody3D" parent="."]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
@@ -163,8 +174,25 @@ shape = SubResource("BoxShape3D_pyblp")
 debug_color = Color(0, 1, 0.701961, 1)
 
 [node name="WinPlatform" parent="." instance=ExtResource("10_p4vr0")]
-transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, 0, 19.2116, 211.289)
+transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, 0.21854, 36.3207, 211.289)
 win_screen_scene = ExtResource("8_vdsbi")
 
 [node name="alternatingplatform" parent="." instance=ExtResource("9_qarqa")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -13.7991, 17.8867, 81.979)
+
+[node name="alternatingplatform2" parent="." instance=ExtResource("9_qarqa")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -13.7991, 17.8867, 114.261)
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+script = ExtResource("10_acv33")
+
+[node name="Label" type="Label" parent="CanvasLayer"]
+offset_right = 40.0
+offset_bottom = 23.0
+theme = ExtResource("11_1o446")
+
+[node name="LaserStill" parent="." instance=ExtResource("12_1o446")]
+transform = Transform3D(2.75628, 0, 0, 0, 1, 0, 0, 0, 1, 0, 19.5929, 72.2401)
+
+[node name="LaserStill2" parent="." instance=ExtResource("12_1o446")]
+transform = Transform3D(2.75628, 0, 0, 0, 1, 0, 0, 0, 1, 0, 19.5929, 103.493)

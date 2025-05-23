@@ -1,6 +1,6 @@
-[gd_scene load_steps=5 format=3 uid="uid://cdrep7fy61gc3"]
+[gd_scene load_steps=5 format=3 uid="uid://dtphausti6n41"]
 
-[ext_resource type="Script" uid="uid://bmm2vx6aqc1xm" path="res://scripts/jumppad.gd" id="1_laror"]
+[ext_resource type="Script" uid="uid://bmm2vx6aqc1xm" path="res://scripts/jumppad.gd" id="1_ffbln"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_e5xl0"]
 
@@ -11,7 +11,7 @@ albedo_color = Color(0, 0.137255, 1, 1)
 material = SubResource("StandardMaterial3D_laror")
 
 [node name="jumppad" type="Area3D"]
-script = ExtResource("1_laror")
+script = ExtResource("1_ffbln")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 transform = Transform3D(1.96671, 0, 0, 0, 0.218937, 0, 0, 0, 2.04645, 0, 0, 0)

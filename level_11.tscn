@@ -91,7 +91,7 @@ material = SubResource("StandardMaterial3D_yr1m6")
 [sub_resource type="BoxShape3D" id="BoxShape3D_2ibqd"]
 size = Vector3(0.792297, 1, 1)
 
-[node name="Node3D" type="Node3D"]
+[node name="Node3D2" type="Node3D"]
 script = ExtResource("1_1222l")
 
 [node name="player" parent="." instance=ExtResource("2_xvakj")]
