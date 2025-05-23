@@ -1,6 +1,6 @@
 extends Area3D
 
-@export var jump_force: Vector3 = Vector3.UP * 30
+@export var jump_force: Vector3 = Vector3.UP * 5
 
 func _ready():
 	connect("body_entered", Callable(self, "_on_body_entered"))

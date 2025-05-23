@@ -143,12 +143,8 @@ draw_pass_1 = SubResource("QuadMesh_6i4tg")
 transform = Transform3D(84.138, 0, 0, 0, 5, 0, 0, 0, 5, -34.341, 0.552959, 41.1688)
 jump_force = Vector3(0, 25, 0)
 
-[node name="jumppad2" parent="." instance=ExtResource("6_1o446")]
-transform = Transform3D(1000, 0, 0, 0, 200, 0, 0, 0, 5, -34.341, 19.0749, 133.744)
-jump_force = Vector3(0, 25, 0)
-
 [node name="jumppad3" parent="." instance=ExtResource("6_1o446")]
-transform = Transform3D(84.138, 0, 0, 0, 5, 0, 0, 0, 5, -34.341, 29.2444, 166.561)
+transform = Transform3D(84.138, 0, 0, 0, 5, 0, 0, 0, 5, -34.341, 29.2444, 136.649)
 jump_force = Vector3(0, 25, 0)
 
 [node name="StaticBody3D" type="StaticBody3D" parent="."]
