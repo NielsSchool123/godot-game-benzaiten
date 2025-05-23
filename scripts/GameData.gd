@@ -2,7 +2,7 @@ extends Node
 
 # secret counter
 var secrets_found: int = 0
-var total_secrets: int = 1
+var total_secrets: int = 2
 
 # tooltip list refill function
 var tooltip_queue: Array = []

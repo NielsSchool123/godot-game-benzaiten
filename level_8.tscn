@@ -1,4 +1,4 @@
-[gd_scene load_steps=23 format=3 uid="uid://cfsbfm8wxsgos"]
+[gd_scene load_steps=24 format=3 uid="uid://cfsbfm8wxsgos"]
 
 [ext_resource type="Texture2D" uid="uid://b5so7di8cwa53" path="res://assets/images/kloppenheim_07_puresky_2k.exr" id="1_o6l31"]
 [ext_resource type="PackedScene" uid="uid://d2otn14bnvjn6" path="res://DeathZone.tscn" id="2_72r3b"]
@@ -13,7 +13,8 @@
 [ext_resource type="PackedScene" uid="uid://2tw6s1v2im4i" path="res://vogel-8.tscn" id="11_ms1hu"]
 [ext_resource type="PackedScene" uid="uid://c8b1t1vu40htk" path="res://ontzicht baar plat form.tscn" id="12_ms1hu"]
 [ext_resource type="PackedScene" uid="uid://tv6hpe80v37m" path="res://secret_platform2.tscn" id="13_w53co"]
-[ext_resource type="Script" uid="uid://dluen6r8bml2u" path="res://secret_platform_2.gd" id="14_6muk6"]
+[ext_resource type="Script" uid="uid://coa6ybv7yi112" path="res://secretlevel2.gd" id="14_w53co"]
+[ext_resource type="PackedScene" uid="uid://dvss3esreqdp7" path="res://SecretScreen2.tscn" id="15_6muk6"]
 
 [sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_w53co"]
 panorama = ExtResource("1_o6l31")
@@ -158,4 +159,5 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -55.3742, 0, 0)
 
 [node name="StaticBody3D6" parent="." instance=ExtResource("13_w53co")]
 transform = Transform3D(-5.59506e-09, 0, -0.128, 0, 0.128, 0, 0.128, 0, -5.59506e-09, -58, 0, -5)
-script = ExtResource("14_6muk6")
+script = ExtResource("14_w53co")
+win_screen_scene = ExtResource("15_6muk6")
