@@ -152,9 +152,12 @@ transform = Transform3D(-0.16342, 0, 0.00534126, 0, 0.163507, 0, -0.00534126, 0,
 transform = Transform3D(-0.209414, 0, -0.977827, 0, 1, 0, 0.977827, 0, -0.209414, -230.977, 30.2018, 2.59546)
 
 [node name="StaticBody3D" parent="." instance=ExtResource("12_ms1hu")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -24.5942, 0, 0)
+transform = Transform3D(-0.653426, 0, 0, 0, 0.649747, 0, 0, 0, 0.649747, -24.5942, 0, 0)
+
+[node name="StaticBody3D4" parent="." instance=ExtResource("12_ms1hu")]
+transform = Transform3D(0.644988, 0, 0, 0, 0.644988, 0, 0, 0, 0.644988, -52.3709, 0, 0)
 
 [node name="StaticBody3D6" parent="." instance=ExtResource("13_w53co")]
-transform = Transform3D(-5.59506e-09, 0, -0.128, 0, 0.128, 0, 0.128, 0, -5.59506e-09, -58, 0, -5)
+transform = Transform3D(-5.59506e-09, 0, -0.128, 0, 0.128, 0, 0.128, 0, -5.59506e-09, -74.7786, 0, -5)
 script = ExtResource("14_w53co")
 win_screen_scene = ExtResource("15_6muk6")

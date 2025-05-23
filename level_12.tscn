@@ -11,7 +11,7 @@
 [ext_resource type="Script" uid="uid://dg1no1bhqm11r" path="res://scripts/countdownUI.gd" id="10_acv33"]
 [ext_resource type="PackedScene" uid="uid://ba3xxdrg3rxn0" path="res://snowwinplatform.tscn" id="10_p4vr0"]
 [ext_resource type="Theme" uid="uid://bmrctah2v8orj" path="res://assets/theme.tres" id="11_1o446"]
-[ext_resource type="PackedScene" uid="uid://dv3ewjt6pni6r" path="res://laserStill.tscn" id="12_1o446"]
+[ext_resource type="PackedScene" path="res://laserStill.tscn" id="12_1o446"]
 
 [sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_bjebc"]
 panorama = ExtResource("4_l3bgt")
