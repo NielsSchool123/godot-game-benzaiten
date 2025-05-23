@@ -15,7 +15,7 @@ func _on_body_entered(body):
 	ui.visible = true
 	ui.text = "LOOK UP"
 	
-	await get_tree().create_timer(1).timeout
+	await get_tree().create_timer(2).timeout
 	Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
 	GameData.secrets_found += 1 
 	get_tree().change_scene_to_file(main_menu_scene)
