@@ -106,7 +106,7 @@ shadow_enabled = true
 shadow_blur = 3.0
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
-transform = Transform3D(2000, 0, 0, 0, 100, 0, 0, 0, 2000, 12.0219, -50.5651, -0.229027)
+transform = Transform3D(2015.38, 0, 0, 0, 100.769, 0, 0, 0, 2015.38, 12.0219, -50.5651, -0.229027)
 mesh = SubResource("BoxMesh_es7r5")
 skeleton = NodePath("../WorldEnvironment")
 

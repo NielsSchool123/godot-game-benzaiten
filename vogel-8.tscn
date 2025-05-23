@@ -1,6 +1,6 @@
 [gd_scene load_steps=6 format=3 uid="uid://2tw6s1v2im4i"]
 
-[ext_resource type="Script" uid="uid://djinqhg4pxifu" path="res://scripts/Vogel-8.gd" id="1_a1pop"]
+[ext_resource type="Script" path="res://Vogel-8.gd" id="1_a1pop"]
 [ext_resource type="PackedScene" uid="uid://c68qdydba7d83" path="res://assets/models/bird.glb" id="2_ib7bn"]
 [ext_resource type="AudioStream" uid="uid://wronojwepiv5" path="res://assets/sounds/death.wav" id="3_oxax0"]
 
